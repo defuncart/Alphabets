@@ -1,4 +1,6 @@
 ﻿using Alphabets.Views;
+using Alphabets.Resources;
+using Plugin.Multilingual;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,8 +11,14 @@ namespace Alphabets
     {
         public App()
         {
-            //initialize all components and set the initial page
+            //initialize all components
             InitializeComponent();
+
+            //setup localization
+            CrossMultilingual.Current.CurrentCultureInfo = CrossMultilingual.Current.DeviceCultureInfo;
+            AppResources.Culture = CrossMultilingual.Current.CurrentCultureInfo;
+
+            //set the initial page
             MainPage = new NavigationPage(new MainPage());
         }
     }
