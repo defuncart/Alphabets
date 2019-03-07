@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Alphabets.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--    COLORS        -->
+            
+<!--            <Color x:Key="backgroundColor">#9BA8BA</Color>-->
+            <!--
+            lightgray1 #dfe4ea
+            lightgray2 #ced6e0
+            red #ff4757
+            green #2ed573
+            blue1 #70a1ff
+            blue2 #1e90ff
+            blue3 #5352ed
+            blue4 #3742fa
+            gray1 #a4b0be
+            gray2 #747d8c
+            gray3 #57606f
+            gray4 #2f3542 black
+            sand #eccc68
+            orange #ffa502
+            coral #ff7f50
+            tomato #ff6348
+            pink #ff6b81
+            light green #7bed9f
+            -->
+            
+            <!--    STYLES        -->
+            <Style TargetType="ContentPage"
+                   ApplyToDerivedTypes="True">
+                <Setter Property="BackgroundColor" Value="#F1F2F6" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
