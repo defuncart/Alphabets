@@ -32,13 +32,7 @@ namespace Alphabets.Helpers
         public static string Language
         {
             get => AppSettings.GetValueOrDefault(Keys.LANGUAGE, "en");
-            set
-            {
-                if (Localization.IsValidLanguage(value))
-                {
-                    AppSettings.AddOrUpdateValue(Keys.LANGUAGE, value); 
-                }
-            }
+            set => AppSettings.AddOrUpdateValue(Keys.LANGUAGE, value);
         }
 
         /// <summary>

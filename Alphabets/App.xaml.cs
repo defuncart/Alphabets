@@ -1,8 +1,7 @@
 ﻿using Alphabets.Helpers;
-using Alphabets.Resources;
 using Alphabets.Views;
-using Plugin.Multilingual;
-using System.Linq;
+using DeFuncArt.Localization.Managers;
+using DeFuncArt.Localization.Helpers;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,16 +15,21 @@ namespace Alphabets
             //initialize all components
             InitializeComponent();
 
-            //if this is the first launch, try to initialize the display language to be the same as the device language
+            //if this is the first launch, initialize the display language
             if (!UserSettings.AlreadyLaunched)
             {
-                UserSettings.Language = CrossMultilingual.Current.DeviceCultureInfo.TwoLetterISOLanguageName; //if the device language is invalid, the default ("en") will be kept
+                //select the user's device language, if supported. otherwise the default ("en") will be kept
+                if (LocalizationHelper.IsValidLanguage(LocalizationManager.DeviceCultureInfo.TwoLetterISOLanguageName))
+                {
+                    UserSettings.Language = LocalizationManager.DeviceCultureInfo.TwoLetterISOLanguageName;
+                }
+                //set a flag that initial setup is complete
                 UserSettings.AlreadyLaunched = true;
             }
 
             //update localization depending on user's setting
-            CrossMultilingual.Current.CurrentCultureInfo = CrossMultilingual.Current.NeutralCultureInfoList.ToList().First(element => element.TwoLetterISOLanguageName == UserSettings.Language);
-            //AppResources.Culture = CrossMultilingual.Current.CurrentCultureInfo;
+            LocalizationManager.SetLangauge(UserSettings.Language);
+
 
             //set the initial page
             MainPage = new NavigationPage(new MainPage());

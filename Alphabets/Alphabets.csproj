@@ -19,6 +19,10 @@
     <Folder Include="Resources\" />
     <Folder Include="Helpers\" />
     <Folder Include="Resources\Localization\" />
+    <Folder Include="DeFuncArt\" />
+    <Folder Include="DeFuncArt\Localization\" />
+    <Folder Include="DeFuncArt\Localization\Managers\" />
+    <Folder Include="DeFuncArt\Localization\Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Resources\Localization\Resources.resx">

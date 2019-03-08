@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace Alphabets.Helpers
+namespace DeFuncArt.Localization.Helpers
 {
     /// <summary>
     /// A helper class for localization.
     /// </summary>
-    public static class Localization
+    public static class LocalizationHelper
     {
         /// <summary>
         /// An array of valid languages.
