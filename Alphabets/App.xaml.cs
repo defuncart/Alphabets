@@ -30,7 +30,6 @@ namespace Alphabets
             //update localization depending on user's setting
             LocalizationManager.SetLangauge(UserSettings.Language);
 
-
             //set the initial page
             MainPage = new NavigationPage(new MainPage());
         }
