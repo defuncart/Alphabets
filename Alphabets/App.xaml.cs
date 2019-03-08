@@ -25,7 +25,7 @@ namespace Alphabets
 
             //update localization depending on user's setting
             CrossMultilingual.Current.CurrentCultureInfo = CrossMultilingual.Current.NeutralCultureInfoList.ToList().First(element => element.TwoLetterISOLanguageName == UserSettings.Language);
-            AppResources.Culture = CrossMultilingual.Current.CurrentCultureInfo;
+            //AppResources.Culture = CrossMultilingual.Current.CurrentCultureInfo;
 
             //set the initial page
             MainPage = new NavigationPage(new MainPage());

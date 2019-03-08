@@ -10,8 +10,8 @@ namespace Alphabets.Helpers
     [ContentProperty("Text")]
     public class TranslateExtension : IMarkupExtension
     {
-        /// <summary>A resource identifier (full path) to AppResources.</summary>
-        private const string ResourceId = "Alphabets.Resources.AppResources";
+        /// <summary>A resource identifier (full path) to Localization resx.</summary>
+        private const string ResourceId = "Alphabets.Resources.Localization.Resources";
 
         /// <summary>The resource manager.</summary>
         private  readonly Lazy<ResourceManager> resmgr = new Lazy<ResourceManager>(() => new ResourceManager(ResourceId, typeof(TranslateExtension).GetTypeInfo().Assembly));
@@ -30,7 +30,7 @@ namespace Alphabets.Helpers
                 return "";
             }
 
-            //try to get the translation from the AppResources
+            //try to get the translation from the ResourceManager
             string translation = resmgr.Value.GetString(Text, CrossMultilingual.Current.CurrentCultureInfo);
 
             //if the translation is null, set the KEY to be the translation itself
