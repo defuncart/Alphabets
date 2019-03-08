@@ -31,7 +31,10 @@
         /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:Alphabets.Models.Lesson"/>.</returns>
         public override string ToString()
         {
-            return $"Lesson has {LessonParts.Length} lessons.";
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder($"Lesson has {LessonParts.Length} parts:\n");
+            stringBuilder.Append(DeFuncArt.Helpers.DebugHelper.ArrayToString(LessonParts));
+
+            return stringBuilder.ToString();
         }
     }
 }

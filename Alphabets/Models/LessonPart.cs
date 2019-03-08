@@ -8,22 +8,22 @@ namespace Alphabets.Models
     public class LessonPart
     {
         /// <summary>
-        /// The main letter (i.e being taught/quized).
-        /// </summary>
-        public int Letter { get; }
-
-        /// <summary>
         /// The type of the lesson part.
         /// </summary>
         public LessonPartType LessonPartType { get; }
 
         /// <summary>
+        /// The main letter (i.e being taught/quized).
+        /// </summary>
+        public int Letter { get; }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="T:Alphabets.Models.LessonPart"/> class.
         /// </summary>
-        public LessonPart(int letter, LessonPartType lessonPartType)
+        public LessonPart(LessonPartType lessonPartType, int letter)
         {
-            Letter = letter;
             LessonPartType = lessonPartType;
+            Letter = letter;
         }
 
         /// <summary>
