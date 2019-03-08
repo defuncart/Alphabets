@@ -11,8 +11,28 @@
 
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.3.0.967583" />
+    <PackageReference Include="Plugin.Multilingual" Version="1.0.2" />
+    <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Resources\Localization\" />
+    <Folder Include="DeFuncArt\" />
+    <Folder Include="DeFuncArt\Localization\" />
+    <Folder Include="DeFuncArt\Localization\Managers\" />
+    <Folder Include="DeFuncArt\Localization\Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Localization\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\Localization\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>
