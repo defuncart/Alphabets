@@ -26,6 +26,12 @@
     <Folder Include="DeFuncArt\Localization\Helpers\" />
     <Folder Include="Models\" />
     <Folder Include="Managers\" />
+    <Folder Include="Resources\Database\" />
+    <Folder Include="Models\JSON\" />
+    <Folder Include="DeFuncArt\Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Database\Georgian.json" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Resources\Localization\Resources.resx">
@@ -37,5 +43,8 @@
     <Compile Update="Resources\Localization\Resources.Designer.cs">
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\Database\Georgian.json" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,170 @@
+{
+	"Name": "Georgian", 
+	"Letters": [
+		{
+			"Cases": ["ა"],
+			"TransCases": ["a"],
+			"PronounciationTips": {"en": "*a* as in f*a*ther", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ბ"],
+			"TransCases": ["b"],
+			"PronounciationTips": {"en": "*b* as in *b*ed", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["გ"],
+			"TransCases": ["g"],
+			"PronounciationTips": {"en": "*g* as in *g*et", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["დ"],
+			"TransCases": ["d"],
+			"PronounciationTips": {"en": "*d* as in *d*ebt", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ე"],
+			"TransCases": ["e"],
+			"PronounciationTips": {"en": "*e* as in *e*gg", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ვ"],
+			"TransCases": ["v"],
+			"PronounciationTips": {"en": "*v* as in *v*et", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ზ"],
+			"TransCases": ["z"],
+			"PronounciationTips": {"en": "*z* as in *z*oo", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["თ"],
+			"TransCases": ["t"],
+			"PronounciationTips": {"en": "*t* as in *t*ent", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ი"],
+			"TransCases": ["i"],
+			"PronounciationTips": {"en": "like the *double-e* in f*ee*t", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["კ"],
+			"TransCases": ["k'"],
+			"PronounciationTips": {"en": "*k* as in *k*araoke", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ლ"],
+			"TransCases": ["l"],
+			"PronounciationTips": {"en": "*l* as in *l*ever", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["მ"],
+			"TransCases": ["m"],
+			"PronounciationTips": {"en": "*m* as in *m*other", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ნ"],
+			"TransCases": ["n"],
+			"PronounciationTips": {"en": "*n* as in *n*ever", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ო"],
+			"TransCases": ["o"],
+			"PronounciationTips": {"en": "*o* like in *o*r", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["პ"],
+			"TransCases": ["p'"],
+			"PronounciationTips": {"en": "*p* as in *p*iano", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ჟ"],
+			"TransCases": ["zh"],
+			"PronounciationTips": {"en": "like the *s* in plea*s*ure", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["რ"],
+			"TransCases": ["r"],
+			"PronounciationTips": {"en": "*r* as in *r*ed", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ს"],
+			"TransCases": ["s"],
+			"PronounciationTips": {"en": "*s* as in *s*et", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ტ"],
+			"TransCases": ["t'"],
+			"PronounciationTips": {"en": "*t* as in *t*otal", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["უ"],
+			"TransCases": ["u"],
+			"PronounciationTips": {"en": "like the *double-o* in l*oo*t", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ფ"],
+			"TransCases": ["p"],
+			"PronounciationTips": {"en": "*p* as in *p*et", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ქ"],
+			"TransCases": ["k"],
+			"PronounciationTips": {"en": "k as the *c* in *c*an't", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ღ"],
+			"TransCases": ["gh"],
+			"PronounciationTips": {"en": "like how the r is pronounced in French", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ყ"],
+			"TransCases": ["q'"],
+			"PronounciationTips": {"en": "*q* as in *q*ueue", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["შ"],
+			"TransCases": ["sh"],
+			"PronounciationTips": {"en": "*sh* as in *sh*ed", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ჩ"],
+			"TransCases": ["ch"],
+			"PronounciationTips": {"en": "*ch* as in *ch*ant", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ც"],
+			"TransCases": ["ts"],
+			"PronounciationTips": {"en": "ts like the zz in pizza", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ძ"],
+			"TransCases": ["dz"],
+			"PronounciationTips": {"en": "like *ds* in a*ds* or re*d z*ebra", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["წ"],
+			"TransCases": ["ts'"],
+			"PronounciationTips": {"en": "*ts* as in *ts*unami", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ჭ"],
+			"TransCases": ["ch'"],
+			"PronounciationTips": {"en": "*ch* as in *ch*arm", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ხ"],
+			"TransCases": ["kh"],
+			"PronounciationTips": {"en": "as the *ch* in lo*ch* and ba*ch*", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ჯ"],
+			"TransCases": ["j"],
+			"PronounciationTips": {"en": "*j* as in *j*et", "de": "", "pl": ""} 
+		},
+		{
+			"Cases": ["ჰ"],
+			"TransCases": ["h"],
+			"PronounciationTips": {"en": "*h* as in *h*ouse", "de": "", "pl": ""} 
+		}
+	]
+}

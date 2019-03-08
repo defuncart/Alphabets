@@ -7,6 +7,8 @@ namespace Alphabets.Views
         public MainPage()
         {
             InitializeComponent();
+
+            Managers.AlphabetManager.Log();
         }
     }
 }
