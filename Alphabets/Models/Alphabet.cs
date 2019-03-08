@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Alphabets.Models
+﻿namespace Alphabets.Models
 {
     /// <summary>
     /// A model representing an alphabet.

@@ -29,6 +29,7 @@
     <Folder Include="Resources\Database\" />
     <Folder Include="Models\JSON\" />
     <Folder Include="DeFuncArt\Helpers\" />
+    <Folder Include="Enums\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Database\Georgian.json" />
