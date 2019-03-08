@@ -30,9 +30,10 @@
     <Folder Include="Models\JSON\" />
     <Folder Include="DeFuncArt\Helpers\" />
     <Folder Include="Enums\" />
+    <Folder Include="Resources\Database\Georgian\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Database\Georgian.json" />
+    <EmbeddedResource Include="Resources\Database\Georgian\Alphabet.json" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Resources\Localization\Resources.resx">
@@ -47,5 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Resources\Database\Georgian.json" />
+    <None Remove="Resources\Database\Georgian\Georgian.json" />
   </ItemGroup>
 </Project>

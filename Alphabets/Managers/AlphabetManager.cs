@@ -1,4 +1,5 @@
-﻿using Alphabets.Models;
+﻿using Alphabets.Enums;
+using Alphabets.Models;
 using Alphabets.Models.JSON;
 using DeFuncArt.Helpers;
 using Newtonsoft.Json;
@@ -22,8 +23,14 @@ namespace Alphabets.Managers
         /// </summary>
         static AlphabetManager()
         {
+            //TODO app setting, not hardcorded
+            AlphabetType alphabetType = AlphabetType.Georgian;
+
+            //determine resource id
+            string resourceId = $"Alphabets.Resources.Database.{alphabetType}.Alphabet.json";
+
             //get json string
-            string json = FileHelper.TextResourceToString("Alphabets.Resources.Database.Georgian.json");
+            string json = FileHelper.TextResourceToString(resourceId);
 
             //deserialize json data
             AlphabetImport alphabetImport = JsonConvert.DeserializeObject<AlphabetImport>(json);
