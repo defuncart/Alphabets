@@ -9,6 +9,7 @@ namespace Alphabets.Views
             InitializeComponent();
 
             Managers.AlphabetManager.Log();
+            Managers.CourseManager.Log();
         }
     }
 }
