@@ -49,7 +49,7 @@ namespace Alphabets.Views
         {
             Debug.WriteLine($"Button {index} clicked");
 
-            Navigation.PushAsync(new GamePage());
+            Navigation.PushModalAsync(new GamePage());
         }
     }
 }

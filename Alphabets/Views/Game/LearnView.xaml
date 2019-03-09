@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:Alphabets.Views"
              xmlns:dfa="clr-namespace:DeFuncArt.Xamarin.Forms"
              xmlns:i18n="clr-namespace:DeFuncArt.Localization.Helpers"
+             xmlns:views="clr-namespace:Alphabets.Views"
              x:Class="Alphabets.Views.Game.LearnView">
     <ContentView.Content>
         <Grid Margin="10,10,10,10">
@@ -37,7 +37,6 @@
                                  MinFontSize="50"
                                  MaxFontSize="500"
                                  BackgroundColor="Transparent"
-                                 
                                  HorizontalOptions="Fill"
                                  VerticalOptions="Fill"/>
                     

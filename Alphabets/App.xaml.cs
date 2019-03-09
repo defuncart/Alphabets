@@ -31,7 +31,7 @@ namespace Alphabets
             LocalizationManager.SetLangauge(UserSettings.Language);
 
             //set the initial page
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new MainPage();
         }
     }
 }

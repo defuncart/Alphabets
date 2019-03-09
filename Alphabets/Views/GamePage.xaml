@@ -3,15 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:dfa="clr-namespace:DeFuncArt.Xamarin.Forms"
              xmlns:i18n="clr-namespace:DeFuncArt.Localization.Helpers"
-             xmlns:local="clr-namespace:Alphabets.Views"
+             xmlns:views="clr-namespace:Alphabets.Views"
+             xmlns:game="clr-namespace:Alphabets.Views.Game"
              x:Class="Alphabets.Views.GamePage">
     <ContentPage.Content>
         <Grid Margin="10,10,10,10">
             <Grid.RowDefinitions>
-                <RowDefinition Height="100*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="90*" />
             </Grid.RowDefinitions>
             
-            <ContentView Grid.Row="0"
+            <!--   Render Navigation Bar   -->
+            <game:NavView Grid.Row="0"
+                          x:Name="navBar" />
+            
+            <!--   Render main content     -->
+            <ContentView Grid.Row="1"
                          x:Name="contentView" />
 
         </Grid>

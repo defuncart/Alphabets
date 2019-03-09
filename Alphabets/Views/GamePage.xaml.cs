@@ -12,8 +12,13 @@ namespace Alphabets.Views
         {
             InitializeComponent();
 
+            //create subviews
             LearnView learnView = new LearnView();
-            contentView.Content = learnView;
+            MultipleChoiceView multipleChoiceView = new MultipleChoiceView();
+
+            //TODO debug
+            //contentView.Content = learnView;
+            contentView.Content = multipleChoiceView;
         }
     }
 }
