@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Alphabets.Views"
+             xmlns:dfa="clr-namespace:DeFuncArt.Xamarin.Forms"
+             xmlns:i18n="clr-namespace:DeFuncArt.Localization.Helpers"
+             x:Class="Alphabets.Views.Game.LearnView">
+    <ContentView.Content>
+        <Grid Margin="10,10,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="85*" />
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="10*" />
+            </Grid.RowDefinitions>
+            
+            <!--   Flashcard   -->
+            <Frame Grid.Row="0"
+                   BackgroundColor="White"
+                   CornerRadius="10"
+                   HasShadow="True"
+                   Padding="10">
+                <Grid Grid.Row="1"
+                      BackgroundColor="White" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="7*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    
+                    <!--   Letter to learn     -->
+                    <dfa:DALabel Grid.Row="0"
+                                 x:Name="letter"
+                                 Text="ა"
+                                 TextColor="{StaticResource Key=Color.Black}"
+                                 HorizontalTextAlignment="Center"
+                                 VerticalTextAlignment="Center"
+                                 MinFontSize="50"
+                                 MaxFontSize="500"
+                                 BackgroundColor="Transparent"
+                                 
+                                 HorizontalOptions="Fill"
+                                 VerticalOptions="Fill"/>
+                    
+                    <!--   Transliteration    -->
+                    <dfa:DALabel Grid.Row="1"
+                                 x:Name="transliteration"
+                                 Text="A a"
+                                 TextColor="{StaticResource Key=Color.DarkGray2}"
+                                 HorizontalTextAlignment="Center"
+                                 VerticalTextAlignment="Center"
+                                 BackgroundColor="Transparent" />
+                    
+                    <!--   Pronounciation tip    -->
+                    <Label Grid.Row="2"
+                           x:Name="pronounciation"
+                           Text="ah as the a in father"
+                           TextColor="{StaticResource Key=Color.DarkGray1}"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           BackgroundColor="Transparent" />
+                </Grid>
+            </Frame>
+            
+            <!--   Button to progress    -->
+            <Button Grid.Row="2"
+                    Text="{i18n:Translate ok}" />
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

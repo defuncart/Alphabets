@@ -32,6 +32,7 @@
     <Folder Include="Enums\" />
     <Folder Include="Resources\Database\Georgian\" />
     <Folder Include="DeFuncArt\Xamarin.Forms\" />
+    <Folder Include="Views\Game\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Database\Georgian\Alphabet.json" />

@@ -48,6 +48,8 @@ namespace Alphabets.Views
         private void OnLesssonButtonClicked(int index)
         {
             Debug.WriteLine($"Button {index} clicked");
+
+            Navigation.PushAsync(new GamePage());
         }
     }
 }
