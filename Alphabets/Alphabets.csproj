@@ -43,8 +43,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Resources\Database\Georgian.json" />
-    <None Remove="Resources\Database\Georgian\Georgian.json" />
     <None Remove="Resources\Database\Georgian\Alphabet.json" />
     <None Remove="Resources\Database\Georgian\Course.json" />
   </ItemGroup>
