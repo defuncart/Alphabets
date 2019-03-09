@@ -4,34 +4,33 @@
              x:Class="Alphabets.App">
     <Application.Resources>
         <ResourceDictionary>
+            
             <!--    COLORS        -->
-            
-<!--            <Color x:Key="backgroundColor">#9BA8BA</Color>-->
-            <!--
-            lightgray1 #dfe4ea
-            lightgray2 #ced6e0
-            red #ff4757
-            green #2ed573
-            blue1 #70a1ff
-            blue2 #1e90ff
-            blue3 #5352ed
-            blue4 #3742fa
-            gray1 #a4b0be
-            gray2 #747d8c
-            gray3 #57606f
-            gray4 #2f3542 black
-            sand #eccc68
-            orange #ffa502
-            coral #ff7f50
-            tomato #ff6348
-            pink #ff6b81
-            light green #7bed9f
-            -->
-            
+            <Color x:Key="white">#ffffff</Color>
+            <Color x:Key="lightgray1">#f1f2f6</Color>
+            <Color x:Key="lightgray2">#dfe4ea</Color>
+            <Color x:Key="lightgray3">#ced6e0</Color>
+            <Color x:Key="midgray">#a4b0be</Color>
+            <Color x:Key="darkgray1">#747d8c</Color>
+            <Color x:Key="darkgray2">#57606f</Color>
+            <Color x:Key="black">#2f3542</Color>
+            <Color x:Key="red">#ff4757</Color>
+            <Color x:Key="green">#2ed573</Color>
+            <Color x:Key="blue1">#70a1ff</Color>
+            <Color x:Key="blue2">#1e90ff</Color>
+            <Color x:Key="blue3">#5352ed</Color>
+            <Color x:Key="blue4">#3742fa</Color>
+            <Color x:Key="pink">#ff6b81</Color>
+            <Color x:Key="limegreen">#7bed9f</Color>
+            <Color x:Key="sand">#eccc68</Color>
+            <Color x:Key="orange">#ffa502</Color>
+            <Color x:Key="coral">#ff7f50</Color>
+            <Color x:Key="tomato">#ff6348</Color>
+
             <!--    STYLES        -->
             <Style TargetType="ContentPage"
                    ApplyToDerivedTypes="True">
-                <Setter Property="BackgroundColor" Value="#F1F2F6" />
+                <Setter Property="BackgroundColor" Value="#f1f2f6" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>
