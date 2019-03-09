@@ -1,4 +1,5 @@
 ﻿using Alphabets.Enums;
+using Alphabets.Helpers;
 using Alphabets.Models;
 using Alphabets.Models.JSON;
 using DeFuncArt.Helpers;
@@ -23,8 +24,8 @@ namespace Alphabets.Managers
         /// </summary>
         static CourseManager()
         {
-            //TODO app setting, not hardcorded
-            AlphabetType alphabetType = AlphabetType.Georgian;
+            //determine current alphabet/course
+            AlphabetType alphabetType = (AlphabetType)UserSettings.CurrentCourseIndex;
 
             //determine resource id
             string resourceId = $"Alphabets.Resources.Database.{alphabetType}.Course.json";
