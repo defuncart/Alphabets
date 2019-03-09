@@ -8,8 +8,14 @@ using Xamarin.Forms.Xaml;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Alphabets
 {
+    /// <summary>
+    /// A cross platform app.
+    /// </summary>
     public partial class App : Application
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:Alphabets.App"/> class.
+        /// </summary>
         public App()
         {
             //initialize all components

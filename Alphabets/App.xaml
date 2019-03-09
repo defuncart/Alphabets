@@ -26,13 +26,14 @@
             <Color x:Key="Color.Orange">#ffa502</Color>
             <Color x:Key="Color.Coral">#ff7f50</Color>
             <Color x:Key="Color.Tomato">#ff6348</Color>
-
+            
             <!--    STYLES        -->
             <Style TargetType="ContentPage"
                    ApplyToDerivedTypes="True">
                 <Setter Property="BackgroundColor" Value="{StaticResource Key=Color.LightGray1}" />
+                <Setter Property="Padding" Value="{DynamicResource Key=Padding.Page}" />
             </Style>
-            
+
             <Style x:Key="Style.Button.MainPage" 
                    TargetType="Button">
                 <Setter Property="BackgroundColor" Value="{StaticResource Key=Color.DarkGray1}" />
@@ -43,6 +44,20 @@
                    TargetType="Button">
                 <Setter Property="BackgroundColor" Value="{StaticResource Key=Color.White}" />
                 <Setter Property="TextColor" Value="{StaticResource Key=Color.Black}" />
+                <Setter Property="CornerRadius" Value="10" />
+            </Style>
+            
+            <Style x:Key="Style.Button.MultipleChoice.Correct" 
+                   TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=Color.Green}" />
+                <Setter Property="TextColor" Value="{StaticResource Key=Color.White}" />
+                <Setter Property="CornerRadius" Value="10" />
+            </Style>
+            
+            <Style x:Key="Style.Button.MultipleChoice.Incorrect" 
+                   TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=Color.Red}" />
+                <Setter Property="TextColor" Value="{StaticResource Key=Color.White}" />
                 <Setter Property="CornerRadius" Value="10" />
             </Style>
             

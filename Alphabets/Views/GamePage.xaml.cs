@@ -8,9 +8,16 @@ namespace Alphabets.Views
     /// </summary>
     public partial class GamePage : ContentPage
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:Alphabets.Views.GamePage"/> class.
+        /// </summary>
         public GamePage()
         {
+            //initialize components
             InitializeComponent();
+
+            //delegates
+            navBar.OnExitButtonClicked += NavBar_OnExitButtonClicked;
 
             //create subviews
             LearnView learnView = new LearnView();
@@ -19,6 +26,16 @@ namespace Alphabets.Views
             //TODO debug
             //contentView.Content = learnView;
             contentView.Content = multipleChoiceView;
+        }
+
+        /// <summary>
+        /// Callback when the exit button the the nav bar is pressed.
+        /// </summary>
+        private void NavBar_OnExitButtonClicked()
+        {
+            //TODO display warning popup
+
+            Navigation.PopModalAsync();
         }
     }
 }

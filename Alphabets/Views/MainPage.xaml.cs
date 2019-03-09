@@ -12,6 +12,9 @@ namespace Alphabets.Views
     /// </summary>
     public partial class MainPage : ContentPage
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:Alphabets.Views.MainPage"/> class.
+        /// </summary>
         public MainPage()
         {
             //initialize all components
