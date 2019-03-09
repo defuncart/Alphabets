@@ -31,6 +31,7 @@
     <Folder Include="DeFuncArt\Helpers\" />
     <Folder Include="Enums\" />
     <Folder Include="Resources\Database\Georgian\" />
+    <Folder Include="DeFuncArt\Xamarin.Forms\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Database\Georgian\Alphabet.json" />
