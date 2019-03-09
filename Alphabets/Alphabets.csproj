@@ -31,6 +31,8 @@
     <Folder Include="DeFuncArt\Helpers\" />
     <Folder Include="Enums\" />
     <Folder Include="Resources\Database\Georgian\" />
+    <Folder Include="DeFuncArt\Xamarin.Forms\" />
+    <Folder Include="Views\Game\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Database\Georgian\Alphabet.json" />
@@ -45,5 +47,10 @@
   <ItemGroup>
     <None Remove="Resources\Database\Georgian\Alphabet.json" />
     <None Remove="Resources\Database\Georgian\Course.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Resources\Localization\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

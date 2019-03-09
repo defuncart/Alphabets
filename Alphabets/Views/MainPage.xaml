@@ -2,12 +2,31 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:local="clr-namespace:Alphabets"
-             xmlns:i18n="clr-namespace:DeFuncArt.Localization.Helpers" 
+             xmlns:i18n="clr-namespace:DeFuncArt.Localization.Helpers"
+             xmlns:dfa="clr-namespace:DeFuncArt.Xamarin.Forms" 
              x:Class="Alphabets.Views.MainPage">
-    <StackLayout>
-        <Label Text="{i18n:Translate HelloWorld}"
-               TextColor="#2f3542"
-               HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <ContentPage.Content>
+        <Grid Margin="10,10,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="7*" />
+            </Grid.RowDefinitions>
+             
+            <dfa:DALabel Grid.Row="0"
+                         x:Name="languageNameText"
+                         Text="ქართული"
+                         TextColor="{StaticResource Key=Color.Black}"
+                         MinFontSize="10"
+                         MaxFontSize="100"
+                         HorizontalTextAlignment="Center"
+                         VerticalTextAlignment="Center" />
+                
+            <StackLayout Grid.Row="2"
+                         x:Name="stackLayout"
+                         HorizontalOptions="FillAndExpand" 
+                         VerticalOptions="FillAndExpand" />
+
+        </Grid>
+    </ContentPage.Content>
 </ContentPage>

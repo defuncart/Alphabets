@@ -13,8 +13,6 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     
-    <data name="HelloWorld" xml:space="preserve">
-        <value>Willkommen bei αბц!</value>
-        <comment>A descriptive comment.</comment>
-    </data>
+    <data name="ok" xml:space="preserve"><value>Ok</value><comment>Generic ok test for popups etc.</comment></data>
+    <data name="main_lesson_namevalue" xml:space="preserve"><value>Lektion {0}</value><comment>Of the form Lesson 1, Lesson 2 etc.</comment></data>
 </root>

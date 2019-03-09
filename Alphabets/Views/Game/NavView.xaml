@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Alphabets.Views.Game.NavView">
+    <ContentView.Content>
+        <Grid BackgroundColor="{StaticResource Key=Color.DarkGray1}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="80*" />
+                <RowDefinition Height="10*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="10*" />
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="75*" />
+                <ColumnDefinition Width="10*" />
+            </Grid.ColumnDefinitions>
+            
+            <!--    Exit Button        -->
+            <Button Grid.Row="1" Grid.Column="1"
+                    x:Name="exitButton"
+                    Text="X"
+                    TextColor="{StaticResource Key=Color.White}"
+                    BackgroundColor="{StaticResource Key=Color.DarkGray1}" />
+            
+            <!--    Game Progress      -->
+            <BoxView Grid.Row="1" Grid.Column="3"
+                     BackgroundColor="{StaticResource Key=Color.White}" />
+            
+        </Grid>
+    </ContentView.Content>
+</ContentView>

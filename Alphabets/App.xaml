@@ -4,35 +4,63 @@
              x:Class="Alphabets.App">
     <Application.Resources>
         <ResourceDictionary>
-            <!--    COLORS        -->
             
-<!--            <Color x:Key="backgroundColor">#9BA8BA</Color>-->
-            <!--
-            lightgray1 #dfe4ea
-            lightgray2 #ced6e0
-            red #ff4757
-            green #2ed573
-            blue1 #70a1ff
-            blue2 #1e90ff
-            blue3 #5352ed
-            blue4 #3742fa
-            gray1 #a4b0be
-            gray2 #747d8c
-            gray3 #57606f
-            gray4 #2f3542 black
-            sand #eccc68
-            orange #ffa502
-            coral #ff7f50
-            tomato #ff6348
-            pink #ff6b81
-            light green #7bed9f
-            -->
+            <!--    COLORS        -->
+            <Color x:Key="Color.White">#ffffff</Color>
+            <Color x:Key="Color.LightGray1">#f1f2f6</Color>
+            <Color x:Key="Color.LightGray2">#dfe4ea</Color>
+            <Color x:Key="Color.LightGray3">#ced6e0</Color>
+            <Color x:Key="Color.MidGray">#a4b0be</Color>
+            <Color x:Key="Color.DarkGray1">#747d8c</Color>
+            <Color x:Key="Color.DarkGray2">#57606f</Color>
+            <Color x:Key="Color.Black">#2f3542</Color>
+            <Color x:Key="Color.Red">#ff4757</Color>
+            <Color x:Key="Color.Green">#2ed573</Color>
+            <Color x:Key="Color.Blue1">#70a1ff</Color>
+            <Color x:Key="Color.Blue2">#1e90ff</Color>
+            <Color x:Key="Color.Blue3">#5352ed</Color>
+            <Color x:Key="Color.Blue4">#3742fa</Color>
+            <Color x:Key="Color.Pink">#ff6b81</Color>
+            <Color x:Key="Color.LimeGreen">#7bed9f</Color>
+            <Color x:Key="Color.Sand">#eccc68</Color>
+            <Color x:Key="Color.Orange">#ffa502</Color>
+            <Color x:Key="Color.Coral">#ff7f50</Color>
+            <Color x:Key="Color.Tomato">#ff6348</Color>
             
             <!--    STYLES        -->
             <Style TargetType="ContentPage"
                    ApplyToDerivedTypes="True">
-                <Setter Property="BackgroundColor" Value="#F1F2F6" />
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=Color.LightGray1}" />
+                <Setter Property="Padding" Value="{DynamicResource Key=Padding.Page}" />
             </Style>
+
+            <Style x:Key="Style.Button.MainPage" 
+                   TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=Color.DarkGray1}" />
+                <Setter Property="TextColor" Value="{StaticResource Key=Color.White}" />
+            </Style>
+            
+            <Style x:Key="Style.Button.MultipleChoice.Default" 
+                   TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=Color.White}" />
+                <Setter Property="TextColor" Value="{StaticResource Key=Color.Black}" />
+                <Setter Property="CornerRadius" Value="10" />
+            </Style>
+            
+            <Style x:Key="Style.Button.MultipleChoice.Correct" 
+                   TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=Color.Green}" />
+                <Setter Property="TextColor" Value="{StaticResource Key=Color.White}" />
+                <Setter Property="CornerRadius" Value="10" />
+            </Style>
+            
+            <Style x:Key="Style.Button.MultipleChoice.Incorrect" 
+                   TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=Color.Red}" />
+                <Setter Property="TextColor" Value="{StaticResource Key=Color.White}" />
+                <Setter Property="CornerRadius" Value="10" />
+            </Style>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>
