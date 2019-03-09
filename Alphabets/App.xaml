@@ -6,32 +6,39 @@
         <ResourceDictionary>
             
             <!--    COLORS        -->
-            <Color x:Key="white">#ffffff</Color>
-            <Color x:Key="lightgray1">#f1f2f6</Color>
-            <Color x:Key="lightgray2">#dfe4ea</Color>
-            <Color x:Key="lightgray3">#ced6e0</Color>
-            <Color x:Key="midgray">#a4b0be</Color>
-            <Color x:Key="darkgray1">#747d8c</Color>
-            <Color x:Key="darkgray2">#57606f</Color>
-            <Color x:Key="black">#2f3542</Color>
-            <Color x:Key="red">#ff4757</Color>
-            <Color x:Key="green">#2ed573</Color>
-            <Color x:Key="blue1">#70a1ff</Color>
-            <Color x:Key="blue2">#1e90ff</Color>
-            <Color x:Key="blue3">#5352ed</Color>
-            <Color x:Key="blue4">#3742fa</Color>
-            <Color x:Key="pink">#ff6b81</Color>
-            <Color x:Key="limegreen">#7bed9f</Color>
-            <Color x:Key="sand">#eccc68</Color>
-            <Color x:Key="orange">#ffa502</Color>
-            <Color x:Key="coral">#ff7f50</Color>
-            <Color x:Key="tomato">#ff6348</Color>
+            <Color x:Key="Color.White">#ffffff</Color>
+            <Color x:Key="Color.LightGray1">#f1f2f6</Color>
+            <Color x:Key="Color.LightGray2">#dfe4ea</Color>
+            <Color x:Key="Color.LightGray3">#ced6e0</Color>
+            <Color x:Key="Color.MidGray">#a4b0be</Color>
+            <Color x:Key="Color.DarkGray1">#747d8c</Color>
+            <Color x:Key="Color.DarkGray2">#57606f</Color>
+            <Color x:Key="Color.Black">#2f3542</Color>
+            <Color x:Key="Color.Red">#ff4757</Color>
+            <Color x:Key="Color.Green">#2ed573</Color>
+            <Color x:Key="Color.Blue1">#70a1ff</Color>
+            <Color x:Key="Color.Blue2">#1e90ff</Color>
+            <Color x:Key="Color.Blue3">#5352ed</Color>
+            <Color x:Key="Color.Blue4">#3742fa</Color>
+            <Color x:Key="Color.Pink">#ff6b81</Color>
+            <Color x:Key="Color.LimeGreen">#7bed9f</Color>
+            <Color x:Key="Color.Sand">#eccc68</Color>
+            <Color x:Key="Color.Orange">#ffa502</Color>
+            <Color x:Key="Color.Coral">#ff7f50</Color>
+            <Color x:Key="Color.Tomato">#ff6348</Color>
 
             <!--    STYLES        -->
             <Style TargetType="ContentPage"
                    ApplyToDerivedTypes="True">
-                <Setter Property="BackgroundColor" Value="#f1f2f6" />
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=Color.LightGray1}" />
             </Style>
+            
+            <Style x:Key="Style.Button.MainPage" 
+                   TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=Color.DarkGray1}" />
+                <Setter Property="TextColor" Value="{StaticResource Key=Color.White}" />
+            </Style>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>
