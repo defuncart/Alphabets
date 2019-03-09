@@ -47,4 +47,9 @@
     <None Remove="Resources\Database\Georgian\Alphabet.json" />
     <None Remove="Resources\Database\Georgian\Course.json" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Resources\Localization\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

@@ -47,9 +47,9 @@ namespace Alphabets.Resources.Localization {
             }
         }
         
-        internal static string HelloWorld {
+        internal static string main_lesson_namevalue {
             get {
-                return ResourceManager.GetString("HelloWorld", resourceCulture);
+                return ResourceManager.GetString("main_lesson_namevalue", resourceCulture);
             }
         }
     }
