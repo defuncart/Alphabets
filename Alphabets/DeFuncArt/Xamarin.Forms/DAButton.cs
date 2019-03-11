@@ -43,7 +43,7 @@ namespace DeFuncArt.Xamarin.Forms
         //TODO MaxFontSizeProperty, MinFontSizeProperty don't assure against MinFontSize > MaxFontSize
 
         /// <summary>
-        /// The label's text.
+        /// The button's text.
         /// </summary>
         new public string Text
         {
@@ -64,7 +64,7 @@ namespace DeFuncArt.Xamarin.Forms
         }
 
         /// <summary>
-        /// Autosizes the label's font size with regards to it's container size.
+        /// Autosizes the button's font size with regards to it's container size.
         /// </summary>
         private void AutoFontSize()
         {
@@ -99,7 +99,7 @@ namespace DeFuncArt.Xamarin.Forms
         }
 
         /// <summary>
-        /// Determines the text height for the label with a given font size.
+        /// Determines the text height for the button with a given font size.
         /// </summary>
         private double TextHeightForFontSize(double fontSize)
         {

@@ -1,5 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace Alphabets.Views.Game
 {
@@ -8,10 +7,25 @@ namespace Alphabets.Views.Game
     /// </summary>
     public partial class NavView : ContentView
     {
+        #region Properties
+
         /// <summary>
-        /// An event which occurs when the exit button is clicked.
+        /// The exit button.
         /// </summary>
-        public Action OnExitButtonClicked;
+        public Button ExitButton => exitButton;
+
+        /// <summary>
+        /// The current progress (expressed between 0 and 1).
+        /// </summary>
+        public double Progress
+        {
+            get => progressBar.Progress;
+            set => progressBar.Progress = value;
+        }
+
+        #endregion
+
+        #region Methods
 
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Alphabets.Views.Game.NavView"/> class.
@@ -20,9 +34,8 @@ namespace Alphabets.Views.Game
         {
             //initialize components
             InitializeComponent();
-
-            //delegates
-            exitButton.Clicked += (object sender, EventArgs e) => OnExitButtonClicked?.Invoke();
         }
+
+        #endregion
     }
 }

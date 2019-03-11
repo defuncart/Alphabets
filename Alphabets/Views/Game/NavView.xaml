@@ -25,8 +25,12 @@
                     BackgroundColor="{StaticResource Key=Color.DarkGray1}" />
             
             <!--    Game Progress      -->
-            <BoxView Grid.Row="1" Grid.Column="3"
-                     BackgroundColor="{StaticResource Key=Color.White}" />
+            <ProgressBar Grid.Row="1" Grid.Column="3"
+                         x:Name="progressBar"
+                         ScaleY="1"
+                         BackgroundColor="{StaticResource Key=Color.DarkGray2}"
+                         ProgressColor="{StaticResource Key=Color.White}"
+                         Progress="0" />
             
         </Grid>
     </ContentView.Content>
