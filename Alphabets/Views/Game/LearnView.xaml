@@ -22,9 +22,10 @@
                 <Grid Grid.Row="1"
                       BackgroundColor="White" >
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="7*" />
-                        <RowDefinition Height="2*" />
-                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="70*" />
+                        <RowDefinition Height="5*" />
+                        <RowDefinition Height="15*" />
+                        <RowDefinition Height="10*" />
                     </Grid.RowDefinitions>
                     
                     <!--   Letter to learn     -->
@@ -35,22 +36,26 @@
                                  HorizontalTextAlignment="Center"
                                  VerticalTextAlignment="Center"
                                  MinFontSize="50"
-                                 MaxFontSize="500"
+                                 MaxFontSize="200"
                                  BackgroundColor="Transparent"
                                  HorizontalOptions="Fill"
                                  VerticalOptions="Fill"/>
                     
+                    <!--   Spacer    -->
+                    
                     <!--   Transliteration    -->
-                    <dfa:DALabel Grid.Row="1"
+                    <dfa:DALabel Grid.Row="2"
                                  x:Name="transliterationLabel"
                                  Text="A a"
                                  TextColor="{StaticResource Key=Color.DarkGray2}"
                                  HorizontalTextAlignment="Center"
                                  VerticalTextAlignment="Center"
+                                 MinFontSize="10"
+                                 MaxFontSize="100"
                                  BackgroundColor="Transparent" />
                     
                     <!--   Pronounciation tip    -->
-                    <Label Grid.Row="2"
+                    <Label Grid.Row="3"
                            x:Name="pronounciationLabel"
                            Text="ah as the a in father"
                            TextColor="{StaticResource Key=Color.DarkGray1}"

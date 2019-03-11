@@ -20,8 +20,8 @@
                          TextColor="{StaticResource Key=Color.Black}"
                          HorizontalTextAlignment="Center"
                          VerticalTextAlignment="Center"
-                         MinFontSize="50"
-                         MaxFontSize="500"
+                         MinFontSize="20"
+                         MaxFontSize="200"
                          BackgroundColor="Transparent"
                          HorizontalOptions="Fill"
                          VerticalOptions="Fill" />
