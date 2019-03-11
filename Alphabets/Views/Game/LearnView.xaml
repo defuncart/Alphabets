@@ -29,7 +29,7 @@
                     
                     <!--   Letter to learn     -->
                     <dfa:DALabel Grid.Row="0"
-                                 x:Name="letter"
+                                 x:Name="letterLabel"
                                  Text="ა"
                                  TextColor="{StaticResource Key=Color.Black}"
                                  HorizontalTextAlignment="Center"
@@ -42,7 +42,7 @@
                     
                     <!--   Transliteration    -->
                     <dfa:DALabel Grid.Row="1"
-                                 x:Name="transliteration"
+                                 x:Name="transliterationLabel"
                                  Text="A a"
                                  TextColor="{StaticResource Key=Color.DarkGray2}"
                                  HorizontalTextAlignment="Center"
@@ -51,7 +51,7 @@
                     
                     <!--   Pronounciation tip    -->
                     <Label Grid.Row="2"
-                           x:Name="pronounciation"
+                           x:Name="pronounciationLabel"
                            Text="ah as the a in father"
                            TextColor="{StaticResource Key=Color.DarkGray1}"
                            HorizontalTextAlignment="Center"
@@ -62,7 +62,8 @@
             
             <!--   Button to progress    -->
             <Button Grid.Row="2"
-                    Text="{i18n:Translate ok}" />
+                    Text="{i18n:Translate ok}" 
+                    Clicked="OnProceedButtonClicked" />
 
         </Grid>
     </ContentView.Content>

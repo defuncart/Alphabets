@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using Alphabets.Helpers;
 using Alphabets.Managers;
 using DeFuncArt.Localization.Managers;
 using Xamarin.Forms;
@@ -50,8 +51,7 @@ namespace Alphabets.Views
         /// <param name="index">The button's index.</param>
         private void OnLesssonButtonClicked(int index)
         {
-            Debug.WriteLine($"Button {index} clicked");
-
+            UserSettings.CurrenLessonIndex = index;
             Navigation.PushModalAsync(new GamePage());
         }
     }
