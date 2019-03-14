@@ -68,29 +68,25 @@ namespace DeFuncArt.Xamarin.Forms
         /// </summary>
         private void AutoFontSize()
         {
-            //determine the text height for the min font size
+            //initialize the upper and lower font sizes
             double lowerFontSize = (double)GetValue(MinFontSizeProperty);
-            double lowerTextHeight = TextHeightForFontSize(lowerFontSize);
-
-            //determine the text height for the max font size
             double upperFontSize = (double)GetValue(MaxFontSizeProperty);
-            double upperTextHeight = TextHeightForFontSize(upperFontSize);
 
             //start a loop which'll find the optimal font size
-            while(upperFontSize - lowerFontSize > 1)
+            while (upperFontSize - lowerFontSize > 1)
             {
                 //determine current average font size and calculate corresponding text height
                 double fontSize = (lowerFontSize + upperFontSize) / 2;
-                double textHeight = TextHeightForFontSize(upperFontSize);
+                double textHeight = TextHeightForFontSize(fontSize);
 
-                //if the calculated height is out of bounds, update max values, else update min values
-                if(textHeight > Height)
+                //if the calculated height is out of bounds, update upper size, else update lower size
+                if (textHeight > Height)
                 {
-                    upperFontSize = fontSize; upperTextHeight = textHeight;
+                    upperFontSize = fontSize;
                 }
                 else
                 {
-                    lowerFontSize = fontSize; lowerTextHeight = textHeight;
+                    lowerFontSize = fontSize;
                 }
             }
 
