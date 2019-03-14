@@ -32,7 +32,6 @@ namespace Alphabets.Views.Game
         /// </summary>
         public NavView()
         {
-            //initialize components
             InitializeComponent();
         }
 

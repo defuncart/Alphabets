@@ -23,14 +23,27 @@ namespace Alphabets.Views.Game
 
         #region Variables
 
-        private Random random;
+        /// <summary>An animation delay after answer submitted.</summary>
+        private const int ANIMATION_DELAY = 2000;
 
+        #endregion
+
+        #region Variables
+
+        /// <summary>An array of answer buttons.</summary>
+        private Button[] answerButtons;
+
+        /// <summary>The index of the correct answer button.</summary>
         private int correctAnswerButtonIndex;
 
-        //TODO hardcoded
-        private const int NUM_ANSWER_BUTTONS = 4;
+        /// <summary>A random number generator.</summary>
+        private Random random;
 
-        private Button[] answerButtons;
+        #endregion
+
+        #region Properties
+
+        private int NumberAnswerButtons => answerButtons.Length;
 
         #endregion
 
@@ -55,10 +68,16 @@ namespace Alphabets.Views.Game
             answerButtons = new Button[] { answerButton0, answerButton1, answerButton2, answerButton3 };
         }
 
+        /// <summary>
+        /// Sets up the view.
+        /// </summary>
+        /// <param name="letter">The letter to test.</param>
+        /// <param name="quizLetters">An array of letters valid for this lesson.</param>
+        /// <param name="isAlphabetToTrans">Whether to test from alphabet to transliterated or vice-versa.</param>
         public void Setup(Letter letter, Letter[] quizLetters, bool isAlphabetToTrans)
         {
             //determine correct answer index
-            correctAnswerButtonIndex = random.Next(NUM_ANSWER_BUTTONS);
+            correctAnswerButtonIndex = random.Next(NumberAnswerButtons);
 
             //determine the incorrect indices
             int[] incorrectIndices = { -1, -1, -1, -1 };
@@ -100,21 +119,21 @@ namespace Alphabets.Views.Game
 
             for (int i = 0; i < answerButtons.Length; i++)
             {
-                if (i == correctAnswerButtonIndex)
+                if (i == correctAnswerButtonIndex) //mark correct answer button as correct
                 {
                     answerButtons[i].Style = ResourceDictionary.GetStyle("Style.Button.MultipleChoice.Correct");
                 }
-                else if (!correct && i == index)
+                else if (!correct && i == index) //if answered incorrectly, mark button as incorrect
                 {
                     answerButtons[i].Style = ResourceDictionary.GetStyle("Style.Button.MultipleChoice.Incorrect");
                 }
-                else
+                else //remove any other buttons from the screen
                 {
                     answerButtons[i].IsEnabled = answerButtons[i].IsVisible = false;
                 }
             }
 
-            await Task.Delay(2000);
+            await Task.Delay(ANIMATION_DELAY);
 
             OnProceed?.Invoke();
         }

@@ -14,24 +14,31 @@ namespace Alphabets.Views
     {
         #region Variables
 
+        /// <summary>An instantiated learn view used to teach a new letter.</summary>
         private LearnView learnView;
+
+        /// <summary>An instantiated multiple choice view used to quiz a learned letter.</summary>
         private MultipleChoiceView multipleChoiceView;
 
+        /// <summary>The index of the current lesson part.</summary>
         private int lessonPartIndex = 0;
-        private ContentView currentContentView;
+
+        /// <summary>An array of quiz letters valid for this lesson.</summary>
+        private Letter[] quizLetters;
 
         #endregion
 
         #region Properties
 
         //TODO refactor to GameManager?
+        /// <summary>The current lesson.</summary>
         private Lesson lesson => CourseManager.Course.Lessons[UserSettings.CurrenLessonIndex];
 
+        /// <summary>The current lesson part.</summary>
         private LessonPart lessonPart => lesson.LessonParts[lessonPartIndex];
 
+        /// <summary>The total numner of lesson parts in this lesson.</summary>
         private int numberLessonParts => lesson.LessonParts.Length;
-
-        private Letter[] quizLetters;
 
         #endregion
 
@@ -64,41 +71,45 @@ namespace Alphabets.Views
             SetupNextLessonPart();
         }
 
-
-        public void SetupNextLessonPart()
+        /// <summary>
+        /// Setups the next lesson part.
+        /// </summary>
+        private void SetupNextLessonPart()
         {
-            //dertermine current letter
+            //determine current letter
             Letter letter = AlphabetManager.Alphabet.Letters[lessonPart.Letter];
 
-            //
+            //setup view
             switch (lessonPart.LessonPartType)
             {
                 case LessonPartType.Learning:
                     learnView.Setup(letter);
-                    currentContentView = learnView;
+                    contentView.Content = learnView;
                     break;
 
                 case LessonPartType.MCAlphabetToTransliteration:
                     multipleChoiceView.Setup(letter: letter, quizLetters: quizLetters, isAlphabetToTrans: true);
-                    currentContentView = multipleChoiceView;
+                    contentView.Content = multipleChoiceView;
                     break;
 
                 case LessonPartType.MCTransliterationToAlphabet:
                     multipleChoiceView.Setup(letter: letter, quizLetters: quizLetters, isAlphabetToTrans: false);
-                    currentContentView = multipleChoiceView;
+                    contentView.Content = multipleChoiceView;
                     break;
             }
 
-            //update view
-            contentView.Content = currentContentView;
+            //update progress bar
             navBar.Progress = lessonPartIndex / (numberLessonParts * 1.0);
         }
 
         #region Callbacks
 
+        /// <summary>
+        /// Callback when the next lesson part should be proceeded to.
+        /// </summary>
         private void OnProceedToNextLessonPart()
         {
-            if(++lessonPartIndex < numberLessonParts)
+            if (++lessonPartIndex < numberLessonParts)
             {
                 SetupNextLessonPart();
             }
