@@ -1,7 +1,9 @@
 ﻿using Alphabets.Models;
 using DeFuncArt.Extensions;
 using System;
+using System.Threading.Tasks;
 using Xamarin.Forms;
+using ResourceDictionary = Alphabets.Helpers.ResourceDictionary;
 
 namespace Alphabets.Views.Game
 {
@@ -61,9 +63,9 @@ namespace Alphabets.Views.Game
             //determine the incorrect indices
             int[] incorrectIndices = { -1, -1, -1, -1 };
             incorrectIndices[correctAnswerButtonIndex] = quizLetters.IndexOf(letter);
-            for(int i=0; i < incorrectIndices.Length; i++)
+            for (int i = 0; i < incorrectIndices.Length; i++)
             {
-                if(i != correctAnswerButtonIndex)
+                if (i != correctAnswerButtonIndex)
                 {
                     int falseIndex;
                     do
@@ -76,9 +78,11 @@ namespace Alphabets.Views.Game
 
             //update ui
             questionLabel.Text = isAlphabetToTrans ? letter.Display : letter.TransDisplay;
-            for(int i=0; i < answerButtons.Length; i++)
+            for (int i = 0; i < answerButtons.Length; i++)
             {
                 answerButtons[i].Text = isAlphabetToTrans ? quizLetters[incorrectIndices[i]].TransDisplay : quizLetters[incorrectIndices[i]].Display;
+                answerButtons[i].Style = ResourceDictionary.GetStyle("Style.Button.MultipleChoice.Default");
+                answerButtons[i].IsEnabled = answerButtons[i].IsVisible = true;
             }
         }
 
@@ -90,8 +94,28 @@ namespace Alphabets.Views.Game
         /// Callback when an answer button is pressed.
         /// </summary>
         /// <param name="index">The button index.</param>
-        private void OnAnswerButtonClicked(int index)
+        async private void OnAnswerButtonClicked(int index)
         {
+            bool correct = index == correctAnswerButtonIndex;
+
+            for (int i = 0; i < answerButtons.Length; i++)
+            {
+                if (i == correctAnswerButtonIndex)
+                {
+                    answerButtons[i].Style = ResourceDictionary.GetStyle("Style.Button.MultipleChoice.Correct");
+                }
+                else if (!correct && i == index)
+                {
+                    answerButtons[i].Style = ResourceDictionary.GetStyle("Style.Button.MultipleChoice.Incorrect");
+                }
+                else
+                {
+                    answerButtons[i].IsEnabled = answerButtons[i].IsVisible = false;
+                }
+            }
+
+            await Task.Delay(2000);
+
             OnProceed?.Invoke();
         }
 

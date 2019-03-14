@@ -21,7 +21,7 @@
                          HorizontalTextAlignment="Center"
                          VerticalTextAlignment="Center"
                          MinFontSize="20"
-                         MaxFontSize="200"
+                         MaxFontSize="160"
                          BackgroundColor="Transparent"
                          HorizontalOptions="Fill"
                          VerticalOptions="Fill" />
