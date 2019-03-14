@@ -28,7 +28,7 @@
             <ProgressBar Grid.Row="1" Grid.Column="3"
                          x:Name="progressBar"
                          ScaleY="1"
-                         BackgroundColor="{StaticResource Key=Color.DarkGray2}"
+                         BackgroundColor="{StaticResource Key=Color.DarkGray1}"
                          ProgressColor="{StaticResource Key=Color.White}"
                          Progress="0" />
             

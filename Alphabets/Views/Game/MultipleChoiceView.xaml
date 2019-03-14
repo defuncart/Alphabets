@@ -17,7 +17,7 @@
             <dfa:DALabel Grid.Row="0"
                          x:Name="questionLabel"
                          Text="ა"
-                         TextColor="{StaticResource Key=Color.Black}"
+                         TextColor="{StaticResource Key=Color.DarkGray2}"
                          HorizontalTextAlignment="Center"
                          VerticalTextAlignment="Center"
                          MinFontSize="20"
