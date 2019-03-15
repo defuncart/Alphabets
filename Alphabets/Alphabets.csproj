@@ -38,6 +38,7 @@
     <Folder Include="Resources\Audio\SFX\" />
     <Folder Include="Resources\Audio\Alphabets\" />
     <Folder Include="Resources\Audio\Alphabets\Georgian\" />
+    <Folder Include="DeFuncArt\Audio\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Database\Georgian\Alphabet.json" />
