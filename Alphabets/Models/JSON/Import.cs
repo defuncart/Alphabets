@@ -41,6 +41,11 @@ namespace Alphabets.Models.JSON
         /// A dictionary of pronounciation tips per localized language.
         /// </summary>
         public Dictionary<string, string> PronounciationTips;
+
+        /// <summary>
+        /// The audio resource identifier.
+        /// </summary>
+        public string ResourceId;
     }
 
     /// <summary>

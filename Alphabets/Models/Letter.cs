@@ -20,15 +20,7 @@ namespace Alphabets.Models
         /// </summary>
         private string[] transCases;
 
-        /// <summary>
-        /// The alternative letters.
-        /// </summary>
-        private string[] alternativeLetters;
-
-        /// <summary>
-        /// The cursive cases.
-        /// </summary>
-        private string[] cursiveCases;
+        //TODO add string[] alternativeLetters, string[] cursiveCases
 
         /// <summary>
         /// A dictionary of pronounciation tips per localized language.
@@ -37,15 +29,19 @@ namespace Alphabets.Models
         private Dictionary<string, string> pronounciationTips;
 
         /// <summary>
+        //  The audio resource identifier.
+        /// </summary>
+        private string resourceId;
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="T:Alphabets.Models.Letter"/> class.
         /// </summary>
-        public Letter(string[] cases, string[] transCases, Dictionary<string, string> pronounciationTips, string[] alternativeLetters = null, string[] cursiveCases = null)
+        public Letter(string[] cases, string[] transCases, Dictionary<string, string> pronounciationTips, string resourceId)
         {
             this.cases = cases;
             this.transCases = transCases;
             this.pronounciationTips = pronounciationTips;
-            this.alternativeLetters = alternativeLetters;
-            this.cursiveCases = cursiveCases;
+            this.resourceId = resourceId;
 
             //initialize display strings
             Display = HasTwoCases ? $"{UpperCase}{LowerCase}" : $"{LowerCase}";
@@ -95,6 +91,11 @@ namespace Alphabets.Models
         /// A localized pronounciation tip.
         /// </summary>
         public string PronounciationTip => pronounciationTips[UserSettings.Language];
+
+        /// <summary>
+        /// The audio resource identifier.
+        /// </summary>
+        public string ResourceId => resourceId;
 
         #endregion
 
