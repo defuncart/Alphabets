@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using Alphabets.Helpers;
 using Alphabets.Managers;
-using DeFuncArt.Localization.Managers;
+using DeFuncArt.Localization;
 using Xamarin.Forms;
 using ResourceDictionary = Alphabets.Helpers.ResourceDictionary;
 

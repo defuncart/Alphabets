@@ -23,7 +23,6 @@
     <Folder Include="Resources\Localization\" />
     <Folder Include="DeFuncArt\" />
     <Folder Include="DeFuncArt\Localization\" />
-    <Folder Include="DeFuncArt\Localization\Managers\" />
     <Folder Include="DeFuncArt\Localization\Helpers\" />
     <Folder Include="Models\" />
     <Folder Include="Managers\" />
