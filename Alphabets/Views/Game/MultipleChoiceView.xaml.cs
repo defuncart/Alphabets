@@ -1,4 +1,5 @@
 ﻿using Alphabets.Models;
+using DeFuncArt.Audio;
 using DeFuncArt.Extensions;
 using System;
 using System.Threading.Tasks;
@@ -133,8 +134,14 @@ namespace Alphabets.Views.Game
                 }
             }
 
+            //audio feedback
+            //TODO hardcoded volume
+            AudioManager.Play(filename: correct ? "SFX.answerCorrect" : "SFX.answerIncorrect", volume: 0.15f);
+
+            //delay so play can observe correct answer
             await Task.Delay(ANIMATION_DELAY);
 
+            //proceed to next lesson part
             OnProceed?.Invoke();
         }
 

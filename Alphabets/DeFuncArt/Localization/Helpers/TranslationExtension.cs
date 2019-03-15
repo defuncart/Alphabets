@@ -1,4 +1,4 @@
-﻿using DeFuncArt.Localization.Managers;
+﻿using DeFuncArt.Localization;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;

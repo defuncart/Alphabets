@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Resources;
 
-namespace DeFuncArt.Localization.Managers
+namespace DeFuncArt.Localization
 {
     /// <summary>
     /// A localization manager which acts as a wrapper for the multilingual plugin.

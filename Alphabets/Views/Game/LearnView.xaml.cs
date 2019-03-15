@@ -1,4 +1,5 @@
 ﻿using Alphabets.Models;
+using DeFuncArt.Audio;
 using System;
 using Xamarin.Forms;
 
@@ -33,9 +34,13 @@ namespace Alphabets.Views.Game
         /// </summary>
         public void Setup(Letter letter)
         {
+            //update ui
             letterLabel.Text = letter.Display;
             transliterationLabel.Text = letter.TransDisplay;
             pronounciationLabel.Text = letter.PronounciationTip;
+
+            //play letter pronounciation
+            AudioManager.Play(letter.ResourceId, "mp3");
         }
 
         #endregion

@@ -1,6 +1,6 @@
 ﻿using Alphabets.Helpers;
 using Alphabets.Views;
-using DeFuncArt.Localization.Managers;
+using DeFuncArt.Localization;
 using DeFuncArt.Localization.Helpers;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;

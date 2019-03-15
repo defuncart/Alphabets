@@ -40,7 +40,7 @@ namespace Alphabets.Managers
             List<Letter> letters = new List<Letter>();
             foreach(LetterImport letterImport in alphabetImport.Letters)
             {
-                letters.Add(new Letter(cases: letterImport.Cases, transCases: letterImport.TransCases, pronounciationTips: letterImport.PronounciationTips));
+                letters.Add(new Letter(cases: letterImport.Cases, transCases: letterImport.TransCases, pronounciationTips: letterImport.PronounciationTips, resourceId: letterImport.ResourceId));
             }
 
             //create alphabet
