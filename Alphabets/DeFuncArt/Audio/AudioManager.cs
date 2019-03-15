@@ -20,6 +20,11 @@ namespace DeFuncArt.Audio
         private static readonly ISimpleAudioPlayer player;
 
         /// <summary>
+        /// Whether the manager is currently playing an audiofile.
+        /// </summary>
+        public static bool IsPlaying => player.IsPlaying;
+
+        /// <summary>
         /// Initializes the <see cref="T:DeFuncArt.Audio.AudioManager"/> class.
         /// </summary>
         static AudioManager()
@@ -32,7 +37,7 @@ namespace DeFuncArt.Audio
         /// </summary>
         /// <param name="filename">The filename (i.e. SFX.answerCorrect).</param>
         /// <param name="fileFormat">The file format.</param>
-        public static void Play(string filename, string fileFormat = DEFAULT_FILE_FORMAT)
+        public static void Play(string filename, string fileFormat = DEFAULT_FILE_FORMAT, float volume = 1)
         {
             //determine resource id
             string resourceId = $"{FileHelper.AssemblyName}.{RESOURCE_PREFIX}.{filename}.{fileFormat}";
@@ -40,8 +45,16 @@ namespace DeFuncArt.Audio
             //get the stream
             Stream stream = FileHelper.GetStream(resourceId);
 
-            //load the stream and play it
+            //load the stream
             player.Load(stream);
+
+            //set volume
+            if(volume >= 0 && volume <= 1)
+            {
+                player.Volume = volume;
+            }
+
+            //play
             player.Play();
         }
     }

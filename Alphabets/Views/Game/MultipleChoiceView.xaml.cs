@@ -135,7 +135,8 @@ namespace Alphabets.Views.Game
             }
 
             //audio feedback
-            AudioManager.Play(correct ? "SFX.answerCorrect" : "SFX.answerIncorrect");
+            //TODO hardcoded volume
+            AudioManager.Play(filename: correct ? "SFX.answerCorrect" : "SFX.answerIncorrect", volume: 0.15f);
 
             //delay so play can observe correct answer
             await Task.Delay(ANIMATION_DELAY);
