@@ -33,6 +33,7 @@
     <Folder Include="Resources\Database\Georgian\" />
     <Folder Include="DeFuncArt\Xamarin.Forms\" />
     <Folder Include="Views\Game\" />
+    <Folder Include="DeFuncArt\Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Database\Georgian\Alphabet.json" />

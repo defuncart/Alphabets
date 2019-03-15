@@ -43,7 +43,7 @@
             <Style x:Key="Style.Button.MultipleChoice.Default" 
                    TargetType="Button">
                 <Setter Property="BackgroundColor" Value="{StaticResource Key=Color.White}" />
-                <Setter Property="TextColor" Value="{StaticResource Key=Color.Black}" />
+                <Setter Property="TextColor" Value="{StaticResource Key=Color.DarkGray1}" />
                 <Setter Property="CornerRadius" Value="10" />
             </Style>
             
