@@ -35,10 +35,51 @@
     <Folder Include="DeFuncArt\Xamarin.Forms\" />
     <Folder Include="Views\Game\" />
     <Folder Include="DeFuncArt\Extensions\" />
+    <Folder Include="Resources\Audio\" />
+    <Folder Include="Resources\Audio\SFX\" />
+    <Folder Include="Resources\Audio\Alphabets\" />
+    <Folder Include="Resources\Audio\Alphabets\Georgian\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Database\Georgian\Alphabet.json" />
     <EmbeddedResource Include="Resources\Database\Georgian\Course.json" />
+    <EmbeddedResource Include="Resources\Audio\SFX\answerCorrect.wav" />
+    <EmbeddedResource Include="Resources\Audio\SFX\answerIncorrect.wav" />
+    <EmbeddedResource Include="Resources\Audio\SFX\buttonGeneric.wav" />
+    <EmbeddedResource Include="Resources\Audio\SFX\lessonComplete.wav" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\01.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\02.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\03.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\04.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\05.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\06.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\07.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\08.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\09.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\10.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\11.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\12.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\13.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\14.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\15.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\16.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\17.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\18.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\19.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\20.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\21.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\22.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\23.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\24.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\25.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\26.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\27.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\28.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\29.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\30.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\31.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\32.mp3" />
+    <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\33.mp3" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Resources\Localization\Resources.resx">
@@ -49,6 +90,43 @@
   <ItemGroup>
     <None Remove="Resources\Database\Georgian\Alphabet.json" />
     <None Remove="Resources\Database\Georgian\Course.json" />
+    <None Remove="Resources\Audio\SFX\answerCorrect.wav" />
+    <None Remove="Resources\Audio\SFX\answerIncorrect.wav" />
+    <None Remove="Resources\Audio\SFX\buttonGeneric.wav" />
+    <None Remove="Resources\Audio\SFX\lessonComplete.wav" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\01.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\02.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\03.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\04.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\05.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\06.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\07.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\08.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\09.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\10.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\11.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\12.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\13.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\14.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\15.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\16.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\17.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\18.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\19.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\20.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\21.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\22.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\23.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\24.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\25.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\26.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\27.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\28.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\29.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\30.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\31.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\32.mp3" />
+    <None Remove="Resources\Audio\Alphabets\Georgian\33.mp3" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Resources\Localization\Resources.Designer.cs">
