@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace Alphabets.Views.Game
 {
@@ -33,6 +34,15 @@ namespace Alphabets.Views.Game
         public NavView()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// Animates the progress to a given value over a given duration with a given easing.
+        /// Can be awaited on.
+        /// </summary>
+        public async Task<bool> AnimateProgressTo(double value, uint duration, Easing easing)
+        {
+            return await progressBar.ProgressTo(value, duration, easing);
         }
 
         #endregion

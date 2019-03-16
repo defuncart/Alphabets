@@ -1,9 +1,11 @@
 ﻿using Alphabets.Enums;
+using Alphabets.Helpers;
 using Alphabets.Managers;
 using Alphabets.Models;
 using Alphabets.Views.Game;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Xamarin.Forms;
-using Alphabets.Helpers;
 
 namespace Alphabets.Views
 {
@@ -12,6 +14,21 @@ namespace Alphabets.Views
     /// </summary>
     public partial class GamePage : ContentPage
     {
+        #region Constants
+
+        /// <summary>The duration of the progress bar.</summary>
+        private const int PROGRESS_BAR_DURATION = 250;
+
+        /// <summary>Animation delays for lesson part types.</summary>
+        private readonly Dictionary<LessonPartType, int> ANIMATION_DELAYS = new Dictionary<LessonPartType, int>()
+        {
+            { LessonPartType.Learning, 0 },
+            { LessonPartType.MCAlphabetToTransliteration, 1750 },
+            { LessonPartType.MCTransliterationToAlphabet, 1750 }
+        };
+
+        #endregion
+
         #region Variables
 
         /// <summary>An instantiated learn view used to teach a new letter.</summary>
@@ -36,6 +53,9 @@ namespace Alphabets.Views
 
         /// <summary>The current lesson part.</summary>
         private LessonPart lessonPart => lesson.LessonParts[lessonPartIndex];
+
+        /// <summary>The current lesson part type.</summary>
+        private LessonPartType lessonPartType => lessonPart.LessonPartType;
 
         /// <summary>The total numner of lesson parts in this lesson.</summary>
         private int numberLessonParts => lesson.LessonParts.Length;
@@ -67,6 +87,9 @@ namespace Alphabets.Views
                 quizLetters[i] = AlphabetManager.Alphabet.Letters[lesson.CumulativeLetters[i]];
             }
 
+            //initialize ui
+            navBar.Progress = 0;
+
             //setup the next lesson part
             SetupNextLessonPart();
         }
@@ -97,9 +120,6 @@ namespace Alphabets.Views
                     contentView.Content = multipleChoiceView;
                     break;
             }
-
-            //update progress bar
-            navBar.Progress = lessonPartIndex / (numberLessonParts * 1.0);
         }
 
         #region Callbacks
@@ -107,8 +127,16 @@ namespace Alphabets.Views
         /// <summary>
         /// Callback when the next lesson part should be proceeded to.
         /// </summary>
-        private void OnProceedToNextLessonPart()
+        async private void OnProceedToNextLessonPart()
         {
+            //update progress bar
+            double progress = (lessonPartIndex + 1) / (numberLessonParts * 1.0);
+            await navBar.AnimateProgressTo(value: progress, duration: PROGRESS_BAR_DURATION, easing: Easing.Linear);
+
+            //add an delay if needed
+            await Task.Delay(ANIMATION_DELAYS[lessonPartType]);
+
+            //determine if the lesson is complete
             if (++lessonPartIndex < numberLessonParts)
             {
                 SetupNextLessonPart();

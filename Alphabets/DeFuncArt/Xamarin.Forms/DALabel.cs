@@ -52,6 +52,15 @@ namespace DeFuncArt.Xamarin.Forms
         }
 
         /// <summary>
+        /// The label's formatted text.
+        /// </summary>
+        new public FormattedString FormattedText
+        {
+            get { return (FormattedString)GetValue(FormattedTextProperty); }
+            set { SetValue(FormattedTextProperty, value); AutoFontSize(); }
+        }
+
+        /// <summary>
         /// Callback when the size of the element is set during a layout cycle.
         /// </summary>
         protected override void OnSizeAllocated(double width, double height)
@@ -75,11 +84,25 @@ namespace DeFuncArt.Xamarin.Forms
             //start a loop which'll find the optimal font size
             while (upperFontSize - lowerFontSize > 1)
             {
-                //determine current average font size and calculate corresponding text height
+                //determine current average font size
                 double fontSize = (lowerFontSize + upperFontSize) / 2;
-                double textHeight = TextHeightForFontSize(fontSize);
 
-                //if the calculated height is out of bounds, update upper size, else update lower size
+                //calculate corresponding text height
+                double textHeight; 
+                if(FormattedText == null) //if there is no formatted text, simply set the overall font size
+                {
+                    FontSize = fontSize;
+                }
+                else //otherwise set the font size per span component
+                {
+                    foreach (Span span in FormattedText.Spans)
+                    {
+                        span.FontSize = fontSize;
+                    }
+                }
+                textHeight = OnMeasure(Width, Double.PositiveInfinity).Request.Height;
+
+                //if the calculated height is out of bounds, update upper size, otherwise update lower size
                 if (textHeight > Height)
                 {
                     upperFontSize = fontSize;
@@ -92,15 +115,6 @@ namespace DeFuncArt.Xamarin.Forms
 
             //finally set the correct font size
             FontSize = lowerFontSize;
-        }
-
-        /// <summary>
-        /// Determines the text height for the label with a given font size.
-        /// </summary>
-        private double TextHeightForFontSize(double fontSize)
-        {
-            FontSize = fontSize;
-            return OnMeasure(Width, Double.PositiveInfinity).Request.Height;
         }
     }
 }

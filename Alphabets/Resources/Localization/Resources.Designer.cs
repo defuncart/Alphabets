@@ -53,6 +53,12 @@ namespace Alphabets.Resources.Localization {
             }
         }
         
+        internal static string _continue {
+            get {
+                return ResourceManager.GetString("continue", resourceCulture);
+            }
+        }
+        
         internal static string main_lesson_namevalue {
             get {
                 return ResourceManager.GetString("main_lesson_namevalue", resourceCulture);

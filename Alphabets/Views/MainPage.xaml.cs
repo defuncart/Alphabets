@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using Alphabets.Helpers;
+﻿using Alphabets.Helpers;
 using Alphabets.Managers;
 using DeFuncArt.Localization;
 using Xamarin.Forms;
@@ -21,15 +20,14 @@ namespace Alphabets.Views
             //initialize all components
             InitializeComponent();
 
-            //TODO
+            //TODO debug
             AlphabetManager.Log();
             CourseManager.Log();
 
             //constuct UI
 
             //TODO hardcoded
-            Title = "Georgian";
-            languageNameText.Text = "ქართული";
+            Title = "ქართული";
 
             //add lesson buttons
             for (int i = 0; i < CourseManager.Course.Lessons.Length; i++)
@@ -46,12 +44,30 @@ namespace Alphabets.Views
         }
 
         /// <summary>
+        /// Callback before the page becomes visible.
+        /// </summary>
+        protected override void OnAppearing()
+        {
+            //call base implementaiton
+            base.OnAppearing();
+
+            //enabled all interaction
+            IsEnabled = true;
+        }
+
+        /// <summary>
         /// Callback when a lesson button was clicked.
         /// </summary>
         /// <param name="index">The button's index.</param>
         private void OnLesssonButtonClicked(int index)
         {
+            //disable all interaction
+            IsEnabled = false;
+
+            //update current lesson index
             UserSettings.CurrenLessonIndex = index;
+
+            //start lesson
             Navigation.PushModalAsync(new GamePage());
         }
     }
