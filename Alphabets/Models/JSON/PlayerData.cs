@@ -1,4 +1,6 @@
-﻿namespace Alphabets.Models.JSON
+﻿using System.Collections.Generic;
+
+namespace Alphabets.Models.JSON
 {
     /// <summary>
     /// A model representing the save data for a player.
@@ -6,20 +8,9 @@
     public class PlayerData
     {
         /// <summary>
-        /// An array of alphabets.
+        /// A dictionary of LetterSaveData reference by id.
         /// </summary>
-        public AlphabetSaveData[] Alphabets;
-    }
-
-    /// <summary>
-    /// A model representing the save data for an alphabet.
-    /// </summary>
-    public class AlphabetSaveData
-    {
-        /// <summary>
-        /// An array of letters.
-        /// </summary>
-        public LetterSaveData[] Letters;
+        public Dictionary<string, LetterSaveData> lettersSaveData;
     }
 
     /// <summary>
@@ -27,11 +18,6 @@
     /// </summary>
     public class LetterSaveData
     {
-        /// <summary>
-        /// The letter's identifier.
-        /// </summary>
-        public string Id;
-
         /// <summary>
         /// The times the letter has been attempted (multiple choice and writing).
         /// </summary>
