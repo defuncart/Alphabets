@@ -73,16 +73,11 @@ namespace Alphabets.Managers
         /// <param name="correctly">Whether letter was answered correctly.</param>
         public static void UpdateLetter(Letter letter, bool correctly)
         {
-            Debug.WriteLine($"LetterAnswered {letter.ResourceId} | {correctly}");
-
             if (playerData.LettersSaveData.TryGetValue(letter.ResourceId, out LetterSaveData letterSaveData))
             {
                 letterSaveData.Attempts++;
                 if (correctly) { letterSaveData.Correct++; }
             }
-
-            //TODO save once per lesson?
-            WriteToDisk();
         }
 
         /// <summary>

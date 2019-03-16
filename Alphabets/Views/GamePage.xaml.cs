@@ -156,6 +156,7 @@ namespace Alphabets.Views
         {
             //TODO display warning popup
 
+            PlayerDataManager.WriteToDisk();
             Navigation.PopModalAsync();
         }
 
