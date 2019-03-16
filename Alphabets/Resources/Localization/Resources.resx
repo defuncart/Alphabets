@@ -14,5 +14,6 @@
     </resheader>
     
     <data name="ok" xml:space="preserve"><value>Ok</value><comment>Generic ok test for popups etc.</comment></data>
+    <data name="continue" xml:space="preserve"><value>Continue</value><comment></comment></data>
     <data name="main_lesson_namevalue" xml:space="preserve"><value>Lesson {0}</value><comment>Of the form Lesson 1, Lesson 2 etc.</comment></data>
 </root>

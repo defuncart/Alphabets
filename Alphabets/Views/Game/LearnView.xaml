@@ -70,8 +70,9 @@
             
             <!--   Button to progress    -->
             <Button Grid.Row="2"
-                    Text="{i18n:Translate ok}"
+                    Text="{i18n:Translate continue}"
                     TextColor="{StaticResource Key=Color.White}"
+                    FontSize="Large"
                     BackgroundColor="{StaticResource Key=Color.DarkGray1}"
                     Clicked="OnProceedButtonClicked" />
 
