@@ -39,10 +39,14 @@ namespace Alphabets.Views.Game
         /// <summary>A random number generator.</summary>
         private Random random;
 
+        /// <summary>The current letter.</summary>
+        private Letter letter;
+
         #endregion
 
         #region Properties
 
+        /// <summary>The number of answer buttons.</summary>
         private int NumberAnswerButtons => answerButtons.Length;
 
         #endregion
@@ -76,6 +80,9 @@ namespace Alphabets.Views.Game
         /// <param name="isAlphabetToTrans">Whether to test from alphabet to transliterated or vice-versa.</param>
         public void Setup(Letter letter, Letter[] quizLetters, bool isAlphabetToTrans)
         {
+            //cache the letter
+            this.letter = letter;
+
             //determine correct answer index
             correctAnswerButtonIndex = random.Next(NumberAnswerButtons);
 
@@ -132,6 +139,10 @@ namespace Alphabets.Views.Game
                     answerButtons[i].IsEnabled = answerButtons[i].IsVisible = false;
                 }
             }
+
+            //TODO maybe move to GamePage?
+            //update player data
+            Managers.PlayerDataManager.UpdateLetter(letter, correct);
 
             //audio feedback
             //TODO hardcoded volume

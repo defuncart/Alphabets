@@ -15,18 +15,36 @@ namespace Alphabets.Managers
     public static class CourseManager
     {
         /// <summary>
+        /// An array of courses.
+        /// </summary>
+        private static readonly Course[] courses;
+
+        /// <summary>
         /// The current course.
         /// </summary>
-        public static Course Course { get; }
+        public static Course Course => courses[UserSettings.CurrentCourseIndex];
 
         /// <summary>
         /// Initializes the <see cref="T:Alphabets.Managers.CourseManager"/> class.
         /// </summary>
         static CourseManager()
         {
-            //determine current alphabet/course
-            AlphabetType alphabetType = (AlphabetType)UserSettings.CurrentCourseIndex;
+            //get an array of alphabet types (i.e. Georgian, Russian)
+            AlphabetType[] alphabetTypes = (AlphabetType[])System.Enum.GetValues(typeof(AlphabetType));
 
+            //create all courses
+            courses = new Course[alphabetTypes.Length];
+            for (int i = 0; i < courses.Length; i++)
+            {
+                courses[i] = CreateCourse(alphabetTypes[i]);
+            }
+        }
+
+        /// <summary>
+        /// Creates a course from json using a given AlphabetType.
+        /// </summary>
+        private static Course CreateCourse(AlphabetType alphabetType)
+        {
             //determine resource id
             string resourceId = $"Alphabets.Resources.Database.{alphabetType}.Course.json";
 
@@ -38,11 +56,11 @@ namespace Alphabets.Managers
 
             //create lessons
             List<Lesson> lessons = new List<Lesson>();
-            foreach(LessonImport lessonImport in courseImport.Lessons)
+            foreach (LessonImport lessonImport in courseImport.Lessons)
             {
                 //create lesson parts
                 List<LessonPart> lessonParts = new List<LessonPart>();
-                foreach(LessonPartImport lessonPartImport in lessonImport.LessonParts)
+                foreach (LessonPartImport lessonPartImport in lessonImport.LessonParts)
                 {
                     lessonParts.Add(new LessonPart(lessonPartType: lessonPartImport.LessonPartType, letter: lessonPartImport.Letter));
                 }
@@ -51,15 +69,17 @@ namespace Alphabets.Managers
             }
 
             //create course
-            Course = new Course(alphabetType: AlphabetType.Georgian, lessons: lessons.ToArray());
+            return new Course(alphabetType: AlphabetType.Georgian, lessons: lessons.ToArray());
         }
 
         //TODO DEBUG
         public static void Log()
         {
-            Debug.WriteLine(Course);
-
-            Debug.WriteLine(Course.Lessons[0]);
+            Debug.WriteLine($"There are {courses.Length} course(s)");
+            foreach (Course course in courses)
+            {
+                Debug.WriteLine(course);
+            }
         }
     }
 }
