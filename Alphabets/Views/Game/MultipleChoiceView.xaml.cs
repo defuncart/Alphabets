@@ -2,7 +2,6 @@
 using DeFuncArt.Audio;
 using DeFuncArt.Extensions;
 using System;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using ResourceDictionary = Alphabets.Helpers.ResourceDictionary;
 
@@ -114,7 +113,7 @@ namespace Alphabets.Views.Game
         /// Callback when an answer button is pressed.
         /// </summary>
         /// <param name="index">The button index.</param>
-        async private void OnAnswerButtonClicked(int index)
+        private void OnAnswerButtonClicked(int index)
         {
             bool correct = index == correctAnswerButtonIndex;
 
@@ -137,9 +136,6 @@ namespace Alphabets.Views.Game
             //audio feedback
             //TODO hardcoded volume
             AudioManager.Play(filename: correct ? "SFX.answerCorrect" : "SFX.answerIncorrect", volume: 0.15f);
-
-            //delay so play can observe correct answer
-            await Task.Delay(ANIMATION_DELAY);
 
             //proceed to next lesson part
             OnProceed?.Invoke();
