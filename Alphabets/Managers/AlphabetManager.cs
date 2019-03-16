@@ -20,6 +20,11 @@ namespace Alphabets.Managers
         private static readonly Alphabet[] alphabets;
 
         /// <summary>
+        /// An array of alphabets.
+        /// </summary>
+        public static Alphabet[] Alphabets => alphabets;
+
+        /// <summary>
         /// The current alphabet.
         /// </summary>
         public static Alphabet Alphabet => alphabets[UserSettings.CurrentCourseIndex];

@@ -23,6 +23,7 @@ namespace Alphabets.Views
             //TODO debug
             AlphabetManager.Log();
             CourseManager.Log();
+            PlayerDataManager.Log();
 
             //constuct UI
 

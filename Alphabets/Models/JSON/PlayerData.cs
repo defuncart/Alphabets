@@ -10,7 +10,7 @@ namespace Alphabets.Models.JSON
         /// <summary>
         /// A dictionary of LetterSaveData reference by id.
         /// </summary>
-        public Dictionary<string, LetterSaveData> lettersSaveData;
+        public Dictionary<string, LetterSaveData> LettersSaveData;
     }
 
     /// <summary>
