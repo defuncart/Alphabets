@@ -81,6 +81,19 @@ namespace Alphabets.Managers
         }
 
         /// <summary>
+        /// Gets the answered correctly ratio for a given letter.
+        /// </summary>
+        public static double GetCorrectRatioForLetter(Letter letter)
+        {
+            if (playerData.LettersSaveData.TryGetValue(letter.ResourceId, out LetterSaveData letterSaveData))
+            {
+                return letterSaveData.Correct / (letterSaveData.Attempts * 1.0);
+            }
+
+            return 0;
+        }
+
+        /// <summary>
         /// Writes the PlayerData to disk.
         /// </summary>
         public static void WriteToDisk()
