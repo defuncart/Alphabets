@@ -27,8 +27,7 @@ namespace Alphabets.Views
             //constuct UI
 
             //TODO hardcoded
-            Title = "Georgian";
-            languageNameText.Text = "ქართული";
+            Title = "ქართული";
 
             //add lesson buttons
             for (int i = 0; i < CourseManager.Course.Lessons.Length; i++)
