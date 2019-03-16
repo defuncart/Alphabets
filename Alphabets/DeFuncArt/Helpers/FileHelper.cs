@@ -17,8 +17,6 @@ namespace DeFuncArt.Helpers
         static FileHelper()
         {
             assembly = IntrospectionExtensions.GetTypeInfo(typeof(FileHelper)).Assembly;
-
-            System.Diagnostics.Debug.WriteLine(assembly.GetName().Name);
         }
 
         /// <summary>
