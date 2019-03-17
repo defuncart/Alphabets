@@ -3,6 +3,7 @@ using Alphabets.Helpers;
 using Alphabets.Managers;
 using Alphabets.Models;
 using Alphabets.Views.Game;
+using DeFuncArt.Localization;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -37,8 +38,14 @@ namespace Alphabets.Views
         /// <summary>An instantiated multiple choice view used to quiz a learned letter.</summary>
         private MultipleChoiceView multipleChoiceView;
 
+        /// <summary>An instantiated results view used at the end of a lesson.</summary>
+        private ResultsView resultsView;
+
         /// <summary>The index of the current lesson part.</summary>
         private int lessonPartIndex;
+
+        /// <summary>A list of letters learned this lesson.</summary>
+        private List<Letter> learnedLetters;
 
         /// <summary>An array of quiz letters valid for this lesson.</summary>
         private Letter[] quizLetters;
@@ -73,11 +80,16 @@ namespace Alphabets.Views
             //create subviews
             learnView = new LearnView();
             multipleChoiceView = new MultipleChoiceView();
+            resultsView = new ResultsView();
 
             //delegates
             navBar.ExitButton.Clicked += (object sender, System.EventArgs e) => NavBar_OnExitButtonClicked();
             learnView.OnProceed += OnProceedToNextLessonPart;
             multipleChoiceView.OnProceed += OnProceedToNextLessonPart;
+            resultsView.OnProceed += ResultsView_OnProceed;
+
+            //instantiate variables
+            learnedLetters = new List<Letter>();
 
             //reset the game
             Reset();
@@ -90,6 +102,7 @@ namespace Alphabets.Views
         {
             //initialize variables
             lessonPartIndex = 0;
+            learnedLetters.Clear();
 
             //TODO linq
             //determine quiz letters
@@ -113,6 +126,7 @@ namespace Alphabets.Views
         {
             //determine current letter
             Letter letter = AlphabetManager.Alphabet.Letters[lessonPart.Letter];
+            if (!learnedLetters.Contains(letter)) { learnedLetters.Add(letter); }
 
             //setup view
             switch (lessonPart.LessonPartType)
@@ -155,8 +169,27 @@ namespace Alphabets.Views
             }
             else
             {
-                //TODO
+                //HACK need to set content first so that the size of the list's rows can be determined
+                navBar.SetText(string.Format(LocalizationManager.GetValue("main_lesson_namevalue"), UserSettings.CurrenLessonIndex + 1));
+                contentView.Content = resultsView;
+                resultsView.SetUp(learnedLetters);
+            }
+        }
 
+        /// <summary>
+        /// Callback when the user wants to proceed from results view.
+        /// </summary>
+        private void ResultsView_OnProceed()
+        {
+            //if there are more lessons, preceed to next one
+            if (UserSettings.CurrenLessonIndex < CourseManager.Course.Lessons.Length - 1)
+            {
+                PlayerDataManager.WriteToDisk();
+                UserSettings.CurrenLessonIndex++;
+                Reset();
+            }
+            else //otherwise return to MainPage
+            {
                 NavBar_OnExitButtonClicked();
             }
         }
