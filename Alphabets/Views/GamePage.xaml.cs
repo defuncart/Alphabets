@@ -38,7 +38,7 @@ namespace Alphabets.Views
         private MultipleChoiceView multipleChoiceView;
 
         /// <summary>The index of the current lesson part.</summary>
-        private int lessonPartIndex = 0;
+        private int lessonPartIndex;
 
         /// <summary>An array of quiz letters valid for this lesson.</summary>
         private Letter[] quizLetters;
@@ -78,6 +78,18 @@ namespace Alphabets.Views
             navBar.ExitButton.Clicked += (object sender, System.EventArgs e) => NavBar_OnExitButtonClicked();
             learnView.OnProceed += OnProceedToNextLessonPart;
             multipleChoiceView.OnProceed += OnProceedToNextLessonPart;
+
+            //reset the game
+            Reset();
+        }
+
+        /// <summary>
+        /// Resets the game.
+        /// </summary>
+        private void Reset()
+        {
+            //initialize variables
+            lessonPartIndex = 0;
 
             //TODO linq
             //determine quiz letters
