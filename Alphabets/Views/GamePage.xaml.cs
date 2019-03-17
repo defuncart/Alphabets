@@ -88,7 +88,7 @@ namespace Alphabets.Views
             }
 
             //initialize ui
-            navBar.Progress = 0;
+            navBar.SetProgress(0);
 
             //setup the next lesson part
             SetupNextLessonPart();
