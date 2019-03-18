@@ -1,0 +1,58 @@
+{
+	"AlphabetType": "Georgian",
+	"Lessons": [
+		{
+  		"CumulativeLetters": [0, 8, 10, 11],
+  		"LessonParts": [
+  			{
+  				"LessonPartType": 0,
+  				"Letter": "0"
+  			},
+  			{
+  				"LessonPartType": 1,
+  				"Letter": "0"
+  			},
+  			{
+  				"LessonPartType": 0,
+  				"Letter": "8"
+  			},
+  			{
+  				"LessonPartType": 1,
+  				"Letter": "8"
+  			},
+  			{
+  				"LessonPartType": 0,
+  				"Letter": "10"
+  			},
+  			{
+  				"LessonPartType": 0,
+  				"Letter": "11"
+  			},
+  			{
+  				"LessonPartType": 1,
+  				"Letter": "10"
+  			},
+  			{
+  				"LessonPartType": 1,
+  				"Letter": "11"
+  			},
+  			{
+  				"LessonPartType": 2,
+  				"Letter": "0"
+  			},
+  			{
+  				"LessonPartType": 2,
+  				"Letter": "8"
+  			},
+  			{
+  				"LessonPartType": 2,
+  				"Letter": "10"
+  			},
+  			{
+  				"LessonPartType": 2,
+  				"Letter": "11"
+  			}
+  		]
+		}
+	]
+}

@@ -16,6 +16,18 @@ If you would like to build the app yourself, then you simply need:
 
 I personally use Visual Studio for Mac (version 7.7.2) but it should work on new versions and also on Visual Studio on Windows (without support for iOS building, of course).
 
+## Screenshots
+
+<table style="width:100%" cellspacing="5" cellpadding="5">
+  <tr>
+    <th><img src="http://defuncart.com/assets/images/games/alphabets/screenshot1.png" style="width:25%"></th>
+    <th><img src="http://defuncart.com/assets/images/games/alphabets/screenshot2.png" style="width:25%"></th>
+    <th><img src="http://defuncart.com/assets/images/games/alphabets/screenshot3.png" style="width:25%"></th>
+    <th><img src="http://defuncart.com/assets/images/games/alphabets/screenshot4.png" style="width:25%"></th>
+  </tr>
+</table>
+<p></p>
+
 ## Branching
 
 **master** contains the latest stable release.
@@ -30,4 +42,4 @@ The project isn't actively looking for contributors, however feel free to contac
 
 ## Credits
 
-Concept, Design and Programming by James Leahy.
+Concept, Design and Programming by James Leahy. [Full Credits](http://defuncart.com/games/alphabets/credits)/
