@@ -49,6 +49,28 @@ namespace Alphabets.Models.JSON
     }
 
     /// <summary>
+    /// An import json model for <see cref="T:Alphabets.Models.Word"/>.
+    /// </summary>
+    [Serializable]
+    public class WordImport
+    {
+        /// <summary>
+        /// The word written in the alphabet to learn.
+        /// </summary>
+        public string Alphabet;
+
+        /// <summary>
+        /// The word transliterated (ie written using latin alphabet).
+        /// </summary>
+        public string Transliterated;
+
+        /// <summary>
+        /// A dictionary of tips per localized language.
+        /// </summary>
+        public Dictionary<string, string> Tips;
+    }
+
+    /// <summary>
     /// An import json model for <see cref="T:Alphabets.Models.Course"/>.
     /// </summary>
     [Serializable]
