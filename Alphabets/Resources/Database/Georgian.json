@@ -339,6 +339,10 @@
       "CumulativeLetters": [ 0, 8, 10, 11 ],
       "LessonParts": [
         {
+          "LessonPartType": 3,
+          "Index": "0"
+        },
+        {
           "LessonPartType": 0,
           "Index": "0"
         },
@@ -391,6 +395,14 @@
     {
       "CumulativeLetters": [ 0, 8, 10, 11, 4, 13, 12, 17 ],
       "LessonParts": [
+        {
+          "LessonPartType": 3,
+          "Index": "5"
+        },
+        {
+          "LessonPartType": 3,
+          "Index": "9"
+        },
         {
           "LessonPartType": 0,
           "Index": "4"

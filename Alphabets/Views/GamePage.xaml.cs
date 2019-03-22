@@ -25,7 +25,8 @@ namespace Alphabets.Views
         {
             { LessonPartType.Learning, 0 },
             { LessonPartType.MCAlphabetToTransliteration, 1750 },
-            { LessonPartType.MCTransliterationToAlphabet, 1750 }
+            { LessonPartType.MCTransliterationToAlphabet, 1750 },
+            { LessonPartType.WordAlphabetToTransliteration, 1750 }
         };
 
         #endregion
@@ -37,6 +38,9 @@ namespace Alphabets.Views
 
         /// <summary>An instantiated multiple choice view used to quiz a learned letter.</summary>
         private MultipleChoiceView multipleChoiceView;
+
+        /// <summary>An instantiated typing view used to quiz a group of learned letters.</summary>
+        private TypingView typingView;
 
         /// <summary>An instantiated results view used at the end of a lesson.</summary>
         private ResultsView resultsView;
@@ -86,12 +90,14 @@ namespace Alphabets.Views
             //create subviews
             learnView = new LearnView();
             multipleChoiceView = new MultipleChoiceView();
+            typingView = new TypingView();
             resultsView = new ResultsView();
 
             //delegates
             navBar.ExitButton.Clicked += (object sender, System.EventArgs e) => NavBar_OnExitButtonClicked();
             learnView.OnProceed += OnProceedToNextLessonPart;
             multipleChoiceView.OnProceed += OnProceedToNextLessonPart;
+            typingView.OnProceed += OnProceedToNextLessonPart;
             resultsView.OnProceed += ResultsView_OnProceed;
 
             //instantiate variables
@@ -130,7 +136,7 @@ namespace Alphabets.Views
         /// </summary>
         private void SetupNextLessonPart()
         {
-            if(isLessonPartLetter)
+            if (isLessonPartLetter)
             {
                 //determine current letter
                 Letter letter = alphabet.Letters[lessonPart.Index];
@@ -154,6 +160,12 @@ namespace Alphabets.Views
                         contentView.Content = multipleChoiceView;
                         break;
                 }
+            }
+            else
+            {
+                Word word = CourseManager.CurrentCourse.Words[lessonPart.Index];
+                typingView.Setup(word: word, quizLetters: quizLetters, isAlphabetToTrans: true);
+                contentView.Content = typingView;
             }
         }
 

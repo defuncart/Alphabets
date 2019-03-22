@@ -21,7 +21,7 @@ namespace Alphabets.Views.Game
 
         #endregion
 
-        #region Variables
+        #region Constants
 
         /// <summary>An animation delay after answer submitted.</summary>
         private const int ANIMATION_DELAY = 2000;
