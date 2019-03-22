@@ -85,6 +85,11 @@ namespace Alphabets.Models.JSON
         /// The courses's lessons.
         /// </summary>
         public LessonImport[] Lessons;
+
+        /// <summary>
+        /// An array of practice words.
+        /// </summary>
+        public WordImport[] Words;
     }
 
     /// <summary>

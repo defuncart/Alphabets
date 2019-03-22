@@ -441,5 +441,124 @@
         }
       ]
     }
+  ],
+  "Words": [
+    {
+      "Original": "მამა",
+      "Transliteration": "mama",
+      "Tips": {
+        "en": "A family member",
+        "de": "A family member",
+        "pl": "A family member"
+      }
+    },
+    {
+      "Original": "მალი",
+      "Transliteration": "mali",
+      "Tips": {
+        "en": "An African country",
+        "de": "An African country",
+        "pl": "An African country"
+      }
+    },
+    {
+      "Original": "ლიმა",
+      "Transliteration": "lima",
+      "Tips": {
+        "en": "A city in South America",
+        "de": "A city in South America",
+        "pl": "A city in South America"
+      }
+    },
+    {
+      "Original": "მაიამი",
+      "Transliteration": "miami",
+      "Tips": {
+        "en": "A city in North America",
+        "de": "A city in North America",
+        "pl": "A city in North America"
+      }
+    },
+    {
+      "Original": "ლამა",
+      "Transliteration": "Llama",
+      "Tips": {
+        "en": "An animal",
+        "de": "An animal",
+        "pl": "An animal"
+      }
+    },
+    {
+      "Original": "ანა",
+      "Transliteration": "ana",
+      "Tips": {
+        "en": "A female name",
+        "de": "A female name",
+        "pl": "A female name"
+      }
+    },
+    {
+      "Original": "მილანი",
+      "Transliteration": "milan",
+      "Tips": {
+        "en": "A city in Europe",
+        "de": "A city in Europe",
+        "pl": "A city in Europe"
+      }
+    },
+    {
+      "Original": "ოსლო",
+      "Transliteration": "oslo",
+      "Tips": {
+        "en": "A city in Europe",
+        "de": "A city in Europe",
+        "pl": "A city in Europe"
+      }
+    },
+    {
+      "Original": "ანანასი",
+      "Transliteration": "ananasi",
+      "Tips": {
+        "en": "A fruit",
+        "de": "A fruit",
+        "pl": "A fruit"
+      }
+    },
+    {
+      "Original": "სონი",
+      "Transliteration": "soni",
+      "Tips": {
+        "en": "A japanese company",
+        "de": "A japanese company",
+        "pl": "A japanese company"
+      }
+    },
+    {
+      "Original": "ლაოსი",
+      "Transliteration": "laosi",
+      "Tips": {
+        "en": "A country in Asia",
+        "de": "A country in Asia",
+        "pl": "A country in Asia"
+      }
+    },
+    {
+      "Original": "ომანი",
+      "Transliteration": "omani",
+      "Tips": {
+        "en": "A country in Asia",
+        "de": "A country in Asia",
+        "pl": "A country in Asia"
+      }
+    },
+    {
+      "Original": "სომალი",
+      "Transliteration": "somali",
+      "Tips": {
+        "en": "A country in Africa",
+        "de": "A country in Africa",
+        "pl": "A country in Africa"
+      }
+    }
   ]
 }

@@ -17,7 +17,7 @@ namespace Alphabets.Managers
         /// <summary>
         /// An array of courses.
         /// </summary>
-        public static Course[] Courses { get; private set; }
+        public static Course[] Courses { get; }
 
         /// <summary>
         /// The current course.
@@ -75,8 +75,15 @@ namespace Alphabets.Managers
                 lessons.Add(new Lesson(cumulativeLetters: lessonImport.CumulativeLetters, lessonParts: lessonParts.ToArray()));
             }
 
+            //create words
+            List<Word> words = new List<Word>();
+            foreach (WordImport wordImport in courseImport.Words)
+            {
+                words.Add(new Word(original: wordImport.Original, transliteration: wordImport.Transliteration, tips: wordImport.Tips));
+            }
+
             //create course
-            return new Course(title: courseImport.Title, alphabet: new Alphabet(letters.ToArray()), lessons: lessons.ToArray());
+            return new Course(title: courseImport.Title, alphabet: new Alphabet(letters.ToArray()), lessons: lessons.ToArray(), words: words.ToArray());
         }
 
         //TODO DEBUG
