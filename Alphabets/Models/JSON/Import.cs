@@ -121,8 +121,8 @@ namespace Alphabets.Models.JSON
         public LessonPartType LessonPartType;
 
         /// <summary>
-        /// The main letter (i.e being taught/quized).
+        /// Either the index of the main letter being taught/quized or the index of the word to transliterate.
         /// </summary>
-        public int Letter;
+        public int Index;
     }
 }

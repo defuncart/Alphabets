@@ -340,51 +340,51 @@
       "LessonParts": [
         {
           "LessonPartType": 0,
-          "Letter": "0"
+          "Index": "0"
         },
         {
           "LessonPartType": 1,
-          "Letter": "0"
+          "Index": "0"
         },
         {
           "LessonPartType": 0,
-          "Letter": "8"
+          "Index": "8"
         },
         {
           "LessonPartType": 1,
-          "Letter": "8"
+          "Index": "8"
         },
         {
           "LessonPartType": 0,
-          "Letter": "10"
+          "Index": "10"
         },
         {
           "LessonPartType": 0,
-          "Letter": "11"
+          "Index": "11"
         },
         {
           "LessonPartType": 1,
-          "Letter": "10"
+          "Index": "10"
         },
         {
           "LessonPartType": 1,
-          "Letter": "11"
+          "Index": "11"
         },
         {
           "LessonPartType": 2,
-          "Letter": "0"
+          "Index": "0"
         },
         {
           "LessonPartType": 2,
-          "Letter": "8"
+          "Index": "8"
         },
         {
           "LessonPartType": 2,
-          "Letter": "10"
+          "Index": "10"
         },
         {
           "LessonPartType": 2,
-          "Letter": "11"
+          "Index": "11"
         }
       ]
     },
@@ -393,51 +393,51 @@
       "LessonParts": [
         {
           "LessonPartType": 0,
-          "Letter": "4"
+          "Index": "4"
         },
         {
           "LessonPartType": 1,
-          "Letter": "4"
+          "Index": "4"
         },
         {
           "LessonPartType": 0,
-          "Letter": "13"
+          "Index": "13"
         },
         {
           "LessonPartType": 1,
-          "Letter": "13"
+          "Index": "13"
         },
         {
           "LessonPartType": 0,
-          "Letter": "12"
+          "Index": "12"
         },
         {
           "LessonPartType": 0,
-          "Letter": "17"
+          "Index": "17"
         },
         {
           "LessonPartType": 1,
-          "Letter": "12"
+          "Index": "12"
         },
         {
           "LessonPartType": 1,
-          "Letter": "17"
+          "Index": "17"
         },
         {
           "LessonPartType": 2,
-          "Letter": "4"
+          "Index": "4"
         },
         {
           "LessonPartType": 2,
-          "Letter": "13"
+          "Index": "13"
         },
         {
           "LessonPartType": 2,
-          "Letter": "12"
+          "Index": "12"
         },
         {
           "LessonPartType": 2,
-          "Letter": "17"
+          "Index": "17"
         }
       ]
     }

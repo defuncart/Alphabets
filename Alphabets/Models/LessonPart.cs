@@ -13,17 +13,17 @@ namespace Alphabets.Models
         public LessonPartType LessonPartType { get; }
 
         /// <summary>
-        /// The main letter (i.e being taught/quized).
+        /// Either the index of the main letter being taught/quized or the index of the word to transliterate.
         /// </summary>
-        public int Letter { get; }
+        public int Index { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Alphabets.Models.LessonPart"/> class.
         /// </summary>
-        public LessonPart(LessonPartType lessonPartType, int letter)
+        public LessonPart(LessonPartType lessonPartType, int index)
         {
             LessonPartType = lessonPartType;
-            Letter = letter;
+            Index = index;
         }
 
         /// <summary>
@@ -32,7 +32,7 @@ namespace Alphabets.Models
         /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:Alphabets.Models.LessonPart"/>.</returns>
         public override string ToString()
         {
-            return $"LessonPart has {LessonPartType} type with letter (index) {Letter}";
+            return $"LessonPart has {LessonPartType} type with index {Index}";
         }
     }
 }

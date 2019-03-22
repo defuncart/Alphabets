@@ -67,6 +67,9 @@ namespace Alphabets.Views
         /// <summary>The current lesson part type.</summary>
         private LessonPartType lessonPartType => lessonPart.LessonPartType;
 
+        /// <summary>Whether the current lesson part is for a letter or word.</summary>
+        private bool isLessonPartLetter => lessonPartType == LessonPartType.Learning || lessonPartType == LessonPartType.MCAlphabetToTransliteration || lessonPartType == LessonPartType.MCTransliterationToAlphabet;
+
         /// <summary>The total numner of lesson parts in this lesson.</summary>
         private int numberLessonParts => lesson.LessonParts.Length;
 
@@ -127,27 +130,30 @@ namespace Alphabets.Views
         /// </summary>
         private void SetupNextLessonPart()
         {
-            //determine current letter
-            Letter letter = alphabet.Letters[lessonPart.Letter];
-            if (!learnedLetters.Contains(letter)) { learnedLetters.Add(letter); }
-
-            //setup view
-            switch (lessonPart.LessonPartType)
+            if(isLessonPartLetter)
             {
-                case LessonPartType.Learning:
-                    learnView.Setup(letter);
-                    contentView.Content = learnView;
-                    break;
+                //determine current letter
+                Letter letter = alphabet.Letters[lessonPart.Index];
+                if (!learnedLetters.Contains(letter)) { learnedLetters.Add(letter); }
 
-                case LessonPartType.MCAlphabetToTransliteration:
-                    multipleChoiceView.Setup(letter: letter, quizLetters: quizLetters, isAlphabetToTrans: true);
-                    contentView.Content = multipleChoiceView;
-                    break;
+                //setup view
+                switch (lessonPartType)
+                {
+                    case LessonPartType.Learning:
+                        learnView.Setup(letter);
+                        contentView.Content = learnView;
+                        break;
 
-                case LessonPartType.MCTransliterationToAlphabet:
-                    multipleChoiceView.Setup(letter: letter, quizLetters: quizLetters, isAlphabetToTrans: false);
-                    contentView.Content = multipleChoiceView;
-                    break;
+                    case LessonPartType.MCAlphabetToTransliteration:
+                        multipleChoiceView.Setup(letter: letter, quizLetters: quizLetters, isAlphabetToTrans: true);
+                        contentView.Content = multipleChoiceView;
+                        break;
+
+                    case LessonPartType.MCTransliterationToAlphabet:
+                        multipleChoiceView.Setup(letter: letter, quizLetters: quizLetters, isAlphabetToTrans: false);
+                        contentView.Content = multipleChoiceView;
+                        break;
+                }
             }
         }
 

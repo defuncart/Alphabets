@@ -69,7 +69,7 @@ namespace Alphabets.Managers
                 List<LessonPart> lessonParts = new List<LessonPart>();
                 foreach (LessonPartImport lessonPartImport in lessonImport.LessonParts)
                 {
-                    lessonParts.Add(new LessonPart(lessonPartType: lessonPartImport.LessonPartType, letter: lessonPartImport.Letter));
+                    lessonParts.Add(new LessonPart(lessonPartType: lessonPartImport.LessonPartType, index: lessonPartImport.Index));
                 }
 
                 lessons.Add(new Lesson(cumulativeLetters: lessonImport.CumulativeLetters, lessonParts: lessonParts.ToArray()));
