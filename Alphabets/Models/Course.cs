@@ -1,6 +1,4 @@
-﻿using Alphabets.Enums;
-
-namespace Alphabets.Models
+﻿namespace Alphabets.Models
 {
     /// <summary>
     /// A model representing an alphabet.
@@ -8,9 +6,9 @@ namespace Alphabets.Models
     public class Course
     {
         /// <summary>
-        /// The alphabet type.
+        /// The alphabet.
         /// </summary>
-        public AlphabetType AlphabetType { get; }
+        public Alphabet Alphabet { get; }
 
         /// <summary>
         /// The courses's lessons.
@@ -20,9 +18,9 @@ namespace Alphabets.Models
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Alphabets.Models.Course"/> class.
         /// </summary>
-        public Course(AlphabetType alphabetType, Lesson[] lessons)
+        public Course(Alphabet alphabet, Lesson[] lessons)
         {
-            AlphabetType = alphabetType;
+            Alphabet = alphabet;
             Lessons = lessons;
         }
 
@@ -32,7 +30,7 @@ namespace Alphabets.Models
         /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:Alphabets.Models.Course"/>.</returns>
         public override string ToString()
         {
-            return $"Course for {AlphabetType} has {Lessons.Length} lessons";
+            return $"Course for {Alphabet} has {Lessons.Length} lessons";
         }
     }
 }

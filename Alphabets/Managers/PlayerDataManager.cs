@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 
 namespace Alphabets.Managers
 {
@@ -54,7 +55,7 @@ namespace Alphabets.Managers
         {
             //firstly create [ string : LetterSaveData ]
             Dictionary<string, LetterSaveData> lettersSaveData = new Dictionary<string, LetterSaveData>();
-            foreach (Alphabet alphabet in AlphabetManager.Alphabets)
+            foreach (Alphabet alphabet in CourseManager.Courses.Select(x=>x.Alphabet))
             {
                 foreach (Letter letter in alphabet.Letters)
                 {

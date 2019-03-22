@@ -55,8 +55,11 @@ namespace Alphabets.Views
         #region Properties
 
         //TODO refactor to GameManager?
+        /// <summary>The current alphabet.</summary>
+        private Alphabet alphabet => CourseManager.CurrentCourse.Alphabet;
+
         /// <summary>The current lesson.</summary>
-        private Lesson lesson => CourseManager.Course.Lessons[UserSettings.CurrenLessonIndex];
+        private Lesson lesson => CourseManager.CurrentCourse.Lessons[UserSettings.CurrenLessonIndex];
 
         /// <summary>The current lesson part.</summary>
         private LessonPart lessonPart => lesson.LessonParts[lessonPartIndex];
@@ -109,7 +112,7 @@ namespace Alphabets.Views
             quizLetters = new Letter[lesson.CumulativeLetters.Length];
             for (int i = 0; i < quizLetters.Length; i++)
             {
-                quizLetters[i] = AlphabetManager.Alphabet.Letters[lesson.CumulativeLetters[i]];
+                quizLetters[i] = alphabet.Letters[lesson.CumulativeLetters[i]];
             }
 
             //initialize ui
@@ -125,7 +128,7 @@ namespace Alphabets.Views
         private void SetupNextLessonPart()
         {
             //determine current letter
-            Letter letter = AlphabetManager.Alphabet.Letters[lessonPart.Letter];
+            Letter letter = alphabet.Letters[lessonPart.Letter];
             if (!learnedLetters.Contains(letter)) { learnedLetters.Add(letter); }
 
             //setup view
@@ -182,7 +185,7 @@ namespace Alphabets.Views
         private void ResultsView_OnProceed()
         {
             //if there are more lessons, preceed to next one
-            if (UserSettings.CurrenLessonIndex < CourseManager.Course.Lessons.Length - 1)
+            if (UserSettings.CurrenLessonIndex < CourseManager.CurrentCourse.Lessons.Length - 1)
             {
                 PlayerDataManager.WriteToDisk();
                 UserSettings.CurrenLessonIndex++;

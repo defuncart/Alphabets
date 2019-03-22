@@ -11,11 +11,6 @@ namespace Alphabets.Models.JSON
     public class AlphabetImport
     {
         /// <summary>
-        /// The alphabet's name.
-        /// </summary>
-        public string Name;
-
-        /// <summary>
         /// The alphabet's letters.
         /// </summary>
         public LetterImport[] Letters;
@@ -77,9 +72,9 @@ namespace Alphabets.Models.JSON
     public class CourseImport
     {
         /// <summary>
-        /// The alphabet type.
+        /// The alphabet.
         /// </summary>
-        public AlphabetType AlphabetType;
+        public AlphabetImport Alphabet;
 
         /// <summary>
         /// The courses's lessons.
