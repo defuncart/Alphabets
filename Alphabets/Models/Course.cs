@@ -36,7 +36,7 @@
         /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:Alphabets.Models.Course"/>.</returns>
         public override string ToString()
         {
-            return $"Course for {Alphabet} has {Lessons.Length} lessons";
+            return $"Course \"{Title}\" has {Lessons.Length} lessons";
         }
     }
 }

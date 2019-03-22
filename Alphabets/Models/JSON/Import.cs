@@ -50,14 +50,14 @@ namespace Alphabets.Models.JSON
     public class WordImport
     {
         /// <summary>
-        /// The word written in the alphabet to learn.
+        /// The original word (written in the alphabet to learn).
         /// </summary>
-        public string Alphabet;
+        public string Original;
 
         /// <summary>
-        /// The word transliterated (ie written using latin alphabet).
+        /// The transliteration (written using latin alphabet).
         /// </summary>
-        public string Transliterated;
+        public string Transliteration;
 
         /// <summary>
         /// A dictionary of tips per localized language.

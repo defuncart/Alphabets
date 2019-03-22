@@ -19,10 +19,10 @@ namespace Alphabets.Models
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Alphabets.Models.Word"/> class.
         /// </summary>
-        public Word(string alphabet, string transliterated, Dictionary<string, string> tips)
+        public Word(string original, string transliteration, Dictionary<string, string> tips)
         {
-            Alphabet = alphabet;
-            Transliterated = transliterated;
+            Original = original;
+            Transliteration = transliteration;
             this.tips = tips;
         }
 
@@ -31,14 +31,14 @@ namespace Alphabets.Models
         #region Properties
 
         /// <summary>
-        /// The word written in the alphabet to learn.
+        /// The original word (written in the alphabet to learn).
         /// </summary>
-        public string Alphabet { get; private set; }
+        public string Original { get; }
 
         /// <summary>
-        /// The word transliterated (ie written using latin alphabet).
+        /// The transliteration (written using latin alphabet).
         /// </summary>
-        public string Transliterated { get; private set; }
+        public string Transliteration { get; }
 
         /// <summary>
         /// A localized tip.
@@ -55,7 +55,7 @@ namespace Alphabets.Models
         /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:Alphabets.Models.Letter"/>.</returns>
         public override string ToString()
         {
-            return $"word = [{Alphabet}, {Transliterated}, {Tip}]";
+            return $"word = [{Original}, {Transliteration}, {Tip}]";
         }
 
         #endregion
