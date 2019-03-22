@@ -72,6 +72,11 @@ namespace Alphabets.Models.JSON
     public class CourseImport
     {
         /// <summary>
+        /// The course's title.
+        /// </summary>
+        public string Title;
+
+        /// <summary>
         /// The alphabet.
         /// </summary>
         public AlphabetImport Alphabet;

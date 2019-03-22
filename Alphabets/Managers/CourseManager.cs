@@ -76,7 +76,7 @@ namespace Alphabets.Managers
             }
 
             //create course
-            return new Course(alphabet: new Alphabet(letters.ToArray()), lessons: lessons.ToArray());
+            return new Course(title: courseImport.Title, alphabet: new Alphabet(letters.ToArray()), lessons: lessons.ToArray());
         }
 
         //TODO DEBUG

@@ -25,9 +25,7 @@ namespace Alphabets.Views
             PlayerDataManager.Log();
 
             //constuct UI
-
-            //TODO hardcoded
-            Title = "ქართული";
+            Title = CourseManager.CurrentCourse.Title;
 
             //add lesson buttons
             for (int i = 0; i < CourseManager.CurrentCourse.Lessons.Length; i++)
