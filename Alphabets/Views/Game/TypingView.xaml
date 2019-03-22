@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dfa="clr-namespace:DeFuncArt.Xamarin.Forms"
+             x:Class="Alphabets.Views.Game.TypingView">
+    <ContentView.Content>
+        <Grid Margin="10,10,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="15*" />
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="8*" />
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="12*" />
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="5*" />
+            </Grid.RowDefinitions>
+            
+            <!--        Word        -->
+            <dfa:DALabel Grid.Row="1"
+                         x:Name="wordLabel"
+                         Text="თბილისი"
+                         TextColor="{StaticResource Key=Color.DarkGray1}"
+                         VerticalTextAlignment="Center"
+                         HorizontalTextAlignment="Center" />
+            
+            <!--        Tip        -->
+            <dfa:DALabel Grid.Row="3"
+                         x:Name="tipLabel"
+                         Text="A city in Georgia."
+                         TextColor="{StaticResource Key=Color.MidGray}"
+                         VerticalTextAlignment="Center"
+                         HorizontalTextAlignment="Center" />
+            
+            <!--   Typed Transliteration   -->
+            <dfa:DALabel Grid.Row="5"
+                         x:Name="typedLabel"
+                         Text="Tbilisi"
+                         FontAttributes="Italic"
+                         TextColor="{StaticResource Key=Color.DarkGray1}"
+                         VerticalTextAlignment="Center"
+                         HorizontalTextAlignment="Center" />
+            
+            <!--    Answer Buttons    -->
+            <Grid Grid.Row="7">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                
+                <dfa:DAButton Grid.Row="0" Grid.Column="0"
+                              x:Name="answerButton0"
+                              Text="A" 
+                              Style="{StaticResource Key=Style.Button.Typing.Default}" />
+                
+                <dfa:DAButton Grid.Row="0" Grid.Column="1"
+                              x:Name="answerButton1"
+                              Text="A" 
+                              Style="{StaticResource Key=Style.Button.Typing.Default}" />
+                
+                <dfa:DAButton Grid.Row="0" Grid.Column="2"
+                              x:Name="answerButton2"
+                              Text="A" 
+                              Style="{StaticResource Key=Style.Button.Typing.Default}" />
+                
+                <dfa:DAButton Grid.Row="0" Grid.Column="3"
+                              x:Name="answerButton3"
+                              Text="A" 
+                              Style="{StaticResource Key=Style.Button.Typing.Default}" />
+                
+                <dfa:DAButton Grid.Row="1" Grid.Column="0"
+                              x:Name="answerButton4"
+                              Text="A" 
+                              Style="{StaticResource Key=Style.Button.Typing.Default}" />
+                
+                <dfa:DAButton Grid.Row="1" Grid.Column="1"
+                              x:Name="answerButton5"
+                              Text="A" 
+                              Style="{StaticResource Key=Style.Button.Typing.Default}" />
+                
+                <dfa:DAButton Grid.Row="1" Grid.Column="2"
+                              x:Name="answerButton6"
+                              Text="A" 
+                              Style="{StaticResource Key=Style.Button.Typing.Default}" />
+                
+                <dfa:DAButton Grid.Row="1" Grid.Column="3"
+                              x:Name="answerButton7"
+                              Text="A" 
+                              Style="{StaticResource Key=Style.Button.Typing.Default}" />
+                
+            </Grid>
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

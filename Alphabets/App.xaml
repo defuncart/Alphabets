@@ -65,6 +65,13 @@
                 <Setter Property="CornerRadius" Value="10" />
             </Style>
             
+            <Style x:Key="Style.Button.Typing.Default" 
+                   TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Key=Color.DarkGray1}" />
+                <Setter Property="TextColor" Value="{StaticResource Key=Color.White}" />
+                <Setter Property="CornerRadius" Value="10" />
+            </Style>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>
