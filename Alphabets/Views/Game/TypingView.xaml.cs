@@ -2,7 +2,9 @@
 using DeFuncArt.Audio;
 using DeFuncArt.Extensions;
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using Xamarin.Forms;
 
 namespace Alphabets.Views.Game
@@ -32,12 +34,18 @@ namespace Alphabets.Views.Game
         /// <summary>The correct answer as a string.</summary>
         private string correctAnswerString;
 
+        /// <summary>A list of buttons (i.e. letters) pressed.</summary>
+        protected List<Button> buttonPressedList;
+
         #endregion
 
         #region Properties
 
         /// <summary>The number of answer buttons.</summary>
         private int NumberAnswerButtons => answerButtons.Length;
+
+        /// <summary>Whether the current typed answer is correct.</summary>
+        private bool IsTypedAnswerCorrect => typedLabel.Text == correctAnswerString;
 
         #endregion
 
@@ -54,6 +62,7 @@ namespace Alphabets.Views.Game
             //variables
             random = new Random();
             answerButtons = new Button[] { answerButton0, answerButton1, answerButton2, answerButton3, answerButton4, answerButton5, answerButton6, answerButton7 };
+            buttonPressedList = new List<Button>();
 
             //delegates
             for (int i = 0; i < NumberAnswerButtons; i++)
@@ -61,6 +70,8 @@ namespace Alphabets.Views.Game
                 int temp = i;
                 answerButtons[i].Clicked += (object sender, EventArgs e) => OnAnswerButtonClicked(temp);
             }
+            backspaceButton.Clicked += (object sender, EventArgs e) => OnBackspaceButton();
+            enterButton.Clicked += (object sender, EventArgs e) => OnEnterButton();
         }
 
         /// <summary>
@@ -71,10 +82,15 @@ namespace Alphabets.Views.Game
             //set variables
             correctAnswerString = isAlphabetToTrans ? word.Transliteration : word.Original;
 
+            //reset variables
+            buttonPressedList.Clear();
+
             //update ui
             wordLabel.Text = isAlphabetToTrans ? word.Original : word.Transliteration;
             tipLabel.Text = word.Tip;
             typedLabel.Text = "";
+            backspaceButton.SetEnabledVisible(false);
+            enterButton.SetEnabledVisible(true);
 
             //determine the letters to display on screen
             Letter[] displayLetters = new Letter[NumberAnswerButtons];
@@ -94,8 +110,37 @@ namespace Alphabets.Views.Game
             for (int i = 0; i < NumberAnswerButtons; i++)
             {
                 answerButtons[i].Text = isAlphabetToTrans ? displayLetters[i].TransLowerCase : displayLetters[i].LowerCase;
-                answerButtons[i].IsEnabled = answerButtons[i].IsVisible = true;
+                answerButtons[i].SetEnabledVisible(true);
             }
+
+            //finally set interaction to be enabled
+            IsEnabled = true;
+        }
+
+        /// <summary>Updates the UI after the question was answered.</summary>
+        private void AnsweredCorrectly(bool correctly)
+        {
+            //set interaction to be disabled
+            IsEnabled = false;
+
+            //if not correct, display correct answer
+            if (!correctly) { typedLabel.Text = correctAnswerString; }
+
+            //hide all buttons
+            foreach (Button answerButton in answerButtons)
+            {
+                answerButton.IsVisible = false;
+            }
+            backspaceButton.IsVisible = enterButton.IsVisible = false;
+
+            //TODO visual feedback that answer was correct
+
+            //audio feedback
+            //TODO hardcoded volume
+            AudioManager.Play(filename: correctly ? "SFX.answerCorrect" : "SFX.answerIncorrect", volume: 0.15f);
+
+            //proceed to next lesson part
+            OnProceed?.Invoke();
         }
 
         #endregion
@@ -108,23 +153,50 @@ namespace Alphabets.Views.Game
         /// <param name="index">The button index.</param>
         private void OnAnswerButtonClicked(int index)
         {
+            //remove the button and update typed text
             typedLabel.Text += answerButtons[index].Text;
-            answerButtons[index].IsEnabled = false;
-            answerButtons[index].IsVisible = false;
+            answerButtons[index].SetEnabledVisible(false);
+            buttonPressedList.Add(answerButtons[index]);
 
-            //check if correct answer
-            if(typedLabel.Text == correctAnswerString)
+            //if the answer is correct, automatically proceed
+            if (IsTypedAnswerCorrect)
             {
-                //TODO
-                bool correct = true;
-
-                //audio feedback
-                //TODO hardcoded volume
-                AudioManager.Play(filename: correct ? "SFX.answerCorrect" : "SFX.answerIncorrect", volume: 0.15f);
-
-                //proceed to next lesson part
-                OnProceed?.Invoke();
+                AnsweredCorrectly(true);
             }
+            else //otherwise, ensure that the backspace button is visible
+            {
+                backspaceButton.SetEnabledVisible(true);
+            }
+        }
+
+        /// <summary>
+        /// Callback when the enter button is pressed.
+        /// </summary>
+        private void OnEnterButton()
+        {
+            AnsweredCorrectly(IsTypedAnswerCorrect);
+        }
+
+        /// <summary>
+        /// Callback when the backspace button is pressed.
+        /// </summary>
+        private void OnBackspaceButton()
+        {
+            //reactivate the last pressed answerButton
+            Button temp = buttonPressedList.Last();
+            temp.SetEnabledVisible(true);
+            buttonPressedList.RemoveAt(buttonPressedList.Count - 1);
+
+            //re-calculate the typed word
+            StringBuilder sb = new StringBuilder();
+            foreach (Button button in buttonPressedList)
+            {
+                sb.Append(button.Text);
+            }
+            typedLabel.Text = sb.ToString();
+
+            //set whether the backspace button should be displayed
+            backspaceButton.SetEnabledVisible(buttonPressedList.Count > 0);
         }
 
         #endregion

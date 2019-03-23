@@ -7,12 +7,12 @@
         <Grid Margin="10,10,10,10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="18*" />
-                <RowDefinition Height="2*" />
-                <RowDefinition Height="7*" />
-                <RowDefinition Height="4*" />
-                <RowDefinition Height="15*" />
-                <RowDefinition Height="4*" />
-                <RowDefinition Height="30*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="6*" />
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="20*" />
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="40*" />
             </Grid.RowDefinitions>
             
             <!--        Word        -->
@@ -44,7 +44,9 @@
             <!--    Answer Buttons    -->
             <Grid Grid.Row="6">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
+                    <RowDefinition Height="4*" />
+                    <RowDefinition Height="4*" />
+                    <RowDefinition Height="3*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -89,6 +91,16 @@
                               x:Name="answerButton7"
                               Text="A" 
                               Style="{StaticResource Key=Style.Button.Typing.Default}" />
+                
+                <dfa:DAButton Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
+                              x:Name="backspaceButton"
+                              Text="⌫" 
+                              Style="{StaticResource Key=Style.Button.MultipleChoice.Incorrect}" />
+                
+                <dfa:DAButton Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"
+                              x:Name="enterButton"
+                              Text="⏎"
+                              Style="{StaticResource Key=Style.Button.MultipleChoice.Correct}" />
                 
             </Grid>
 
