@@ -108,8 +108,11 @@ namespace Alphabets.Views.Game
             {
                 answerButtons[i].Text = isAlphabetToTrans ? quizLetters[incorrectIndices[i]].TransDisplay : quizLetters[incorrectIndices[i]].Display;
                 answerButtons[i].Style = ResourceDictionary.GetStyle("Style.Button.MultipleChoice.Default");
-                answerButtons[i].IsEnabled = answerButtons[i].IsVisible = true;
+                answerButtons[i].IsVisible = true;
             }
+
+            //finally set interaction to be enabled
+            IsEnabled = true;
         }
 
         #endregion
@@ -122,6 +125,9 @@ namespace Alphabets.Views.Game
         /// <param name="index">The button index.</param>
         private void OnAnswerButtonClicked(int index)
         {
+            //set interaction to be disabled
+            IsEnabled = false;
+
             bool correct = index == correctAnswerButtonIndex;
 
             for (int i = 0; i < answerButtons.Length; i++)
@@ -136,7 +142,7 @@ namespace Alphabets.Views.Game
                 }
                 else //remove any other buttons from the screen
                 {
-                    answerButtons[i].IsEnabled = answerButtons[i].IsVisible = false;
+                    answerButtons[i].IsVisible = false;
                 }
             }
 

@@ -117,7 +117,9 @@ namespace Alphabets.Views.Game
             IsEnabled = true;
         }
 
-        /// <summary>Updates the UI after the question was answered.</summary>
+        /// <summary>
+        /// Updates the UI after the question was answered.
+        /// </summary>
         private void AnsweredCorrectly(bool correctly)
         {
             //set interaction to be disabled
@@ -133,7 +135,7 @@ namespace Alphabets.Views.Game
             }
             backspaceButton.IsVisible = enterButton.IsVisible = false;
 
-            //TODO visual feedback that answer was correct
+            //TODO visual feedback that answer was correct/incorrect
 
             //audio feedback
             //TODO hardcoded volume
