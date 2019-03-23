@@ -3,7 +3,7 @@
 namespace DeFuncArt.Extensions
 {
     /// <summary>A collection of array extention methods.</summary>
-    public static class ArrayExtensions
+    public static partial class Extensions
     {
         /// <summary>A random number generator.</summary>
         private static Random random = new Random();
