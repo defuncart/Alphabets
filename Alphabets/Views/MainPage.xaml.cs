@@ -66,7 +66,7 @@ namespace Alphabets.Views
             UserSettings.CurrenLessonIndex = index;
 
             //start lesson
-            Navigation.PushModalAsync(new GamePage());
+            Navigation.PushModalAsync(new LessonPage());
         }
     }
 }

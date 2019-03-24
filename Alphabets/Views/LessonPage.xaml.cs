@@ -11,9 +11,9 @@ using Xamarin.Forms;
 namespace Alphabets.Views
 {
     /// <summary>
-    /// The game page where the player learns letters and is quized on them.
+    /// The lesson page where the player learns letters and is quized on them.
     /// </summary>
-    public partial class GamePage : ContentPage
+    public partial class LessonPage : ContentPage
     {
         #region Constants
 
@@ -80,9 +80,9 @@ namespace Alphabets.Views
         #endregion
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:Alphabets.Views.GamePage"/> class.
+        /// Initializes a new instance of the <see cref="T:Alphabets.Views.LessonPage"/> class.
         /// </summary>
-        public GamePage()
+        public LessonPage()
         {
             //initialize components
             InitializeComponent();
