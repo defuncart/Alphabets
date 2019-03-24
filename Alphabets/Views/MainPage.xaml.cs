@@ -12,6 +12,15 @@ namespace Alphabets.Views
     /// </summary>
     public partial class MainPage : ContentPage
     {
+        #region Constants
+
+        /// <summary>The number elements per lesson row.</summary>
+        private const int NUMBER_ELEMENTS_PER_LESSON_ROW = 2;
+
+        #endregion
+
+        #region Methods
+
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Alphabets.Views.MainPage"/> class.
         /// </summary>
@@ -37,9 +46,17 @@ namespace Alphabets.Views
                 int temp = i;
                 lessonButton.Clicked += (object sender, System.EventArgs e) => OnLesssonButtonClicked(temp);
 
-                stackLayout.Children.Add(lessonButton);
+                //determine (row, column) position
+                int row = i / NUMBER_ELEMENTS_PER_LESSON_ROW; int column = i % NUMBER_ELEMENTS_PER_LESSON_ROW;
+
+                //add button to grid
+                gridLayout.Children.Add(lessonButton, column, row);
             }
         }
+
+        #endregion
+
+        #region Callbacks
 
         /// <summary>
         /// Callback before the page becomes visible.
@@ -68,5 +85,7 @@ namespace Alphabets.Views
             //start lesson
             Navigation.PushModalAsync(new LessonPage());
         }
+
+        #endregion
     }
 }
