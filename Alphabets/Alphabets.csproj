@@ -38,6 +38,7 @@
     <Folder Include="Resources\Audio\Alphabets\" />
     <Folder Include="Resources\Audio\Alphabets\Georgian\" />
     <Folder Include="DeFuncArt\Audio\" />
+    <Folder Include="Views\Common\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Audio\SFX\answerCorrect.wav" />
