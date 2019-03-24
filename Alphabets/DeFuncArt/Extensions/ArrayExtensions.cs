@@ -3,8 +3,11 @@
 namespace DeFuncArt.Extensions
 {
     /// <summary>A collection of array extention methods.</summary>
-    public static class ArrayExtensions
+    public static partial class Extensions
     {
+        /// <summary>A random number generator.</summary>
+        private static Random random = new Random();
+
         /// <summary>
         /// Determines whether an array contains a given value.
         /// </summary>
@@ -33,6 +36,22 @@ namespace DeFuncArt.Extensions
                 array[i] = value;
             }
             return array;
+        }
+
+        /// <summary>
+        /// Shuffles the array.
+        /// </summary>
+        public static void Shuffle<T>(this T[] array)
+        {
+            int n = array.Length;
+            while (n > 1)
+            {
+                n--;
+                int k = random.Next(n + 1);
+                T value = array[k];
+                array[k] = array[n];
+                array[n] = value;
+            }
         }
     }
 }

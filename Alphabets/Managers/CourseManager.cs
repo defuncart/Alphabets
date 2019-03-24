@@ -17,12 +17,12 @@ namespace Alphabets.Managers
         /// <summary>
         /// An array of courses.
         /// </summary>
-        private static readonly Course[] courses;
+        public static Course[] Courses { get; }
 
         /// <summary>
         /// The current course.
         /// </summary>
-        public static Course Course => courses[UserSettings.CurrentCourseIndex];
+        public static Course CurrentCourse => Courses[UserSettings.CurrentCourseIndex];
 
         /// <summary>
         /// Initializes the <see cref="T:Alphabets.Managers.CourseManager"/> class.
@@ -33,10 +33,10 @@ namespace Alphabets.Managers
             AlphabetType[] alphabetTypes = (AlphabetType[])System.Enum.GetValues(typeof(AlphabetType));
 
             //create all courses
-            courses = new Course[alphabetTypes.Length];
-            for (int i = 0; i < courses.Length; i++)
+            Courses = new Course[alphabetTypes.Length];
+            for (int i = 0; i < Courses.Length; i++)
             {
-                courses[i] = CreateCourse(alphabetTypes[i]);
+                Courses[i] = CreateCourse(alphabetTypes[i]);
             }
         }
 
@@ -46,13 +46,20 @@ namespace Alphabets.Managers
         private static Course CreateCourse(AlphabetType alphabetType)
         {
             //determine resource id
-            string resourceId = $"Alphabets.Resources.Database.{alphabetType}.Course.json";
+            string resourceId = $"Alphabets.Resources.Database.{alphabetType}.json";
 
             //get json string
             string json = FileHelper.TextResourceToString(resourceId);
 
             //deserialize json data
             CourseImport courseImport = JsonConvert.DeserializeObject<CourseImport>(json);
+
+            //create letters
+            List<Letter> letters = new List<Letter>();
+            foreach (LetterImport letterImport in courseImport.Alphabet.Letters)
+            {
+                letters.Add(new Letter(cases: letterImport.Cases, transCases: letterImport.TransCases, pronounciationTips: letterImport.PronounciationTips, resourceId: letterImport.ResourceId));
+            }
 
             //create lessons
             List<Lesson> lessons = new List<Lesson>();
@@ -62,21 +69,28 @@ namespace Alphabets.Managers
                 List<LessonPart> lessonParts = new List<LessonPart>();
                 foreach (LessonPartImport lessonPartImport in lessonImport.LessonParts)
                 {
-                    lessonParts.Add(new LessonPart(lessonPartType: lessonPartImport.LessonPartType, letter: lessonPartImport.Letter));
+                    lessonParts.Add(new LessonPart(lessonPartType: lessonPartImport.LessonPartType, index: lessonPartImport.Index));
                 }
 
                 lessons.Add(new Lesson(cumulativeLetters: lessonImport.CumulativeLetters, lessonParts: lessonParts.ToArray()));
             }
 
+            //create words
+            List<Word> words = new List<Word>();
+            foreach (WordImport wordImport in courseImport.Words)
+            {
+                words.Add(new Word(original: wordImport.Original, transliteration: wordImport.Transliteration, tips: wordImport.Tips));
+            }
+
             //create course
-            return new Course(alphabetType: AlphabetType.Georgian, lessons: lessons.ToArray());
+            return new Course(title: courseImport.Title, alphabet: new Alphabet(letters.ToArray()), lessons: lessons.ToArray(), words: words.ToArray());
         }
 
         //TODO DEBUG
         public static void Log()
         {
-            Debug.WriteLine($"There are {courses.Length} course(s)");
-            foreach (Course course in courses)
+            Debug.WriteLine($"There are {Courses.Length} course(s)");
+            foreach (Course course in Courses)
             {
                 Debug.WriteLine(course);
             }

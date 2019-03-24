@@ -25,7 +25,8 @@ namespace Alphabets.Views
         {
             { LessonPartType.Learning, 0 },
             { LessonPartType.MCAlphabetToTransliteration, 1750 },
-            { LessonPartType.MCTransliterationToAlphabet, 1750 }
+            { LessonPartType.MCTransliterationToAlphabet, 1750 },
+            { LessonPartType.WordAlphabetToTransliteration, 1750 }
         };
 
         #endregion
@@ -37,6 +38,9 @@ namespace Alphabets.Views
 
         /// <summary>An instantiated multiple choice view used to quiz a learned letter.</summary>
         private MultipleChoiceView multipleChoiceView;
+
+        /// <summary>An instantiated typing view used to quiz a group of learned letters.</summary>
+        private TypingView typingView;
 
         /// <summary>An instantiated results view used at the end of a lesson.</summary>
         private ResultsView resultsView;
@@ -55,14 +59,20 @@ namespace Alphabets.Views
         #region Properties
 
         //TODO refactor to GameManager?
+        /// <summary>The current alphabet.</summary>
+        private Alphabet alphabet => CourseManager.CurrentCourse.Alphabet;
+
         /// <summary>The current lesson.</summary>
-        private Lesson lesson => CourseManager.Course.Lessons[UserSettings.CurrenLessonIndex];
+        private Lesson lesson => CourseManager.CurrentCourse.Lessons[UserSettings.CurrenLessonIndex];
 
         /// <summary>The current lesson part.</summary>
         private LessonPart lessonPart => lesson.LessonParts[lessonPartIndex];
 
         /// <summary>The current lesson part type.</summary>
         private LessonPartType lessonPartType => lessonPart.LessonPartType;
+
+        /// <summary>Whether the current lesson part is for a letter or word.</summary>
+        private bool isLessonPartLetter => lessonPartType == LessonPartType.Learning || lessonPartType == LessonPartType.MCAlphabetToTransliteration || lessonPartType == LessonPartType.MCTransliterationToAlphabet;
 
         /// <summary>The total numner of lesson parts in this lesson.</summary>
         private int numberLessonParts => lesson.LessonParts.Length;
@@ -80,12 +90,14 @@ namespace Alphabets.Views
             //create subviews
             learnView = new LearnView();
             multipleChoiceView = new MultipleChoiceView();
+            typingView = new TypingView();
             resultsView = new ResultsView();
 
             //delegates
             navBar.ExitButton.Clicked += (object sender, System.EventArgs e) => NavBar_OnExitButtonClicked();
             learnView.OnProceed += OnProceedToNextLessonPart;
             multipleChoiceView.OnProceed += OnProceedToNextLessonPart;
+            typingView.OnProceed += OnProceedToNextLessonPart;
             resultsView.OnProceed += ResultsView_OnProceed;
 
             //instantiate variables
@@ -109,7 +121,7 @@ namespace Alphabets.Views
             quizLetters = new Letter[lesson.CumulativeLetters.Length];
             for (int i = 0; i < quizLetters.Length; i++)
             {
-                quizLetters[i] = AlphabetManager.Alphabet.Letters[lesson.CumulativeLetters[i]];
+                quizLetters[i] = alphabet.Letters[lesson.CumulativeLetters[i]];
             }
 
             //initialize ui
@@ -124,27 +136,36 @@ namespace Alphabets.Views
         /// </summary>
         private void SetupNextLessonPart()
         {
-            //determine current letter
-            Letter letter = AlphabetManager.Alphabet.Letters[lessonPart.Letter];
-            if (!learnedLetters.Contains(letter)) { learnedLetters.Add(letter); }
-
-            //setup view
-            switch (lessonPart.LessonPartType)
+            if (isLessonPartLetter)
             {
-                case LessonPartType.Learning:
-                    learnView.Setup(letter);
-                    contentView.Content = learnView;
-                    break;
+                //determine current letter
+                Letter letter = alphabet.Letters[lessonPart.Index];
+                if (!learnedLetters.Contains(letter)) { learnedLetters.Add(letter); }
 
-                case LessonPartType.MCAlphabetToTransliteration:
-                    multipleChoiceView.Setup(letter: letter, quizLetters: quizLetters, isAlphabetToTrans: true);
-                    contentView.Content = multipleChoiceView;
-                    break;
+                //setup view
+                switch (lessonPartType)
+                {
+                    case LessonPartType.Learning:
+                        learnView.Setup(letter);
+                        contentView.Content = learnView;
+                        break;
 
-                case LessonPartType.MCTransliterationToAlphabet:
-                    multipleChoiceView.Setup(letter: letter, quizLetters: quizLetters, isAlphabetToTrans: false);
-                    contentView.Content = multipleChoiceView;
-                    break;
+                    case LessonPartType.MCAlphabetToTransliteration:
+                        multipleChoiceView.Setup(letter: letter, quizLetters: quizLetters, isAlphabetToTrans: true);
+                        contentView.Content = multipleChoiceView;
+                        break;
+
+                    case LessonPartType.MCTransliterationToAlphabet:
+                        multipleChoiceView.Setup(letter: letter, quizLetters: quizLetters, isAlphabetToTrans: false);
+                        contentView.Content = multipleChoiceView;
+                        break;
+                }
+            }
+            else
+            {
+                Word word = CourseManager.CurrentCourse.Words[lessonPart.Index];
+                typingView.Setup(word: word, quizLetters: quizLetters, isAlphabetToTrans: true);
+                contentView.Content = typingView;
             }
         }
 
@@ -182,7 +203,7 @@ namespace Alphabets.Views
         private void ResultsView_OnProceed()
         {
             //if there are more lessons, preceed to next one
-            if (UserSettings.CurrenLessonIndex < CourseManager.Course.Lessons.Length - 1)
+            if (UserSettings.CurrenLessonIndex < CourseManager.CurrentCourse.Lessons.Length - 1)
             {
                 PlayerDataManager.WriteToDisk();
                 UserSettings.CurrenLessonIndex++;

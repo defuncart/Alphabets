@@ -11,11 +11,6 @@ namespace Alphabets.Models.JSON
     public class AlphabetImport
     {
         /// <summary>
-        /// The alphabet's name.
-        /// </summary>
-        public string Name;
-
-        /// <summary>
         /// The alphabet's letters.
         /// </summary>
         public LetterImport[] Letters;
@@ -49,20 +44,52 @@ namespace Alphabets.Models.JSON
     }
 
     /// <summary>
+    /// An import json model for <see cref="T:Alphabets.Models.Word"/>.
+    /// </summary>
+    [Serializable]
+    public class WordImport
+    {
+        /// <summary>
+        /// The original word (written in the alphabet to learn).
+        /// </summary>
+        public string Original;
+
+        /// <summary>
+        /// The transliteration (written using latin alphabet).
+        /// </summary>
+        public string Transliteration;
+
+        /// <summary>
+        /// A dictionary of tips per localized language.
+        /// </summary>
+        public Dictionary<string, string> Tips;
+    }
+
+    /// <summary>
     /// An import json model for <see cref="T:Alphabets.Models.Course"/>.
     /// </summary>
     [Serializable]
     public class CourseImport
     {
         /// <summary>
-        /// The alphabet type.
+        /// The course's title.
         /// </summary>
-        public AlphabetType AlphabetType;
+        public string Title;
+
+        /// <summary>
+        /// The alphabet.
+        /// </summary>
+        public AlphabetImport Alphabet;
 
         /// <summary>
         /// The courses's lessons.
         /// </summary>
         public LessonImport[] Lessons;
+
+        /// <summary>
+        /// An array of practice words.
+        /// </summary>
+        public WordImport[] Words;
     }
 
     /// <summary>
@@ -94,8 +121,8 @@ namespace Alphabets.Models.JSON
         public LessonPartType LessonPartType;
 
         /// <summary>
-        /// The main letter (i.e being taught/quized).
+        /// Either the index of the main letter being taught/quized or the index of the word to transliterate.
         /// </summary>
-        public int Letter;
+        public int Index;
     }
 }

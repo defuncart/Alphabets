@@ -21,17 +21,14 @@ namespace Alphabets.Views
             InitializeComponent();
 
             //TODO debug
-            AlphabetManager.Log();
             CourseManager.Log();
             PlayerDataManager.Log();
 
             //constuct UI
-
-            //TODO hardcoded
-            Title = "ქართული";
+            Title = CourseManager.CurrentCourse.Title;
 
             //add lesson buttons
-            for (int i = 0; i < CourseManager.Course.Lessons.Length; i++)
+            for (int i = 0; i < CourseManager.CurrentCourse.Lessons.Length; i++)
             {
                 Button lessonButton = new Button();
                 lessonButton.Text = string.Format(LocalizationManager.GetValue("main_lesson_namevalue"), i + 1);

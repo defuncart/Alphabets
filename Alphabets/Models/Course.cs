@@ -1,6 +1,4 @@
-﻿using Alphabets.Enums;
-
-namespace Alphabets.Models
+﻿namespace Alphabets.Models
 {
     /// <summary>
     /// A model representing an alphabet.
@@ -8,9 +6,14 @@ namespace Alphabets.Models
     public class Course
     {
         /// <summary>
-        /// The alphabet type.
+        /// The course's title.
         /// </summary>
-        public AlphabetType AlphabetType { get; }
+        public string Title { get; }
+
+        /// <summary>
+        /// The alphabet.
+        /// </summary>
+        public Alphabet Alphabet { get; }
 
         /// <summary>
         /// The courses's lessons.
@@ -18,12 +21,19 @@ namespace Alphabets.Models
         public Lesson[] Lessons { get; }
 
         /// <summary>
+        /// An array of practice words.
+        /// </summary>
+        public Word[] Words { get; }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="T:Alphabets.Models.Course"/> class.
         /// </summary>
-        public Course(AlphabetType alphabetType, Lesson[] lessons)
+        public Course(string title, Alphabet alphabet, Lesson[] lessons, Word[] words)
         {
-            AlphabetType = alphabetType;
+            Title = title;
+            Alphabet = alphabet;
             Lessons = lessons;
+            Words = words;
         }
 
         /// <summary>
@@ -32,7 +42,7 @@ namespace Alphabets.Models
         /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:Alphabets.Models.Course"/>.</returns>
         public override string ToString()
         {
-            return $"Course for {AlphabetType} has {Lessons.Length} lessons";
+            return $"Course \"{Title}\" has {Lessons.Length} lessons and {Words.Length} practice words.";
         }
     }
 }

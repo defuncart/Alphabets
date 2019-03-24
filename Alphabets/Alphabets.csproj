@@ -30,7 +30,6 @@
     <Folder Include="Models\JSON\" />
     <Folder Include="DeFuncArt\Helpers\" />
     <Folder Include="Enums\" />
-    <Folder Include="Resources\Database\Georgian\" />
     <Folder Include="DeFuncArt\Xamarin.Forms\" />
     <Folder Include="Views\Game\" />
     <Folder Include="DeFuncArt\Extensions\" />
@@ -41,8 +40,6 @@
     <Folder Include="DeFuncArt\Audio\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Database\Georgian\Alphabet.json" />
-    <EmbeddedResource Include="Resources\Database\Georgian\Course.json" />
     <EmbeddedResource Include="Resources\Audio\SFX\answerCorrect.wav" />
     <EmbeddedResource Include="Resources\Audio\SFX\answerIncorrect.wav" />
     <EmbeddedResource Include="Resources\Audio\SFX\buttonGeneric.wav" />
@@ -80,6 +77,7 @@
     <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\31.mp3" />
     <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\32.mp3" />
     <EmbeddedResource Include="Resources\Audio\Alphabets\Georgian\33.mp3" />
+    <EmbeddedResource Include="Resources\Database\Georgian.json" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Resources\Localization\Resources.resx">
@@ -127,6 +125,7 @@
     <None Remove="Resources\Audio\Alphabets\Georgian\31.mp3" />
     <None Remove="Resources\Audio\Alphabets\Georgian\32.mp3" />
     <None Remove="Resources\Audio\Alphabets\Georgian\33.mp3" />
+    <None Remove="Resources\Database\Georgian.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Resources\Localization\Resources.Designer.cs">
