@@ -7,8 +7,8 @@
         "TransCases": [ "a" ],
         "PronounciationTips": {
           "en": "ah as the *a* as in f*a*ther",
-          "de": "*a* as in f*a*ther",
-          "pl": "*a* as in f*a*ther"
+          "de": "ah as the *a* as in f*a*ther",
+          "pl": "ah as the *a* as in f*a*ther"
         },
         "ResourceId": "Alphabets.Georgian.01"
       },
@@ -47,8 +47,8 @@
         "TransCases": [ "e" ],
         "PronounciationTips": {
           "en": "eh as the *e* as in *e*gg",
-          "de": "*e* as in *e*gg",
-          "pl": "*e* as in *e*gg"
+          "de": "eh as the *e* as in *e*gg",
+          "pl": "eh as the *e* as in *e*gg"
         },
         "ResourceId": "Alphabets.Georgian.05"
       },
@@ -226,9 +226,9 @@
         "Cases": [ "ღ" ],
         "TransCases": [ "gh" ],
         "PronounciationTips": {
-          "en": "like how the r is pronounced in French",
-          "de": "like how the r is pronounced in French",
-          "pl": "like how the r is pronounced in French"
+          "en": "similar to *r* in French",
+          "de": "similar to *r* in French",
+          "pl": "similar to *r* in French"
         },
         "ResourceId": "Alphabets.Georgian.23"
       },
@@ -266,9 +266,9 @@
         "Cases": [ "ც" ],
         "TransCases": [ "ts" ],
         "PronounciationTips": {
-          "en": "ts like the zz in pizza",
-          "de": "ts like the zz in pizza",
-          "pl": "ts like the zz in pizza"
+          "en": "ts like the *zz* in pi*zz*a",
+          "de": "ts like the *zz* in pi*zz*a",
+          "pl": "ts like the *zz* in pi*zz*a"
         },
         "ResourceId": "Alphabets.Georgian.27"
       },
@@ -276,9 +276,9 @@
         "Cases": [ "ძ" ],
         "TransCases": [ "dz" ],
         "PronounciationTips": {
-          "en": "like *ds* in a*ds* or re*d z*ebra",
-          "de": "like *ds* in a*ds* or re*d z*ebra",
-          "pl": "like *ds* in a*ds* or re*d z*ebra"
+          "en": "like the *ds* in a*ds*",
+          "de": "like the *ds* in a*ds*",
+          "pl": "like the *ds* in a*ds*"
         },
         "ResourceId": "Alphabets.Georgian.28"
       },
@@ -306,9 +306,9 @@
         "Cases": [ "ხ" ],
         "TransCases": [ "kh" ],
         "PronounciationTips": {
-          "en": "as the *ch* in lo*ch* and ba*ch*",
-          "de": "as the *ch* in lo*ch* and ba*ch*",
-          "pl": "as the *ch* in lo*ch* and ba*ch*"
+          "en": "as the *ch* in lo*ch*/ba*ch*",
+          "de": "as the *ch* in lo*ch*/ba*ch*",
+          "pl": "as the *ch* in lo*ch*/ba*ch*"
         },
         "ResourceId": "Alphabets.Georgian.31"
       },

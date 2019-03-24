@@ -64,5 +64,11 @@ namespace Alphabets.Resources.Localization {
                 return ResourceManager.GetString("main_lesson_namevalue", resourceCulture);
             }
         }
+        
+        internal static string main_flashcards_name {
+            get {
+                return ResourceManager.GetString("main_flashcards_name", resourceCulture);
+            }
+        }
     }
 }
