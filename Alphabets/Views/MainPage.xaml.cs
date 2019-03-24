@@ -86,6 +86,15 @@ namespace Alphabets.Views
             Navigation.PushModalAsync(new LessonPage());
         }
 
+        /// <summary>
+        /// Callback when the flashcard button was clicked.
+        /// </summary>
+        private void OnFlashcardsButtonPressed(object sender, System.EventArgs eventArgs)
+        {
+            //push an alphabet page
+            Navigation.PushAsync(new AlphabetPage());
+        }
+
         #endregion
     }
 }
