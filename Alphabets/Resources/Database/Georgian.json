@@ -7,8 +7,8 @@
         "TransCases": [ "a" ],
         "PronounciationTips": {
           "en": "ah as the *a* as in f*a*ther",
-          "de": "*a* as in f*a*ther",
-          "pl": "*a* as in f*a*ther"
+          "de": "ah as the *a* as in f*a*ther",
+          "pl": "ah as the *a* as in f*a*ther"
         },
         "ResourceId": "Alphabets.Georgian.01"
       },
@@ -47,8 +47,8 @@
         "TransCases": [ "e" ],
         "PronounciationTips": {
           "en": "eh as the *e* as in *e*gg",
-          "de": "*e* as in *e*gg",
-          "pl": "*e* as in *e*gg"
+          "de": "eh as the *e* as in *e*gg",
+          "pl": "eh as the *e* as in *e*gg"
         },
         "ResourceId": "Alphabets.Georgian.05"
       },
@@ -226,9 +226,9 @@
         "Cases": [ "ღ" ],
         "TransCases": [ "gh" ],
         "PronounciationTips": {
-          "en": "like how the r is pronounced in French",
-          "de": "like how the r is pronounced in French",
-          "pl": "like how the r is pronounced in French"
+          "en": "similar to *r* in French",
+          "de": "similar to *r* in French",
+          "pl": "similar to *r* in French"
         },
         "ResourceId": "Alphabets.Georgian.23"
       },
@@ -266,9 +266,9 @@
         "Cases": [ "ც" ],
         "TransCases": [ "ts" ],
         "PronounciationTips": {
-          "en": "ts like the zz in pizza",
-          "de": "ts like the zz in pizza",
-          "pl": "ts like the zz in pizza"
+          "en": "ts like the *zz* in pi*zz*a",
+          "de": "ts like the *zz* in pi*zz*a",
+          "pl": "ts like the *zz* in pi*zz*a"
         },
         "ResourceId": "Alphabets.Georgian.27"
       },
@@ -276,9 +276,9 @@
         "Cases": [ "ძ" ],
         "TransCases": [ "dz" ],
         "PronounciationTips": {
-          "en": "like *ds* in a*ds* or re*d z*ebra",
-          "de": "like *ds* in a*ds* or re*d z*ebra",
-          "pl": "like *ds* in a*ds* or re*d z*ebra"
+          "en": "like the *ds* in a*ds*",
+          "de": "like the *ds* in a*ds*",
+          "pl": "like the *ds* in a*ds*"
         },
         "ResourceId": "Alphabets.Georgian.28"
       },
@@ -306,9 +306,9 @@
         "Cases": [ "ხ" ],
         "TransCases": [ "kh" ],
         "PronounciationTips": {
-          "en": "as the *ch* in lo*ch* and ba*ch*",
-          "de": "as the *ch* in lo*ch* and ba*ch*",
-          "pl": "as the *ch* in lo*ch* and ba*ch*"
+          "en": "as the *ch* in lo*ch*/ba*ch*",
+          "de": "as the *ch* in lo*ch*/ba*ch*",
+          "pl": "as the *ch* in lo*ch*/ba*ch*"
         },
         "ResourceId": "Alphabets.Georgian.31"
       },
@@ -452,6 +452,370 @@
           "Index": "9"
         }
       ]
+    },
+    {
+      "CumulativeLetters": [ 0, 8, 10, 11, 4, 13, 12, 17, 19, 5, 16 ],
+      "LessonParts": [
+        {
+          "LessonPartType": 0,
+          "Index": "19"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "19"
+        },
+        {
+          "LessonPartType": 0,
+          "Index": "5"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "5"
+        },
+        {
+          "LessonPartType": 0,
+          "Index": "16"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "16"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "19"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "5"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "16"
+        },
+        {
+          "LessonPartType": 3,
+          "Index": "16"
+        },
+        {
+          "LessonPartType": 3,
+          "Index": "13"
+        },
+        {
+          "LessonPartType": 3,
+          "Index": "14"
+        },
+        {
+          "LessonPartType": 3,
+          "Index": "26"
+        }
+      ]
+    },
+    {
+      "CumulativeLetters": [ 0, 8, 10, 11, 4, 13, 12, 17, 19, 5, 16, 7, 21, 20 ],
+      "LessonParts": [
+        {
+          "LessonPartType": 0,
+          "Index": "7"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "7"
+        },
+        {
+          "LessonPartType": 0,
+          "Index": "21"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "21"
+        },
+        {
+          "LessonPartType": 0,
+          "Index": "20"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "20"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "7"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "21"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "20"
+        },
+        {
+          "LessonPartType": 3,
+          "Index": "36"
+        },
+        {
+          "LessonPartType": 3,
+          "Index": "41"
+        }
+      ]
+    },
+    {
+      "CumulativeLetters": [ 0, 8, 10, 11, 4, 13, 12, 17, 19, 5, 16, 7, 21, 20, 18, 9, 14 ],
+      "LessonParts": [
+        {
+          "LessonPartType": 0,
+          "Index": "18"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "18"
+        },
+        {
+          "LessonPartType": 0,
+          "Index": "9"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "9"
+        },
+        {
+          "LessonPartType": 0,
+          "Index": "14"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "14"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "18"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "9"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "14"
+        }
+      ]
+    },
+    {
+      "CumulativeLetters": [ 0, 8, 10, 11, 4, 13, 12, 17, 19, 5, 16, 7, 21, 20, 18, 9, 14, 1, 2, 3, 6 ],
+      "LessonParts": [
+        {
+          "LessonPartType": 0,
+          "Index": "1"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "1"
+        },
+        {
+          "LessonPartType": 0,
+          "Index": "2"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "2"
+        },
+        {
+          "LessonPartType": 0,
+          "Index": "3"
+        },
+        {
+          "LessonPartType": 0,
+          "Index": "6"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "3"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "6"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "1"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "2"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "3"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "6"
+        }
+      ]
+    },
+    {
+      "CumulativeLetters": [ 0, 8, 10, 11, 4, 13, 12, 17, 19, 5, 16, 7, 21, 20, 18, 9, 14, 1, 2, 3, 6, 24, 26, 25 ],
+      "LessonParts": [
+        {
+          "LessonPartType": 0,
+          "Index": "24"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "24"
+        },
+        {
+          "LessonPartType": 0,
+          "Index": "26"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "26"
+        },
+        {
+          "LessonPartType": 0,
+          "Index": "25"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "25"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "24"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "26"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "25"
+        }
+      ]
+    },
+    {
+      "CumulativeLetters": [ 0, 8, 10, 11, 4, 13, 12, 17, 19, 5, 16, 7, 21, 20, 18, 9, 14, 1, 2, 3, 6, 24, 26, 25, 30, 31, 15 ],
+      "LessonParts": [
+        {
+          "LessonPartType": 0,
+          "Index": "30"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "30"
+        },
+        {
+          "LessonPartType": 0,
+          "Index": "31"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "31"
+        },
+        {
+          "LessonPartType": 0,
+          "Index": "15"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "15"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "30"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "31"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "15"
+        }
+      ]
+    },
+    {
+      "CumulativeLetters": [ 0, 8, 10, 11, 4, 13, 12, 17, 19, 5, 16, 7, 21, 20, 18, 9, 14, 1, 2, 3, 6, 24, 26, 25, 30, 31, 15, 22, 27, 32 ],
+      "LessonParts": [
+        {
+          "LessonPartType": 0,
+          "Index": "22"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "22"
+        },
+        {
+          "LessonPartType": 0,
+          "Index": "27"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "27"
+        },
+        {
+          "LessonPartType": 0,
+          "Index": "32"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "32"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "22"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "27"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "32"
+        }
+      ]
+    },
+    {
+      "CumulativeLetters": [ 0, 8, 10, 11, 4, 13, 12, 17, 19, 5, 16, 7, 21, 20, 18, 9, 14, 1, 2, 3, 6, 24, 26, 25, 30, 31, 15, 22, 27, 32, 28, 29, 23 ],
+      "LessonParts": [
+        {
+          "LessonPartType": 0,
+          "Index": "28"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "28"
+        },
+        {
+          "LessonPartType": 0,
+          "Index": "29"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "29"
+        },
+        {
+          "LessonPartType": 0,
+          "Index": "23"
+        },
+        {
+          "LessonPartType": 1,
+          "Index": "23"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "28"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "29"
+        },
+        {
+          "LessonPartType": 2,
+          "Index": "23"
+        }
+      ]
     }
   ],
   "Words": [
@@ -570,6 +934,528 @@
         "en": "A country in Africa",
         "de": "A country in Africa",
         "pl": "A country in Africa"
+      }
+    },
+    {
+      "Original": "რომი",
+      "Transliteration": "romi",
+      "Tips": {
+        "en": "A city in Italy",
+        "de": "A city in Italy",
+        "pl": "A city in Italy"
+      }
+    },
+    {
+      "Original": "ისრაელი",
+      "Transliteration": "israeli",
+      "Tips": {
+        "en": "A country in the Middle East",
+        "de": "A country in the Middle East",
+        "pl": "A country in the Middle East"
+      }
+    },
+    {
+      "Original": "ერევანი",
+      "Transliteration": "erevani",
+      "Tips": {
+        "en": "The capital of Armenia.",
+        "de": "The capital of Armenia.",
+        "pl": "The capital of Armenia."
+      }
+    },
+    {
+      "Original": "ევრო",
+      "Transliteration": "evro",
+      "Tips": {
+        "en": "A currency",
+        "de": "A currency",
+        "pl": "A currency"
+      }
+    },
+    {
+      "Original": "ირანი",
+      "Transliteration": "irani",
+      "Tips": {
+        "en": "A country in Asia",
+        "de": "A country in Asia",
+        "pl": "A country in Asia"
+      }
+    },
+    {
+      "Original": "სირია",
+      "Transliteration": "siria",
+      "Tips": {
+        "en": "A country in Asia",
+        "de": "A country in Asia",
+        "pl": "A country in Asia"
+      }
+    },
+    {
+      "Original": "სეული",
+      "Transliteration": "seuli",
+      "Tips": {
+        "en": "A city in Asia",
+        "de": "A city in Asia",
+        "pl": "A city in Asia"
+      }
+    },
+    {
+      "Original": "ვერონა",
+      "Transliteration": "verona",
+      "Tips": {
+        "en": "A city in Italy",
+        "de": "A city in Italy",
+        "pl": "A city in Italy"
+      }
+    },
+    {
+      "Original": "სარაევო",
+      "Transliteration": "saraevo",
+      "Tips": {
+        "en": "A city in Europe",
+        "de": "A city in Europe",
+        "pl": "A city in Europe"
+      }
+    },
+    {
+      "Original": "სევილია",
+      "Transliteration": "sevilia",
+      "Tips": {
+        "en": "A city in Spain",
+        "de": "A city in Spain",
+        "pl": "A city in Spain"
+      }
+    },
+    {
+      "Original": "ვალენსია",
+      "Transliteration": "valensia",
+      "Tips": {
+        "en": "A city in Spain",
+        "de": "A city in Spain",
+        "pl": "A city in Spain"
+      }
+    },
+    {
+      "Original": "სლოვენია",
+      "Transliteration": "slovenia",
+      "Tips": {
+        "en": "A country in Europe",
+        "de": "A country in Europe",
+        "pl": "A country in Europe"
+      }
+    },
+    {
+      "Original": "ვილნიუსი",
+      "Transliteration": "vilniusi",
+      "Tips": {
+        "en": "A city in Europe",
+        "de": "A city in Europe",
+        "pl": "A city in Europe"
+      }
+    },
+    {
+      "Original": "მენიუ",
+      "Transliteration": "meniu",
+      "Tips": {
+        "en": "Something to check before ordering in a restaurant",
+        "de": "Something to check before ordering in a restaurant",
+        "pl": "Something to check before ordering in a restaurant"
+      }
+    },
+    {
+      "Original": "ვერსია",
+      "Transliteration": "versia",
+      "Tips": {
+        "en": "A particular form of something",
+        "de": "A particular form of something",
+        "pl": "A particular form of something"
+      }
+    },
+    {
+      "Original": "ლარი",
+      "Transliteration": "lari",
+      "Tips": {
+        "en": "Georgia's currency.",
+        "de": "Georgia's currency.",
+        "pl": "Georgia's currency."
+      }
+    },
+    {
+      "Original": "ვანი",
+      "Transliteration": "vani",
+      "Tips": {
+        "en": "A town in Georgia.",
+        "de": "A town in Georgia.",
+        "pl": "A town in Georgia."
+      }
+    },
+    {
+      "Original": "არა",
+      "Transliteration": "ara",
+      "Tips": {
+        "en": "The Georgian word for *no*",
+        "de": "The Georgian word for *no*",
+        "pl": "The Georgian word for *no*"
+      }
+    },
+    {
+      "Original": "რიონი",
+      "Transliteration": "rioni",
+      "Tips": {
+        "en": "A river in western Georgia",
+        "de": "A river in western Georgia",
+        "pl": "A river in western Georgia"
+      }
+    },
+    {
+      "Original": "ანანური",
+      "Transliteration": "ananuri",
+      "Tips": {
+        "en": "A castle complex north of Tbilisi",
+        "de": "A castle complex north of Tbilisi",
+        "pl": "A castle complex north of Tbilisi"
+      }
+    },
+    {
+      "Original": "ნული",
+      "Transliteration": "nuli",
+      "Tips": {
+        "en": "Zero",
+        "de": "Zero",
+        "pl": "Zero"
+      }
+    },
+    {
+      "Original": "ფოთი",
+      "Transliteration": "poti",
+      "Tips": {
+        "en": "A city in Georgia",
+        "de": "A city in Georgia",
+        "pl": "A city in Georgia"
+      }
+    },
+    {
+      "Original": "თელავი",
+      "Transliteration": "telavi",
+      "Tips": {
+        "en": "A city in Georgia",
+        "de": "A city in Georgia",
+        "pl": "A city in Georgia"
+      }
+    },
+    {
+      "Original": "ქუთაისი",
+      "Transliteration": "kutaisi",
+      "Tips": {
+        "en": "A city in Georgia",
+        "de": "A city in Georgia",
+        "pl": "A city in Georgia"
+      }
+    },
+    {
+      "Original": "რუსთავი",
+      "Transliteration": "rustavi",
+      "Tips": {
+        "en": "A city in Georgia",
+        "de": "A city in Georgia",
+        "pl": "A city in Georgia"
+      }
+    },
+    {
+      "Original": "იმერეთი",
+      "Transliteration": "imereti",
+      "Tips": {
+        "en": "A region in Georgia",
+        "de": "A region in Georgia",
+        "pl": "A region in Georgia"
+      }
+    },
+    {
+      "Original": "სვანეთი",
+      "Transliteration": "svaneti",
+      "Tips": {
+        "en": "A region in Georgia",
+        "de": "A region in Georgia",
+        "pl": "A region in Georgia"
+      }
+    },
+    {
+      "Original": "საქართველო",
+      "Transliteration": "sakartvelo",
+      "Tips": {
+        "en": "Georgia written in Georgian",
+        "de": "Georgia written in Georgian",
+        "pl": "Georgia written in Georgian"
+      }
+    },
+    {
+      "Original": "ქართული",
+      "Transliteration": "kartuli",
+      "Tips": {
+        "en": "Name of the Georgain language",
+        "de": "Name of the Georgain language",
+        "pl": "Name of the Georgain language"
+      }
+    },
+    {
+      "Original": "ათენი",
+      "Transliteration": "ateni",
+      "Tips": {
+        "en": "A city in Europe",
+        "de": "A city in Europe",
+        "pl": "A city in Europe"
+      }
+    },
+    {
+      "Original": "მთა",
+      "Transliteration": "mta",
+      "Tips": {
+        "en": "The georgian word for *mountain*",
+        "de": "The georgian word for *mountain*",
+        "pl": "The georgian word for *mountain*"
+      }
+    },
+    {
+      "Original": "ერთი",
+      "Transliteration": "erti",
+      "Tips": {
+        "en": "The georgian word for *one*",
+        "de": "The georgian word for *one*",
+        "pl": "The georgian word for *one*"
+      }
+    },
+    {
+      "Original": "ქალაქი",
+      "Transliteration": "kalaki",
+      "Tips": {
+        "en": "The georgian word for *city*",
+        "de": "The georgian word for *city*",
+        "pl": "The georgian word for *city*"
+      }
+    },
+    {
+      "Original": "კორეა",
+      "Transliteration": "k'orea",
+      "Tips": {
+        "en": "A county in Asia",
+        "de": "A county in Asia",
+        "pl": "A county in Asia"
+      }
+    },
+    {
+      "Original": "მალტა",
+      "Transliteration": "malt'a",
+      "Tips": {
+        "en": "A country in Europe",
+        "de": "A country in Europe",
+        "pl": "A country in Europe"
+      }
+    },
+    {
+      "Original": "კენია",
+      "Transliteration": "k'enia",
+      "Tips": {
+        "en": "A country in Africa",
+        "de": "A country in Africa",
+        "pl": "A country in Africa"
+      }
+    },
+    {
+      "Original": "მონაკო",
+      "Transliteration": "monak'o",
+      "Tips": {
+        "en": "A country in Europe",
+        "de": "A country in Europe",
+        "pl": "A country in Europe"
+      }
+    },
+    {
+      "Original": "ნეპალი",
+      "Transliteration": "nep'ali",
+      "Tips": {
+        "en": "A county in Asia",
+        "de": "A county in Asia",
+        "pl": "A county in Asia"
+      }
+    },
+    {
+      "Original": "ევროპა",
+      "Transliteration": "evrop'a",
+      "Tips": {
+        "en": "A region",
+        "de": "A region",
+        "pl": "A region"
+      }
+    },
+    {
+      "Original": "it'alia",
+      "Transliteration": "marok'o",
+      "Tips": {
+        "en": "A country in Africa",
+        "de": "A country in Africa",
+        "pl": "A country in Africa"
+      }
+    },
+    {
+      "Original": "იაპონია",
+      "Transliteration": "iap'onia",
+      "Tips": {
+        "en": "A county in Asia",
+        "de": "A county in Asia",
+        "pl": "A county in Asia"
+      }
+    },
+    {
+      "Original": "ამერიკა",
+      "Transliteration": "amerik'a",
+      "Tips": {
+        "en": "A country",
+        "de": "A country",
+        "pl": "A country"
+      }
+    },
+    {
+      "Original": "ავსტრია",
+      "Transliteration": "avst'ria",
+      "Tips": {
+        "en": "A country in Europe",
+        "de": "A country in Europe",
+        "pl": "A country in Europe"
+      }
+    },
+    {
+      "Original": "ეთიოპია",
+      "Transliteration": "etiop'ia",
+      "Tips": {
+        "en": "A country in Africa",
+        "de": "A country in Africa",
+        "pl": "A country in Africa"
+      }
+    },
+    {
+      "Original": "უკრაინა",
+      "Transliteration": "uk'raina",
+      "Tips": {
+        "en": "A country in Europe",
+        "de": "A country in Europe",
+        "pl": "A country in Europe"
+      }
+    },
+    {
+      "Original": "პოლონეთი",
+      "Transliteration": "p'oloneti",
+      "Tips": {
+        "en": "A country in Europe",
+        "de": "A country in Europe",
+        "pl": "A country in Europe"
+      }
+    },
+    {
+      "Original": "ესტონეთი",
+      "Transliteration": "est'oneti",
+      "Tips": {
+        "en": "A country in Europe",
+        "de": "A country in Europe",
+        "pl": "A country in Europe"
+      }
+    },
+    {
+      "Original": "ესპანეთი",
+      "Transliteration": "esp'aneti",
+      "Tips": {
+        "en": "A country in Europe",
+        "de": "A country in Europe",
+        "pl": "A country in Europe"
+      }
+    },
+    {
+      "Original": "ვატიკანი",
+      "Transliteration": "vat'ik'ani",
+      "Tips": {
+        "en": "A country in Europe",
+        "de": "A country in Europe",
+        "pl": "A country in Europe"
+      }
+    },
+    {
+      "Original": "კავკასია",
+      "Transliteration": "k'avk'asia",
+      "Tips": {
+        "en": "The region where Georgia is located",
+        "de": "The region where Georgia is located",
+        "pl": "The region where Georgia is located"
+      }
+    },
+    {
+      "Original": "სლოვაკეთი",
+      "Transliteration": "slovak'eti",
+      "Tips": {
+        "en": "A country in Europe",
+        "de": "A country in Europe",
+        "pl": "A country in Europe"
+      }
+    },
+    {
+      "Original": "პაკისტანი",
+      "Transliteration": "p'ak'ist'ani",
+      "Tips": {
+        "en": "A county in Asia",
+        "de": "A county in Asia",
+        "pl": "A county in Asia"
+      }
+    },
+    {
+      "Original": "ავსტრალია",
+      "Transliteration": "avst'ralia",
+      "Tips": {
+        "en": "A country",
+        "de": "A country",
+        "pl": "A country"
+      }
+    },
+    {
+      "Original": "კოსტა-რიკა",
+      "Transliteration": "k'ost'a-rik'a",
+      "Tips": {
+        "en": "",
+        "de": "",
+        "pl": ""
+      }
+    },
+    {
+      "Original": "მეტრო",
+      "Transliteration": "met'ro",
+      "Tips": {
+        "en": "...",
+        "de": "...",
+        "pl": "..."
+      }
+    },
+    {
+      "Original": "მარკეტი",
+      "Transliteration": "mark'et'i",
+      "Tips": {
+        "en": "...",
+        "de": "...",
+        "pl": "..."
+      }
+    },
+    {
+      "Original": "მუსიკა",
+      "Transliteration": "musik'a",
+      "Tips": {
+        "en": "Something people enjoy playing and listening to",
+        "de": "Something people enjoy playing and listening to",
+        "pl": "Something people enjoy playing and listening to"
+      }
+    },
+    {
+      "Original": "ინტერნეტი",
+      "Transliteration": "int'ernet'i",
+      "Tips": {
+        "en": "...",
+        "de": "...",
+        "pl": "..."
       }
     }
   ]

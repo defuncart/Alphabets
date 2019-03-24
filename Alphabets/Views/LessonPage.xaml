@@ -5,7 +5,7 @@
              xmlns:i18n="clr-namespace:DeFuncArt.Localization.Helpers"
              xmlns:views="clr-namespace:Alphabets.Views"
              xmlns:game="clr-namespace:Alphabets.Views.Game"
-             x:Class="Alphabets.Views.GamePage">
+             x:Class="Alphabets.Views.LessonPage">
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
