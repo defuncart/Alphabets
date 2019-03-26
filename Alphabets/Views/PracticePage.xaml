@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<game:GamePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dfa="clr-namespace:DeFuncArt.Xamarin.Forms"
+             xmlns:i18n="clr-namespace:DeFuncArt.Localization.Helpers"
+             xmlns:game="clr-namespace:Alphabets.Views.Game"
+             x:Class="Alphabets.Views.PracticePage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="90*" />
+            </Grid.RowDefinitions>
+            
+            <!--   Render Navigation Bar   -->
+            <game:NavView Grid.Row="0"
+                          x:Name="navBar" />
+            
+            <!--   Render main content     -->
+            <ContentView Grid.Row="1"
+                         x:Name="contentView" />
+
+        </Grid>
+    </ContentPage.Content>
+</game:GamePage>
