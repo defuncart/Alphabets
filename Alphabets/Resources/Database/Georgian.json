@@ -826,7 +826,9 @@
         "en": "A family member",
         "de": "A family member",
         "pl": "A family member"
-      }
+      },
+      "Letters": [ 11, 0, 11, 0 ],
+      "Lesson": 1
     },
     {
       "Original": "მალი",
@@ -835,7 +837,9 @@
         "en": "An African country",
         "de": "An African country",
         "pl": "An African country"
-      }
+      },
+      "Letters": [ 11, 0, 10, 8 ],
+      "Lesson": 1
     },
     {
       "Original": "ლიმა",
@@ -844,7 +848,9 @@
         "en": "A city in South America",
         "de": "A city in South America",
         "pl": "A city in South America"
-      }
+      },
+      "Letters": [ 10, 8, 11, 0 ],
+      "Lesson": 1
     },
     {
       "Original": "მაიამი",
@@ -853,7 +859,9 @@
         "en": "A city in North America",
         "de": "A city in North America",
         "pl": "A city in North America"
-      }
+      },
+      "Letters": [ 11, 0, 8, 0, 11, 8 ],
+      "Lesson": 1
     },
     {
       "Original": "ლამა",
@@ -862,7 +870,9 @@
         "en": "An animal",
         "de": "An animal",
         "pl": "An animal"
-      }
+      },
+      "Letters": [ 10, 0, 11, 0 ],
+      "Lesson": 1
     },
     {
       "Original": "ანა",
@@ -871,7 +881,9 @@
         "en": "A female name",
         "de": "A female name",
         "pl": "A female name"
-      }
+      },
+      "Letters": [ 0, 12, 0 ],
+      "Lesson": 2
     },
     {
       "Original": "მილანი",
@@ -880,7 +892,9 @@
         "en": "A city in Europe",
         "de": "A city in Europe",
         "pl": "A city in Europe"
-      }
+      },
+      "Letters": [ 11, 8, 10, 0, 12, 8 ],
+      "Lesson": 2
     },
     {
       "Original": "ოსლო",
@@ -889,7 +903,9 @@
         "en": "A city in Europe",
         "de": "A city in Europe",
         "pl": "A city in Europe"
-      }
+      },
+      "Letters": [ 13, 17, 10, 13 ],
+      "Lesson": 2
     },
     {
       "Original": "ანანასი",
@@ -898,7 +914,9 @@
         "en": "A fruit",
         "de": "A fruit",
         "pl": "A fruit"
-      }
+      },
+      "Letters": [ 0, 12, 0, 12, 0, 17, 8 ],
+      "Lesson": 2
     },
     {
       "Original": "სონი",
@@ -907,7 +925,9 @@
         "en": "A japanese company",
         "de": "A japanese company",
         "pl": "A japanese company"
-      }
+      },
+      "Letters": [ 17, 13, 12, 8 ],
+      "Lesson": 2
     },
     {
       "Original": "ლაოსი",
@@ -916,7 +936,9 @@
         "en": "A country in Asia",
         "de": "A country in Asia",
         "pl": "A country in Asia"
-      }
+      },
+      "Letters": [ 10, 0, 13, 17, 8 ],
+      "Lesson": 2
     },
     {
       "Original": "ომანი",
@@ -925,7 +947,9 @@
         "en": "A country in Asia",
         "de": "A country in Asia",
         "pl": "A country in Asia"
-      }
+      },
+      "Letters": [ 13, 11, 0, 12, 8 ],
+      "Lesson": 2
     },
     {
       "Original": "სომალი",
@@ -934,7 +958,9 @@
         "en": "A country in Africa",
         "de": "A country in Africa",
         "pl": "A country in Africa"
-      }
+      },
+      "Letters": [ 17, 13, 11, 0, 10, 8 ],
+      "Lesson": 2
     },
     {
       "Original": "რომი",
@@ -943,7 +969,9 @@
         "en": "A city in Italy",
         "de": "A city in Italy",
         "pl": "A city in Italy"
-      }
+      },
+      "Letters": [ 16, 13, 11, 8 ],
+      "Lesson": 3
     },
     {
       "Original": "ისრაელი",
@@ -952,7 +980,9 @@
         "en": "A country in the Middle East",
         "de": "A country in the Middle East",
         "pl": "A country in the Middle East"
-      }
+      },
+      "Letters": [ 8, 17, 16, 0, 4, 10, 8 ],
+      "Lesson": 3
     },
     {
       "Original": "ერევანი",
@@ -961,7 +991,9 @@
         "en": "The capital of Armenia.",
         "de": "The capital of Armenia.",
         "pl": "The capital of Armenia."
-      }
+      },
+      "Letters": [ 4, 16, 4, 5, 0, 12, 8 ],
+      "Lesson": 3
     },
     {
       "Original": "ევრო",
@@ -970,7 +1002,9 @@
         "en": "A currency",
         "de": "A currency",
         "pl": "A currency"
-      }
+      },
+      "Letters": [ 4, 5, 16, 13 ],
+      "Lesson": 3
     },
     {
       "Original": "ირანი",
@@ -979,7 +1013,9 @@
         "en": "A country in Asia",
         "de": "A country in Asia",
         "pl": "A country in Asia"
-      }
+      },
+      "Letters": [ 8, 16, 0, 12, 8 ],
+      "Lesson": 3
     },
     {
       "Original": "სირია",
@@ -988,7 +1024,9 @@
         "en": "A country in Asia",
         "de": "A country in Asia",
         "pl": "A country in Asia"
-      }
+      },
+      "Letters": [ 17, 8, 16, 8, 0 ],
+      "Lesson": 3
     },
     {
       "Original": "სეული",
@@ -997,7 +1035,9 @@
         "en": "A city in Asia",
         "de": "A city in Asia",
         "pl": "A city in Asia"
-      }
+      },
+      "Letters": [ 17, 4, 19, 10, 8 ],
+      "Lesson": 3
     },
     {
       "Original": "ვერონა",
@@ -1006,7 +1046,9 @@
         "en": "A city in Italy",
         "de": "A city in Italy",
         "pl": "A city in Italy"
-      }
+      },
+      "Letters": [ 5, 4, 16, 13, 12, 0 ],
+      "Lesson": 3
     },
     {
       "Original": "სარაევო",
@@ -1015,7 +1057,9 @@
         "en": "A city in Europe",
         "de": "A city in Europe",
         "pl": "A city in Europe"
-      }
+      },
+      "Letters": [ 17, 0, 16, 0, 4, 5, 13 ],
+      "Lesson": 3
     },
     {
       "Original": "სევილია",
@@ -1024,7 +1068,9 @@
         "en": "A city in Spain",
         "de": "A city in Spain",
         "pl": "A city in Spain"
-      }
+      },
+      "Letters": [ 17, 4, 5, 8, 10, 8, 0 ],
+      "Lesson": 3
     },
     {
       "Original": "ვალენსია",
@@ -1033,7 +1079,9 @@
         "en": "A city in Spain",
         "de": "A city in Spain",
         "pl": "A city in Spain"
-      }
+      },
+      "Letters": [ 5, 0, 10, 4, 12, 17, 8, 0 ],
+      "Lesson": 3
     },
     {
       "Original": "სლოვენია",
@@ -1042,7 +1090,9 @@
         "en": "A country in Europe",
         "de": "A country in Europe",
         "pl": "A country in Europe"
-      }
+      },
+      "Letters": [ 17, 10, 13, 5, 4, 12, 8, 0 ],
+      "Lesson": 3
     },
     {
       "Original": "ვილნიუსი",
@@ -1051,7 +1101,9 @@
         "en": "A city in Europe",
         "de": "A city in Europe",
         "pl": "A city in Europe"
-      }
+      },
+      "Letters": [ 5, 8, 10, 12, 8, 19, 17, 8 ],
+      "Lesson": 3
     },
     {
       "Original": "მენიუ",
@@ -1060,7 +1112,9 @@
         "en": "Something to check before ordering in a restaurant",
         "de": "Something to check before ordering in a restaurant",
         "pl": "Something to check before ordering in a restaurant"
-      }
+      },
+      "Letters": [ 11, 4, 12, 8, 19 ],
+      "Lesson": 3
     },
     {
       "Original": "ვერსია",
@@ -1069,7 +1123,9 @@
         "en": "A particular form of something",
         "de": "A particular form of something",
         "pl": "A particular form of something"
-      }
+      },
+      "Letters": [ 5, 4, 16, 17, 8, 0 ],
+      "Lesson": 3
     },
     {
       "Original": "ლარი",
@@ -1078,7 +1134,9 @@
         "en": "Georgia's currency.",
         "de": "Georgia's currency.",
         "pl": "Georgia's currency."
-      }
+      },
+      "Letters": [ 10, 0, 16, 8 ],
+      "Lesson": 3
     },
     {
       "Original": "ვანი",
@@ -1087,7 +1145,9 @@
         "en": "A town in Georgia.",
         "de": "A town in Georgia.",
         "pl": "A town in Georgia."
-      }
+      },
+      "Letters": [ 5, 0, 12, 8 ],
+      "Lesson": 3
     },
     {
       "Original": "არა",
@@ -1096,7 +1156,9 @@
         "en": "The Georgian word for *no*",
         "de": "The Georgian word for *no*",
         "pl": "The Georgian word for *no*"
-      }
+      },
+      "Letters": [ 0, 16, 0 ],
+      "Lesson": 3
     },
     {
       "Original": "რიონი",
@@ -1105,7 +1167,9 @@
         "en": "A river in western Georgia",
         "de": "A river in western Georgia",
         "pl": "A river in western Georgia"
-      }
+      },
+      "Letters": [ 16, 8, 13, 12, 8 ],
+      "Lesson": 3
     },
     {
       "Original": "ანანური",
@@ -1114,7 +1178,9 @@
         "en": "A castle complex north of Tbilisi",
         "de": "A castle complex north of Tbilisi",
         "pl": "A castle complex north of Tbilisi"
-      }
+      },
+      "Letters": [ 0, 12, 0, 12, 19, 16, 8 ],
+      "Lesson": 3
     },
     {
       "Original": "ნული",
@@ -1123,7 +1189,9 @@
         "en": "Zero",
         "de": "Zero",
         "pl": "Zero"
-      }
+      },
+      "Letters": [ 12, 19, 10, 8 ],
+      "Lesson": 3
     },
     {
       "Original": "ფოთი",
@@ -1132,7 +1200,9 @@
         "en": "A city in Georgia",
         "de": "A city in Georgia",
         "pl": "A city in Georgia"
-      }
+      },
+      "Letters": [ 20, 13, 7, 8 ],
+      "Lesson": 4
     },
     {
       "Original": "თელავი",
@@ -1141,7 +1211,9 @@
         "en": "A city in Georgia",
         "de": "A city in Georgia",
         "pl": "A city in Georgia"
-      }
+      },
+      "Letters": [ 7, 4, 10, 0, 5, 8 ],
+      "Lesson": 4
     },
     {
       "Original": "ქუთაისი",
@@ -1150,7 +1222,9 @@
         "en": "A city in Georgia",
         "de": "A city in Georgia",
         "pl": "A city in Georgia"
-      }
+      },
+      "Letters": [ 21, 19, 7, 0, 8, 17, 8 ],
+      "Lesson": 4
     },
     {
       "Original": "რუსთავი",
@@ -1159,7 +1233,9 @@
         "en": "A city in Georgia",
         "de": "A city in Georgia",
         "pl": "A city in Georgia"
-      }
+      },
+      "Letters": [ 16, 19, 17, 7, 0, 5, 8 ],
+      "Lesson": 4
     },
     {
       "Original": "იმერეთი",
@@ -1168,7 +1244,9 @@
         "en": "A region in Georgia",
         "de": "A region in Georgia",
         "pl": "A region in Georgia"
-      }
+      },
+      "Letters": [ 8, 11, 4, 16, 4, 7, 8 ],
+      "Lesson": 4
     },
     {
       "Original": "სვანეთი",
@@ -1177,7 +1255,9 @@
         "en": "A region in Georgia",
         "de": "A region in Georgia",
         "pl": "A region in Georgia"
-      }
+      },
+      "Letters": [ 17, 5, 0, 12, 4, 7, 8 ],
+      "Lesson": 4
     },
     {
       "Original": "საქართველო",
@@ -1186,7 +1266,9 @@
         "en": "Georgia written in Georgian",
         "de": "Georgia written in Georgian",
         "pl": "Georgia written in Georgian"
-      }
+      },
+      "Letters": [ 17, 0, 21, 0, 16, 7, 5, 4, 10, 13 ],
+      "Lesson": 4
     },
     {
       "Original": "ქართული",
@@ -1195,7 +1277,9 @@
         "en": "Name of the Georgain language",
         "de": "Name of the Georgain language",
         "pl": "Name of the Georgain language"
-      }
+      },
+      "Letters": [ 21, 0, 16, 7, 19, 10, 8 ],
+      "Lesson": 4
     },
     {
       "Original": "ათენი",
@@ -1204,7 +1288,9 @@
         "en": "A city in Europe",
         "de": "A city in Europe",
         "pl": "A city in Europe"
-      }
+      },
+      "Letters": [ 0, 7, 4, 12, 8 ],
+      "Lesson": 4
     },
     {
       "Original": "მთა",
@@ -1213,7 +1299,9 @@
         "en": "The georgian word for *mountain*",
         "de": "The georgian word for *mountain*",
         "pl": "The georgian word for *mountain*"
-      }
+      },
+      "Letters": [ 11, 7, 0 ],
+      "Lesson": 4
     },
     {
       "Original": "ერთი",
@@ -1222,7 +1310,9 @@
         "en": "The georgian word for *one*",
         "de": "The georgian word for *one*",
         "pl": "The georgian word for *one*"
-      }
+      },
+      "Letters": [ 4, 16, 7, 8 ],
+      "Lesson": 4
     },
     {
       "Original": "ქალაქი",
@@ -1231,7 +1321,9 @@
         "en": "The georgian word for *city*",
         "de": "The georgian word for *city*",
         "pl": "The georgian word for *city*"
-      }
+      },
+      "Letters": [ 21, 0, 10, 0, 21, 8 ],
+      "Lesson": 4
     },
     {
       "Original": "კორეა",
@@ -1240,7 +1332,9 @@
         "en": "A county in Asia",
         "de": "A county in Asia",
         "pl": "A county in Asia"
-      }
+      },
+      "Letters": [ 9, 13, 16, 4, 0 ],
+      "Lesson": 5
     },
     {
       "Original": "მალტა",
@@ -1249,7 +1343,9 @@
         "en": "A country in Europe",
         "de": "A country in Europe",
         "pl": "A country in Europe"
-      }
+      },
+      "Letters": [ 11, 0, 10, 18, 0 ],
+      "Lesson": 5
     },
     {
       "Original": "კენია",
@@ -1258,7 +1354,9 @@
         "en": "A country in Africa",
         "de": "A country in Africa",
         "pl": "A country in Africa"
-      }
+      },
+      "Letters": [ 9, 4, 12, 8, 0 ],
+      "Lesson": 5
     },
     {
       "Original": "მონაკო",
@@ -1267,7 +1365,9 @@
         "en": "A country in Europe",
         "de": "A country in Europe",
         "pl": "A country in Europe"
-      }
+      },
+      "Letters": [ 11, 13, 12, 0, 9, 13 ],
+      "Lesson": 5
     },
     {
       "Original": "ნეპალი",
@@ -1276,7 +1376,9 @@
         "en": "A county in Asia",
         "de": "A county in Asia",
         "pl": "A county in Asia"
-      }
+      },
+      "Letters": [ 12, 4, 14, 0, 10, 8 ],
+      "Lesson": 5
     },
     {
       "Original": "ევროპა",
@@ -1285,16 +1387,31 @@
         "en": "A region",
         "de": "A region",
         "pl": "A region"
-      }
+      },
+      "Letters": [ 4, 5, 16, 13, 14, 0 ],
+      "Lesson": 5
     },
     {
-      "Original": "it'alia",
+      "Original": "მაროკო",
       "Transliteration": "marok'o",
       "Tips": {
         "en": "A country in Africa",
         "de": "A country in Africa",
         "pl": "A country in Africa"
-      }
+      },
+      "Letters": [ 11, 0, 16, 13, 9, 13 ],
+      "Lesson": 5
+    },
+    {
+      "Original": "იტალია",
+      "Transliteration": "it'alia",
+      "Tips": {
+        "en": "A country in Europe",
+        "de": "A country in Europe",
+        "pl": "A country in Europe"
+      },
+      "Letters": [ 8, 18, 0, 10, 8, 0 ],
+      "Lesson": 5
     },
     {
       "Original": "იაპონია",
@@ -1303,7 +1420,9 @@
         "en": "A county in Asia",
         "de": "A county in Asia",
         "pl": "A county in Asia"
-      }
+      },
+      "Letters": [ 8, 0, 14, 13, 12, 8, 0 ],
+      "Lesson": 5
     },
     {
       "Original": "ამერიკა",
@@ -1312,7 +1431,9 @@
         "en": "A country",
         "de": "A country",
         "pl": "A country"
-      }
+      },
+      "Letters": [ 0, 11, 4, 16, 8, 9, 0 ],
+      "Lesson": 5
     },
     {
       "Original": "ავსტრია",
@@ -1321,7 +1442,9 @@
         "en": "A country in Europe",
         "de": "A country in Europe",
         "pl": "A country in Europe"
-      }
+      },
+      "Letters": [ 0, 5, 17, 18, 16, 8, 0 ],
+      "Lesson": 5
     },
     {
       "Original": "ეთიოპია",
@@ -1330,7 +1453,9 @@
         "en": "A country in Africa",
         "de": "A country in Africa",
         "pl": "A country in Africa"
-      }
+      },
+      "Letters": [ 4, 7, 8, 13, 14, 8, 0 ],
+      "Lesson": 5
     },
     {
       "Original": "უკრაინა",
@@ -1339,7 +1464,9 @@
         "en": "A country in Europe",
         "de": "A country in Europe",
         "pl": "A country in Europe"
-      }
+      },
+      "Letters": [ 19, 9, 16, 0, 8, 12, 0 ],
+      "Lesson": 5
     },
     {
       "Original": "პოლონეთი",
@@ -1348,7 +1475,9 @@
         "en": "A country in Europe",
         "de": "A country in Europe",
         "pl": "A country in Europe"
-      }
+      },
+      "Letters": [ 14, 13, 10, 13, 12, 4, 7, 8 ],
+      "Lesson": 5
     },
     {
       "Original": "ესტონეთი",
@@ -1357,7 +1486,9 @@
         "en": "A country in Europe",
         "de": "A country in Europe",
         "pl": "A country in Europe"
-      }
+      },
+      "Letters": [ 4, 17, 18, 13, 12, 4, 7, 8 ],
+      "Lesson": 5
     },
     {
       "Original": "ესპანეთი",
@@ -1366,7 +1497,9 @@
         "en": "A country in Europe",
         "de": "A country in Europe",
         "pl": "A country in Europe"
-      }
+      },
+      "Letters": [ 4, 17, 14, 0, 12, 4, 7, 8 ],
+      "Lesson": 5
     },
     {
       "Original": "ვატიკანი",
@@ -1375,7 +1508,9 @@
         "en": "A country in Europe",
         "de": "A country in Europe",
         "pl": "A country in Europe"
-      }
+      },
+      "Letters": [ 5, 0, 18, 8, 9, 0, 12, 8 ],
+      "Lesson": 5
     },
     {
       "Original": "კავკასია",
@@ -1384,7 +1519,9 @@
         "en": "The region where Georgia is located",
         "de": "The region where Georgia is located",
         "pl": "The region where Georgia is located"
-      }
+      },
+      "Letters": [ 9, 0, 5, 9, 0, 17, 8, 0 ],
+      "Lesson": 5
     },
     {
       "Original": "სლოვაკეთი",
@@ -1393,7 +1530,9 @@
         "en": "A country in Europe",
         "de": "A country in Europe",
         "pl": "A country in Europe"
-      }
+      },
+      "Letters": [ 17, 10, 13, 5, 0, 9, 4, 7, 8 ],
+      "Lesson": 5
     },
     {
       "Original": "პაკისტანი",
@@ -1402,7 +1541,9 @@
         "en": "A county in Asia",
         "de": "A county in Asia",
         "pl": "A county in Asia"
-      }
+      },
+      "Letters": [ 14, 0, 9, 8, 17, 18, 0, 12, 8 ],
+      "Lesson": 5
     },
     {
       "Original": "ავსტრალია",
@@ -1411,16 +1552,9 @@
         "en": "A country",
         "de": "A country",
         "pl": "A country"
-      }
-    },
-    {
-      "Original": "კოსტა-რიკა",
-      "Transliteration": "k'ost'a-rik'a",
-      "Tips": {
-        "en": "",
-        "de": "",
-        "pl": ""
-      }
+      },
+      "Letters": [ 0, 5, 17, 18, 16, 0, 10, 8, 0 ],
+      "Lesson": 5
     },
     {
       "Original": "მეტრო",
@@ -1429,7 +1563,9 @@
         "en": "...",
         "de": "...",
         "pl": "..."
-      }
+      },
+      "Letters": [ 11, 4, 18, 16, 13 ],
+      "Lesson": 5
     },
     {
       "Original": "მარკეტი",
@@ -1438,7 +1574,9 @@
         "en": "...",
         "de": "...",
         "pl": "..."
-      }
+      },
+      "Letters": [ 11, 0, 16, 9, 4, 18, 8 ],
+      "Lesson": 5
     },
     {
       "Original": "მუსიკა",
@@ -1447,7 +1585,9 @@
         "en": "Something people enjoy playing and listening to",
         "de": "Something people enjoy playing and listening to",
         "pl": "Something people enjoy playing and listening to"
-      }
+      },
+      "Letters": [ 11, 19, 17, 8, 9, 0 ],
+      "Lesson": 5
     },
     {
       "Original": "ინტერნეტი",
@@ -1456,7 +1596,9 @@
         "en": "...",
         "de": "...",
         "pl": "..."
-      }
+      },
+      "Letters": [ 8, 12, 18, 4, 16, 12, 4, 18, 8 ],
+      "Lesson": 5
     }
   ]
 }
