@@ -19,16 +19,23 @@ namespace Alphabets.Models
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Alphabets.Models.Word"/> class.
         /// </summary>
-        public Word(string original, string transliteration, Dictionary<string, string> tips)
+        public Word(Letter[] letters, string original, string transliteration, Dictionary<string, string> tips, int lesson)
         {
+            Letters = letters;
             Original = original;
             Transliteration = transliteration;
             this.tips = tips;
+            Lesson = lesson;
         }
 
         #endregion
 
         #region Properties
+
+        /// <summary>
+        /// Each letter of the word.
+        /// </summary>
+        public Letter[] Letters { get; }
 
         /// <summary>
         /// The original word (written in the alphabet to learn).
@@ -44,6 +51,11 @@ namespace Alphabets.Models
         /// A localized tip.
         /// </summary>
         public string Tip => tips[UserSettings.Language];
+
+        /// <summary>
+        /// The lesson for which this word is suitable for.
+        /// </summary>
+        public int Lesson { get; }
 
         #endregion
 

@@ -63,6 +63,16 @@ namespace Alphabets.Models.JSON
         /// A dictionary of tips per localized language.
         /// </summary>
         public Dictionary<string, string> Tips;
+
+        /// <summary>
+        /// Each letter of the word. This is the letter index in the alphabet.
+        /// </summary>
+        public int[] Letters;
+
+        /// <summary>
+        /// The lesson for which this word is suitable for.
+        /// </summary>
+        public int Lesson;
     }
 
     /// <summary>

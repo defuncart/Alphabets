@@ -79,11 +79,27 @@ namespace Alphabets.Managers
             List<Word> words = new List<Word>();
             foreach (WordImport wordImport in courseImport.Words)
             {
-                words.Add(new Word(original: wordImport.Original, transliteration: wordImport.Transliteration, tips: wordImport.Tips));
+                Letter[] wordLetters = WordLetterIndecesArrayToWordLetterArray(wordImport.Letters, letters);
+                words.Add(new Word(letters: wordLetters, original: wordImport.Original, transliteration: wordImport.Transliteration, tips: wordImport.Tips, lesson: wordImport.Lesson));
             }
 
             //create course
             return new Course(title: courseImport.Title, alphabet: new Alphabet(letters.ToArray()), lessons: lessons.ToArray(), words: words.ToArray());
+        }
+
+        /// <summary>
+        /// Constructs a [Letter] from an [int] of the letter indeces for a given alphabet's letters.
+        /// </summary>
+        /// <param name="indeces">The letter indeces.</param>
+        /// <param name="alphabetLetters">The alphabet's letters.</param>
+        private static Letter[] WordLetterIndecesArrayToWordLetterArray(int[] indeces, List<Letter> alphabetLetters)
+        {
+            Letter[] wordLetters = new Letter[indeces.Length];
+            for (int i = 0; i < wordLetters.Length; i++)
+            {
+                wordLetters[i] = alphabetLetters[indeces[i]];
+            }
+            return wordLetters;
         }
 
         //TODO DEBUG
