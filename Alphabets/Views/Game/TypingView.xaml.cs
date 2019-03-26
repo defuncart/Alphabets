@@ -35,7 +35,10 @@ namespace Alphabets.Views.Game
         private string correctAnswerString;
 
         /// <summary>A list of buttons (i.e. letters) pressed.</summary>
-        protected List<Button> buttonPressedList;
+        private List<Button> buttonPressedList;
+
+        /// <summary>The current word.</summary>
+        private Word word;
 
         #endregion
 
@@ -79,6 +82,9 @@ namespace Alphabets.Views.Game
         /// </summary>
         public void Setup(Word word, Letter[] quizLetters, bool isAlphabetToTrans)
         {
+            //cache the word
+            this.word = word;
+
             //set variables
             correctAnswerString = isAlphabetToTrans ? word.Transliteration : word.Original;
 
@@ -124,6 +130,20 @@ namespace Alphabets.Views.Game
         {
             //set interaction to be disabled
             IsEnabled = false;
+
+            //update score
+            for (int i = 0; i < word.Letters.Length; i++)
+            {
+                bool correct = false;
+                if (i < typedLabel.Text.Length && i < correctAnswerString.Length)
+                {
+                    correct = typedLabel.Text[i] == correctAnswerString[i];
+                }
+
+                //TODO maybe move to GamePage?
+                //update player data
+                Managers.PlayerDataManager.UpdateLetter(word.Letters[i], correct);
+            }
 
             //if not correct, display correct answer
             if (!correctly) { typedLabel.Text = correctAnswerString; }
