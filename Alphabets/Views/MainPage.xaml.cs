@@ -87,9 +87,18 @@ namespace Alphabets.Views
         }
 
         /// <summary>
+        /// Callback when the practice button was clicked.
+        /// </summary>
+        private void OnPracticeButtonClicked(object sender, System.EventArgs eventArgs)
+        {
+            //start practice
+            Navigation.PushModalAsync(new PracticePage());
+        }
+
+        /// <summary>
         /// Callback when the flashcard button was clicked.
         /// </summary>
-        private void OnFlashcardsButtonPressed(object sender, System.EventArgs eventArgs)
+        private void OnFlashcardsButtonClicked(object sender, System.EventArgs eventArgs)
         {
             //push an alphabet page
             Navigation.PushAsync(new AlphabetPage());

@@ -59,6 +59,12 @@ namespace Alphabets.Resources.Localization {
             }
         }
         
+        internal static string main_practice_name {
+            get {
+                return ResourceManager.GetString("main_practice_name", resourceCulture);
+            }
+        }
+        
         internal static string main_lesson_namevalue {
             get {
                 return ResourceManager.GetString("main_lesson_namevalue", resourceCulture);
