@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 
 namespace Alphabets.Managers
 {
@@ -19,6 +18,9 @@ namespace Alphabets.Managers
 
         /// <summary>The player data.</summary>
         private static readonly PlayerData playerData;
+
+        /// <summary>The current course save data.</summary>
+        private static CourseData courseData => playerData.CoursesData[CourseManager.CurrentCourse.Id];
 
         /// <summary>
         /// Initializes the <see cref="T:Alphabets.Managers.PlayerDataManager"/> class.
@@ -53,18 +55,23 @@ namespace Alphabets.Managers
         /// </summary>
         private static PlayerData CreatePlayerData()
         {
-            //firstly create [ string : LetterSaveData ]
-            Dictionary<string, LetterSaveData> lettersSaveData = new Dictionary<string, LetterSaveData>();
-            foreach (Alphabet alphabet in CourseManager.Courses.Select(x=>x.Alphabet))
+            //create all course data
+            Dictionary<string, CourseData> coursesData = new Dictionary<string, CourseData>();
+            foreach (Course course in CourseManager.Courses)
             {
-                foreach (Letter letter in alphabet.Letters)
+                //create course save data
+                Dictionary<string, LetterData> lettersData = new Dictionary<string, LetterData>();
+                foreach (Letter letter in course.Alphabet.Letters)
                 {
-                    lettersSaveData[letter.ResourceId] = new LetterSaveData();
+                    lettersData[letter.ResourceId] = new LetterData();
                 }
+
+                //update dictionary
+                coursesData[course.Id] = new CourseData { LettersData = lettersData };
             }
 
             //create PlayerData
-            return new PlayerData { LettersSaveData = lettersSaveData };
+            return new PlayerData { CoursesData = coursesData };
         }
 
         /// <summary>
@@ -74,7 +81,7 @@ namespace Alphabets.Managers
         /// <param name="correctly">Whether letter was answered correctly.</param>
         public static void UpdateLetter(Letter letter, bool correctly)
         {
-            if (playerData.LettersSaveData.TryGetValue(letter.ResourceId, out LetterSaveData letterSaveData))
+            if (courseData.LettersData.TryGetValue(letter.ResourceId, out LetterData letterSaveData))
             {
                 letterSaveData.Attempts++;
                 if (correctly) { letterSaveData.Correct++; }
@@ -86,7 +93,7 @@ namespace Alphabets.Managers
         /// </summary>
         public static double GetCorrectRatioForLetter(Letter letter)
         {
-            if (playerData.LettersSaveData.TryGetValue(letter.ResourceId, out LetterSaveData letterSaveData))
+            if (courseData.LettersData.TryGetValue(letter.ResourceId, out LetterData letterSaveData))
             {
                 return letterSaveData.Correct / (letterSaveData.Attempts * 1.0);
             }
