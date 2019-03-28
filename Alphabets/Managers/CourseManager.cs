@@ -84,7 +84,7 @@ namespace Alphabets.Managers
             }
 
             //create course
-            return new Course(title: courseImport.Title, alphabet: new Alphabet(letters.ToArray()), lessons: lessons.ToArray(), words: words.ToArray());
+            return new Course(id: alphabetType.ToString(), title: courseImport.Title, alphabet: new Alphabet(letters.ToArray()), lessons: lessons.ToArray(), words: words.ToArray());
         }
 
         /// <summary>

@@ -6,6 +6,11 @@
     public class Course
     {
         /// <summary>
+        /// The course's id.
+        /// </summary>
+        public string Id { get; }
+
+        /// <summary>
         /// The course's title.
         /// </summary>
         public string Title { get; }
@@ -28,8 +33,9 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Alphabets.Models.Course"/> class.
         /// </summary>
-        public Course(string title, Alphabet alphabet, Lesson[] lessons, Word[] words)
+        public Course(string id, string title, Alphabet alphabet, Lesson[] lessons, Word[] words)
         {
+            Id = id;
             Title = title;
             Alphabet = alphabet;
             Lessons = lessons;
