@@ -24,10 +24,6 @@ namespace Alphabets.Helpers
             public const string LANGUAGE = "language";
             /// <summary>The alreadyLaunched key.</summary>
             public const string ALREADY_LAUNCHED = "alreadyLaunched";
-            /// <summary>The currentCourseIndex key.</summary>
-            public const string CURRENT_COURSE_INDEX = "currentCourseIndex";
-            /// <summary>The currentLessonIndex key.</summary>
-            public const string CURRENT_LESSON_INDEX = "currentLessonIndex";
         }
 
         /// <summary>
@@ -46,24 +42,6 @@ namespace Alphabets.Helpers
         {
             get => AppSettings.GetValueOrDefault(Keys.ALREADY_LAUNCHED, false);
             set => AppSettings.AddOrUpdateValue(Keys.ALREADY_LAUNCHED, value);
-        }
-
-        /// <summary>
-        /// The current course (alphabet) index.
-        /// </summary>
-        public static int CurrentCourseIndex
-        {
-            get => AppSettings.GetValueOrDefault(Keys.CURRENT_COURSE_INDEX, 0);
-            set => AppSettings.AddOrUpdateValue(Keys.CURRENT_COURSE_INDEX, value);
-        }
-
-        /// <summary>
-        /// The current lesson index.
-        /// </summary>
-        public static int CurrenLessonIndex
-        {
-            get => AppSettings.GetValueOrDefault(Keys.CURRENT_LESSON_INDEX, 0);
-            set => AppSettings.AddOrUpdateValue(Keys.CURRENT_LESSON_INDEX, value);
         }
 
         /// <summary>

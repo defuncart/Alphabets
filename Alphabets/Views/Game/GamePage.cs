@@ -1,5 +1,4 @@
 ﻿using Alphabets.Enums;
-using Alphabets.Helpers;
 using Alphabets.Managers;
 using Alphabets.Models;
 using System.Collections.Generic;
@@ -206,10 +205,10 @@ namespace Alphabets.Views.Game
         private void ResultsView_OnProceed()
         {
             //if there are more lessons, preceed to next one
-            if (UserSettings.CurrenLessonIndex < CourseManager.CurrentCourse.Lessons.Length - 1)
+            if (PlayerDataManager.CurrentLessonIndex < CourseManager.CurrentCourse.Lessons.Length - 1)
             {
+                PlayerDataManager.CurrentLessonIndex++;
                 PlayerDataManager.WriteToDisk();
-                UserSettings.CurrenLessonIndex++;
                 Reset();
             }
             else //otherwise return to MainPage

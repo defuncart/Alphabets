@@ -21,10 +21,10 @@ namespace Alphabets.Views
         protected override ContentView GameView => contentView;
 
         /// <summary>The current lesson part.</summary>
-        protected override Lesson lesson => CourseManager.CurrentCourse.Lessons[UserSettings.CurrenLessonIndex];
+        protected override Lesson lesson => CourseManager.CurrentCourse.Lessons[PlayerDataManager.CurrentLessonIndex];
 
         /// <summary>The results view title.</summary>
-        protected override string ResultsViewTitle => string.Format(LocalizationManager.GetValue("main_lesson_namevalue"), UserSettings.CurrenLessonIndex + 1);
+        protected override string ResultsViewTitle => string.Format(LocalizationManager.GetValue("main_lesson_namevalue"), PlayerDataManager.CurrentLessonIndex + 1);
 
         #endregion
 

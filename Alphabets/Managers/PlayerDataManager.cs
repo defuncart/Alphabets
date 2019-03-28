@@ -10,8 +10,14 @@ namespace Alphabets.Managers
 {
     public static class PlayerDataManager
     {
+        #region Constants
+
         /// <summary>The PlayerData filename.</summary>
         private const string FILENAME = "PlayerData.json";
+
+        #endregion
+
+        #region Variables
 
         /// <summary>The full filepath to save/load the PlayerData to/from.</summary>
         private static readonly string filepath;
@@ -19,8 +25,35 @@ namespace Alphabets.Managers
         /// <summary>The player data.</summary>
         private static readonly PlayerData playerData;
 
-        /// <summary>The current course save data.</summary>
+        #endregion
+
+        #region Properties
+
+        /// <summary>The current course data.</summary>
         private static CourseData courseData => playerData.CoursesData[CourseManager.CurrentCourse.Id];
+
+        /// <summary>
+        /// The current course index.
+        /// </summary>
+        public static int CurrentCourseIndex
+        {
+            get => playerData.CurrentCourseIndex;
+            set => playerData.CurrentCourseIndex = value;
+  
+        }
+
+        /// <summary>
+        /// The current lesson index (for the current course).
+        /// </summary>
+        public static int CurrentLessonIndex
+        {
+            get => courseData.CurrentLessonIndex;
+            set => courseData.CurrentLessonIndex = value;
+        }
+
+        #endregion
+
+        #region Methods
 
         /// <summary>
         /// Initializes the <see cref="T:Alphabets.Managers.PlayerDataManager"/> class.
@@ -114,5 +147,7 @@ namespace Alphabets.Managers
         {
             Debug.WriteLine(filepath);
         }
+
+        #endregion
     }
 }

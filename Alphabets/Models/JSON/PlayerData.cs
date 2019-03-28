@@ -11,6 +11,11 @@ namespace Alphabets.Models.JSON
         /// A dictionary of CoursesData reference by id.
         /// </summary>
         public Dictionary<string, CourseData> CoursesData;
+
+        /// <summary>
+        /// The current course index.
+        /// </summary>
+        public int CurrentCourseIndex;
     }
 
     /// <summary>
@@ -22,6 +27,11 @@ namespace Alphabets.Models.JSON
         /// A dictionary of LetterData reference by id.
         /// </summary>
         public Dictionary<string, LetterData> LettersData;
+
+        /// <summary>
+        /// The current lesson index.
+        /// </summary>
+        public int CurrentLessonIndex;
     }
 
     /// <summary>

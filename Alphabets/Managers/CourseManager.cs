@@ -1,5 +1,4 @@
 ﻿using Alphabets.Enums;
-using Alphabets.Helpers;
 using Alphabets.Models;
 using Alphabets.Models.JSON;
 using DeFuncArt.Helpers;
@@ -22,7 +21,7 @@ namespace Alphabets.Managers
         /// <summary>
         /// The current course.
         /// </summary>
-        public static Course CurrentCourse => Courses[UserSettings.CurrentCourseIndex];
+        public static Course CurrentCourse => Courses[PlayerDataManager.CurrentCourseIndex];
 
         /// <summary>
         /// Initializes the <see cref="T:Alphabets.Managers.CourseManager"/> class.

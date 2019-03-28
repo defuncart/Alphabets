@@ -1,5 +1,4 @@
-﻿using Alphabets.Helpers;
-using Alphabets.Managers;
+﻿using Alphabets.Managers;
 using DeFuncArt.Localization;
 using Xamarin.Forms;
 using ResourceDictionary = Alphabets.Helpers.ResourceDictionary;
@@ -80,7 +79,7 @@ namespace Alphabets.Views
             IsEnabled = false;
 
             //update current lesson index
-            UserSettings.CurrenLessonIndex = index;
+            PlayerDataManager.CurrentLessonIndex = index;
 
             //start lesson
             Navigation.PushModalAsync(new LessonPage());
