@@ -149,26 +149,26 @@ namespace Alphabets.Views.Game
                 switch (lessonPartType)
                 {
                     case LessonPartType.Learning:
-                        learnView.Setup(letter);
                         GameView.Content = learnView;
+                        learnView.Setup(letter);
                         break;
 
                     case LessonPartType.MCAlphabetToTransliteration:
-                        multipleChoiceView.Setup(letter: letter, quizLetters: quizLetters, isAlphabetToTrans: true);
                         GameView.Content = multipleChoiceView;
+                        multipleChoiceView.Setup(letter: letter, quizLetters: quizLetters, isAlphabetToTrans: true);
                         break;
 
                     case LessonPartType.MCTransliterationToAlphabet:
-                        multipleChoiceView.Setup(letter: letter, quizLetters: quizLetters, isAlphabetToTrans: false);
                         GameView.Content = multipleChoiceView;
+                        multipleChoiceView.Setup(letter: letter, quizLetters: quizLetters, isAlphabetToTrans: false);
                         break;
                 }
             }
             else
             {
                 Word word = CourseManager.CurrentCourse.Words[lessonPart.Index];
-                typingView.Setup(word: word, quizLetters: quizLetters, isAlphabetToTrans: true);
                 GameView.Content = typingView;
+                typingView.Setup(word: word, quizLetters: quizLetters, isAlphabetToTrans: true);
             }
         }
 
