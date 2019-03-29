@@ -2,11 +2,11 @@
 
 namespace DeFuncArt.Extensions
 {
-    /// <summary>A collection of Xamarin.Forms.VisualElement extention methods.</summary>
+    /// <summary>A collection of extention methods.</summary>
     public static partial class Extensions
     {
         /// <summary>
-        /// Extension method: Sets whether the button is enabled and visible.
+        /// Sets whether the button is enabled and visible.
         /// </summary>
         public static void SetEnabledVisible(this VisualElement element, bool isEnabledVisible)
         {
