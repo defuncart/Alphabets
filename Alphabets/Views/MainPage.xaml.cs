@@ -90,6 +90,9 @@ namespace Alphabets.Views
         /// </summary>
         private void OnPracticeButtonClicked(object sender, System.EventArgs eventArgs)
         {
+            //disable all interaction
+            IsEnabled = false;
+
             //start practice
             Navigation.PushModalAsync(new PracticePage());
         }
@@ -99,6 +102,9 @@ namespace Alphabets.Views
         /// </summary>
         private void OnFlashcardsButtonClicked(object sender, System.EventArgs eventArgs)
         {
+            //disable all interaction
+            IsEnabled = false;
+
             //push an alphabet page
             Navigation.PushAsync(new AlphabetPage());
         }
