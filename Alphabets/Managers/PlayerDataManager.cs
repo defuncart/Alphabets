@@ -49,20 +49,23 @@ namespace Alphabets.Managers
         public static int CurrentLessonIndex
         {
             get => courseData.CurrentLessonIndex;
-            set
-            {
-                courseData.CurrentLessonIndex = value;
-                if (courseData.CurrentLessonIndex > courseData.HighestLessonIndexCompleted)
-                {
-                    courseData.HighestLessonIndexCompleted = courseData.CurrentLessonIndex;
-                }
-            }
+            set => courseData.CurrentLessonIndex = value;
         }
 
         /// <summary>
         /// The highest lesson index completed.
         /// </summary>
-        public static int HighestLessonIndexCompleted => courseData.HighestLessonIndexCompleted;
+        public static int HighestLessonIndexCompleted
+        {
+            get => courseData.HighestLessonIndexCompleted;
+            set
+            {
+                if (value > courseData.HighestLessonIndexCompleted)
+                {
+                    courseData.HighestLessonIndexCompleted = value;
+                }
+            }
+        }
 
         #endregion
 
@@ -76,6 +79,8 @@ namespace Alphabets.Managers
             //determine the filepath (i.e. /data/user/0/com.defuncart.Alphabets/files/PlayerData.json) which isn't exposed to the user
             string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             filepath = Path.Combine(documentsPath, FILENAME);
+
+            //File.Delete(filepath);
 
             //if the file exists, load into memory, otherwise create a new one
             if (File.Exists(filepath))

@@ -181,6 +181,13 @@ namespace Alphabets.Views.Game
             }
             else
             {
+                //update player data
+                if (PlayerDataManager.HighestLessonIndexCompleted < PlayerDataManager.CurrentLessonIndex)
+                {
+                    PlayerDataManager.HighestLessonIndexCompleted = PlayerDataManager.CurrentLessonIndex;
+                }
+                PlayerDataManager.WriteToDisk();
+
                 //HACK need to set content first so that the size of the list's rows can be determined
                 NavBar.SetText(ResultsViewTitle);
                 GameView.Content = resultsView;
@@ -197,7 +204,6 @@ namespace Alphabets.Views.Game
             if (PlayerDataManager.CurrentLessonIndex < CourseManager.CurrentCourse.Lessons.Length - 1)
             {
                 PlayerDataManager.CurrentLessonIndex++;
-                PlayerDataManager.WriteToDisk();
                 Reset();
             }
             else //otherwise return to MainPage

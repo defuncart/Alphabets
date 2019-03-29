@@ -1,4 +1,5 @@
-﻿using Alphabets.Managers;
+﻿using System.Collections.Generic;
+using Alphabets.Managers;
 using DeFuncArt.Localization;
 using Xamarin.Forms;
 using ResourceDictionary = Alphabets.Helpers.ResourceDictionary;
@@ -15,6 +16,13 @@ namespace Alphabets.Views
 
         /// <summary>The number elements per lesson row.</summary>
         private const int NUMBER_ELEMENTS_PER_LESSON_ROW = 2;
+
+        #endregion
+
+        #region Variables
+
+        /// <summary>A list of lesson buttons.</summary>
+        private List<Button> lessonButtons;
 
         #endregion
 
@@ -35,7 +43,11 @@ namespace Alphabets.Views
             //constuct UI
             Title = CourseManager.CurrentCourse.Title;
 
+            System.Diagnostics.Debug.WriteLine($"PlayerDataManager.HighestLessonIndexCompleted: {PlayerDataManager.HighestLessonIndexCompleted}");
+            System.Diagnostics.Debug.WriteLine($"PlayerDataManager.CurrentLessonIndex: {PlayerDataManager.CurrentLessonIndex}");
+
             //add lesson buttons
+            lessonButtons = new List<Button>();
             for (int i = 0; i < CourseManager.CurrentCourse.Lessons.Length; i++)
             {
                 Button lessonButton = new Button();
@@ -50,7 +62,25 @@ namespace Alphabets.Views
 
                 //add button to grid
                 gridLayout.Children.Add(lessonButton, column, row);
+
+                //add button to list
+                lessonButtons.Add(lessonButton);
             }
+        }
+
+        /// <summary>
+        /// Updates whether buttons are enabled (depending on player progress).
+        /// </summary>
+        private void UpdateButtons()
+        {
+            for (int i = 0; i < lessonButtons.Count; i++)
+            {
+                //determine if the button is enabled
+                lessonButtons[i].IsEnabled = i <= PlayerDataManager.HighestLessonIndexCompleted + 1;
+            }
+
+            //the practice button is available after the first lesson is completed
+            practiceButton.IsEnabled = PlayerDataManager.HighestLessonIndexCompleted >= 0;
         }
 
         #endregion
@@ -64,6 +94,10 @@ namespace Alphabets.Views
         {
             //call base implementaiton
             base.OnAppearing();
+
+            System.Diagnostics.Debug.WriteLine("here");
+
+            UpdateButtons();
 
             //enabled all interaction
             IsEnabled = true;
