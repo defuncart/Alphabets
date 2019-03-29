@@ -9,7 +9,7 @@
         /// An array of letters already learned and taught in this lesson.
         /// Used for multiple choice (when choosing incorrect answers).
         /// </summary>
-        public int[] CumulativeLetters { get; }
+        public Letter[] CumulativeLetters { get; }
 
         /// <summary>
         /// An array of lesson parts.
@@ -19,7 +19,7 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="T:Alphabets.Models.Lesson"/> class.
         /// </summary>
-        public Lesson(int[] cumulativeLetters, LessonPart[] lessonParts)
+        public Lesson(Letter[] cumulativeLetters, LessonPart[] lessonParts)
         {
             CumulativeLetters = cumulativeLetters;
             LessonParts = lessonParts;

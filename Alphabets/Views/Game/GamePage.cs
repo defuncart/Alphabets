@@ -48,9 +48,6 @@ namespace Alphabets.Views.Game
         /// <summary>A list of letters learned this lesson.</summary>
         protected List<Letter> learnedLetters;
 
-        /// <summary>An array of quiz letters valid for this lesson.</summary>
-        protected Letter[] quizLetters;
-
         #endregion
 
         #region Properties
@@ -118,14 +115,6 @@ namespace Alphabets.Views.Game
             lessonPartIndex = 0;
             learnedLetters.Clear();
 
-            //TODO linq
-            //determine quiz letters
-            quizLetters = new Letter[lesson.CumulativeLetters.Length];
-            for (int i = 0; i < quizLetters.Length; i++)
-            {
-                quizLetters[i] = alphabet.Letters[lesson.CumulativeLetters[i]];
-            }
-
             //initialize ui
             NavBar.SetProgress(0);
 
@@ -154,12 +143,12 @@ namespace Alphabets.Views.Game
 
                     case LessonPartType.MCAlphabetToTransliteration:
                         GameView.Content = multipleChoiceView;
-                        multipleChoiceView.Setup(letter: letter, quizLetters: quizLetters, isAlphabetToTrans: true);
+                        multipleChoiceView.Setup(letter: letter, quizLetters: lesson.CumulativeLetters, isAlphabetToTrans: true);
                         break;
 
                     case LessonPartType.MCTransliterationToAlphabet:
                         GameView.Content = multipleChoiceView;
-                        multipleChoiceView.Setup(letter: letter, quizLetters: quizLetters, isAlphabetToTrans: false);
+                        multipleChoiceView.Setup(letter: letter, quizLetters: lesson.CumulativeLetters, isAlphabetToTrans: false);
                         break;
                 }
             }
@@ -167,7 +156,7 @@ namespace Alphabets.Views.Game
             {
                 Word word = CourseManager.CurrentCourse.Words[lessonPart.Index];
                 GameView.Content = typingView;
-                typingView.Setup(word: word, quizLetters: quizLetters, isAlphabetToTrans: true);
+                typingView.Setup(word: word, quizLetters: lesson.CumulativeLetters, isAlphabetToTrans: true);
             }
         }
 

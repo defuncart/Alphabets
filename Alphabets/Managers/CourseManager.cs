@@ -71,7 +71,14 @@ namespace Alphabets.Managers
                     lessonParts.Add(new LessonPart(lessonPartType: lessonPartImport.LessonPartType, index: lessonPartImport.Index));
                 }
 
-                lessons.Add(new Lesson(cumulativeLetters: lessonImport.CumulativeLetters, lessonParts: lessonParts.ToArray()));
+                //create cumulative letters (referernces to letters from indeces)
+                Letter[] cumulativeLetters = new Letter[lessonImport.CumulativeLetters.Length];
+                for (int i = 0; i < cumulativeLetters.Length; i++)
+                {
+                    cumulativeLetters[i] = letters[lessonImport.CumulativeLetters[i]];
+                }
+
+                lessons.Add(new Lesson(cumulativeLetters: cumulativeLetters, lessonParts: lessonParts.ToArray()));
             }
 
             //create words
