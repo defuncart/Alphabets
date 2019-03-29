@@ -1,10 +1,12 @@
 ﻿using Alphabets.Models;
 using Alphabets.Models.JSON;
+using DeFuncArt.Extensions;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 
 namespace Alphabets.Managers
 {
@@ -39,7 +41,6 @@ namespace Alphabets.Managers
         {
             get => playerData.CurrentCourseIndex;
             set => playerData.CurrentCourseIndex = value;
-  
         }
 
         /// <summary>
@@ -48,8 +49,20 @@ namespace Alphabets.Managers
         public static int CurrentLessonIndex
         {
             get => courseData.CurrentLessonIndex;
-            set => courseData.CurrentLessonIndex = value;
+            set
+            {
+                courseData.CurrentLessonIndex = value;
+                if (courseData.CurrentLessonIndex > courseData.HighestLessonIndexCompleted)
+                {
+                    courseData.HighestLessonIndexCompleted = courseData.CurrentLessonIndex;
+                }
+            }
         }
+
+        /// <summary>
+        /// The highest lesson index completed.
+        /// </summary>
+        public static int HighestLessonIndexCompleted => courseData.HighestLessonIndexCompleted;
 
         #endregion
 
@@ -128,10 +141,33 @@ namespace Alphabets.Managers
         {
             if (courseData.LettersData.TryGetValue(letter.ResourceId, out LetterData letterSaveData))
             {
-                return letterSaveData.Correct / (letterSaveData.Attempts * 1.0);
+                return letterSaveData.Ratio;
             }
 
             return 0;
+        }
+
+        /// <summary>
+        /// Gets a list of the count number of weakest words (for the current course).
+        /// </summary>
+        public static List<string> GetWeakestLetters(int count)
+        {
+            //sort letter data by correct ratio
+            IEnumerable<KeyValuePair<string, LetterData>> lettersData = courseData.LettersData.Where(x => x.Value.Attempts > 0).OrderByDescending(x => x.Value.Ratio);
+
+            //TODO
+            //technically this should never be possible
+            while (lettersData.Count() < count)
+            {
+                KeyValuePair<string, LetterData> letterData = courseData.LettersData.RandomEntry();
+                if (!lettersData.Contains(letterData))
+                {
+                    lettersData = lettersData.Append(letterData);
+                }
+            }
+
+            //return list of letter ids
+            return lettersData.Select(x => x.Key).Take(count).ToList();
         }
 
         /// <summary>

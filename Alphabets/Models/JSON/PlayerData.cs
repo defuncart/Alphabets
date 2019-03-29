@@ -32,6 +32,11 @@ namespace Alphabets.Models.JSON
         /// The current lesson index.
         /// </summary>
         public int CurrentLessonIndex;
+
+        /// <summary>
+        /// The highest lesson index completed.
+        /// </summary>
+        public int HighestLessonIndexCompleted = -1;
     }
 
     /// <summary>
@@ -48,5 +53,10 @@ namespace Alphabets.Models.JSON
         /// The times the letter has been correctly answered (multiple choice and writing).
         /// </summary>
         public int Correct;
+
+        /// <summary>
+        /// The ratio of correct answers to attempts.
+        /// </summary>
+        public double Ratio => Correct / (Attempts * 1.0);
     }
 }
