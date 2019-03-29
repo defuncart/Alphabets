@@ -80,8 +80,6 @@ namespace Alphabets.Managers
             string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             filepath = Path.Combine(documentsPath, FILENAME);
 
-            //File.Delete(filepath);
-
             //if the file exists, load into memory, otherwise create a new one
             if (File.Exists(filepath))
             {

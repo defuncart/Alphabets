@@ -2,6 +2,7 @@
 using Alphabets.Models;
 using Alphabets.Views.Game;
 using DeFuncArt.Extensions;
+using DeFuncArt.Localization;
 using System.Collections.Generic;
 using System.Linq;
 using Xamarin.Forms;
@@ -32,7 +33,7 @@ namespace Alphabets.Views
         protected override Lesson lesson => practiceLesson;
 
         /// <summary>The results view title.</summary>
-        protected override string ResultsViewTitle => "TEMP";
+        protected override string ResultsViewTitle => LocalizationManager.GetValue("main_practice_name");
 
         #endregion
 
