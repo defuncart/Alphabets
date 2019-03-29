@@ -1,4 +1,4 @@
-﻿using Alphabets.Helpers;
+﻿using System.Collections.Generic;
 using Alphabets.Managers;
 using DeFuncArt.Localization;
 using Xamarin.Forms;
@@ -19,6 +19,13 @@ namespace Alphabets.Views
 
         #endregion
 
+        #region Variables
+
+        /// <summary>A list of lesson buttons.</summary>
+        private List<Button> lessonButtons;
+
+        #endregion
+
         #region Methods
 
         /// <summary>
@@ -36,7 +43,11 @@ namespace Alphabets.Views
             //constuct UI
             Title = CourseManager.CurrentCourse.Title;
 
+            System.Diagnostics.Debug.WriteLine($"PlayerDataManager.HighestLessonIndexCompleted: {PlayerDataManager.HighestLessonIndexCompleted}");
+            System.Diagnostics.Debug.WriteLine($"PlayerDataManager.CurrentLessonIndex: {PlayerDataManager.CurrentLessonIndex}");
+
             //add lesson buttons
+            lessonButtons = new List<Button>();
             for (int i = 0; i < CourseManager.CurrentCourse.Lessons.Length; i++)
             {
                 Button lessonButton = new Button();
@@ -51,7 +62,25 @@ namespace Alphabets.Views
 
                 //add button to grid
                 gridLayout.Children.Add(lessonButton, column, row);
+
+                //add button to list
+                lessonButtons.Add(lessonButton);
             }
+        }
+
+        /// <summary>
+        /// Updates whether buttons are enabled (depending on player progress).
+        /// </summary>
+        private void UpdateButtons()
+        {
+            for (int i = 0; i < lessonButtons.Count; i++)
+            {
+                //determine if the button is enabled
+                lessonButtons[i].IsEnabled = i <= PlayerDataManager.HighestLessonIndexCompleted + 1;
+            }
+
+            //the practice button is available after the first lesson is completed
+            practiceButton.IsEnabled = PlayerDataManager.HighestLessonIndexCompleted >= 0;
         }
 
         #endregion
@@ -65,6 +94,10 @@ namespace Alphabets.Views
         {
             //call base implementaiton
             base.OnAppearing();
+
+            System.Diagnostics.Debug.WriteLine("here");
+
+            UpdateButtons();
 
             //enabled all interaction
             IsEnabled = true;
@@ -80,17 +113,32 @@ namespace Alphabets.Views
             IsEnabled = false;
 
             //update current lesson index
-            UserSettings.CurrenLessonIndex = index;
+            PlayerDataManager.CurrentLessonIndex = index;
 
             //start lesson
             Navigation.PushModalAsync(new LessonPage());
         }
 
         /// <summary>
+        /// Callback when the practice button was clicked.
+        /// </summary>
+        private void OnPracticeButtonClicked(object sender, System.EventArgs eventArgs)
+        {
+            //disable all interaction
+            IsEnabled = false;
+
+            //start practice
+            Navigation.PushModalAsync(new PracticePage());
+        }
+
+        /// <summary>
         /// Callback when the flashcard button was clicked.
         /// </summary>
-        private void OnFlashcardsButtonPressed(object sender, System.EventArgs eventArgs)
+        private void OnFlashcardsButtonClicked(object sender, System.EventArgs eventArgs)
         {
+            //disable all interaction
+            IsEnabled = false;
+
             //push an alphabet page
             Navigation.PushAsync(new AlphabetPage());
         }

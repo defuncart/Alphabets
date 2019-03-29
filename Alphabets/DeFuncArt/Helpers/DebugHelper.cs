@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Text;
 
 namespace DeFuncArt.Helpers
@@ -8,6 +9,9 @@ namespace DeFuncArt.Helpers
     /// </summary>
     public static class DebugHelper
     {
+        /// <summary>
+        /// Formats an Array into a string.
+        /// </summary>
         public static string ArrayToString<T>(T[] array)
         {
             if (array != null)
@@ -19,6 +23,34 @@ namespace DeFuncArt.Helpers
                     if (i != 0) { stringBuilder.Append(", "); }
 
                     stringBuilder.Append(array[i].ToString());
+                }
+                stringBuilder.Append("]");
+
+                //return the built string
+                return stringBuilder.ToString();
+            }
+
+            //otherwise return null
+            return null;
+        }
+
+        /// <summary>
+        /// Formats an IEnumerable into a string.
+        /// </summary>
+        public static string EnumerableToString<T>(IEnumerable<T> collection)
+        {
+            if (collection != null)
+            {
+                //build a string representation of the dictionary
+                StringBuilder stringBuilder = new StringBuilder("[");
+                bool addComma = false;
+                foreach (IEnumerable enumerable in collection)
+                {
+                    if (addComma) { stringBuilder.Append(", "); }
+
+                    if (!addComma) { addComma = true; }
+
+                    stringBuilder.Append(enumerable.ToString());
                 }
                 stringBuilder.Append("]");
 

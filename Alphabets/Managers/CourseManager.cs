@@ -1,5 +1,4 @@
 ﻿using Alphabets.Enums;
-using Alphabets.Helpers;
 using Alphabets.Models;
 using Alphabets.Models.JSON;
 using DeFuncArt.Helpers;
@@ -22,7 +21,7 @@ namespace Alphabets.Managers
         /// <summary>
         /// The current course.
         /// </summary>
-        public static Course CurrentCourse => Courses[UserSettings.CurrentCourseIndex];
+        public static Course CurrentCourse => Courses[PlayerDataManager.CurrentCourseIndex];
 
         /// <summary>
         /// Initializes the <see cref="T:Alphabets.Managers.CourseManager"/> class.
@@ -72,7 +71,14 @@ namespace Alphabets.Managers
                     lessonParts.Add(new LessonPart(lessonPartType: lessonPartImport.LessonPartType, index: lessonPartImport.Index));
                 }
 
-                lessons.Add(new Lesson(cumulativeLetters: lessonImport.CumulativeLetters, lessonParts: lessonParts.ToArray()));
+                //create cumulative letters (referernces to letters from indeces)
+                Letter[] cumulativeLetters = new Letter[lessonImport.CumulativeLetters.Length];
+                for (int i = 0; i < cumulativeLetters.Length; i++)
+                {
+                    cumulativeLetters[i] = letters[lessonImport.CumulativeLetters[i]];
+                }
+
+                lessons.Add(new Lesson(cumulativeLetters: cumulativeLetters, lessonParts: lessonParts.ToArray()));
             }
 
             //create words
@@ -84,7 +90,7 @@ namespace Alphabets.Managers
             }
 
             //create course
-            return new Course(title: courseImport.Title, alphabet: new Alphabet(letters.ToArray()), lessons: lessons.ToArray(), words: words.ToArray());
+            return new Course(id: alphabetType.ToString(), title: courseImport.Title, alphabet: new Alphabet(letters.ToArray()), lessons: lessons.ToArray(), words: words.ToArray());
         }
 
         /// <summary>
