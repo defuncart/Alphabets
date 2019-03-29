@@ -153,7 +153,7 @@ namespace Alphabets.Managers
         public static List<string> GetWeakestLetters(int count)
         {
             //sort letter data by correct ratio
-            IEnumerable<KeyValuePair<string, LetterData>> lettersData = courseData.LettersData.Where(x => x.Value.Attempts > 0).OrderByDescending(x => x.Value.Ratio);
+            IEnumerable<KeyValuePair<string, LetterData>> lettersData = courseData.LettersData.Where(x => x.Value.Attempts > 0).OrderBy(x => x.Value.Ratio);
 
             //TODO
             //technically this should never be possible

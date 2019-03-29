@@ -1,6 +1,9 @@
 ﻿using Alphabets.Enums;
 using Alphabets.Models;
 using Alphabets.Views.Game;
+using DeFuncArt.Extensions;
+using System.Collections.Generic;
+using System.Linq;
 using Xamarin.Forms;
 
 namespace Alphabets.Views
@@ -49,15 +52,53 @@ namespace Alphabets.Views
         /// </summary>
         protected override void Reset()
         {
-            //TODO hardcoded for debug
+            //determine weak letters
+            //TODO hardcoded
+            List<string> letterIds = Managers.PlayerDataManager.GetWeakestLetters(3);
+            System.Diagnostics.Debug.WriteLine(DeFuncArt.Helpers.DebugHelper.EnumerableToString(letterIds));
+            List<Letter> letters = new List<Letter>();
+            foreach (string letterId in letterIds)
+            {
+                letters.Add(alphabet.Letters.First(x => x.ResourceId == letterId));
+            }
 
-            LessonPart[] lessonParts = new LessonPart[3];
-            lessonParts[0] = new LessonPart(lessonPartType: LessonPartType.Learning, index: 0);
-            lessonParts[1] = new LessonPart(lessonPartType: LessonPartType.MCAlphabetToTransliteration, index: 0);
-            lessonParts[2] = new LessonPart(lessonPartType: LessonPartType.WordAlphabetToTransliteration, index: 0);
+            //determine words
+            //TODO hardcoded
+            System.Func<Word, bool> predicate = word => word.Lesson <= Managers.PlayerDataManager.HighestLessonIndexCompleted &&
+                                                        (word.Letters.Contains(letters[0]) || word.Letters.Contains(letters[1]) || word.Letters.Contains(letters[2]));
+            IEnumerable<Word> words = Managers.CourseManager.CurrentCourse.Words.Where(predicate);
+            words = words.Shuffle().Take(4);
+
+            //TODO hardcoded
+            //construct lesson
+            List<LessonPart> lessonParts = new List<LessonPart>();
+            int index = Managers.CourseManager.CurrentCourse.Alphabet.Letters.IndexOf(letters[0]);
+            lessonParts.Add(new LessonPart(lessonPartType: LessonPartType.Learning, index: index));
+            lessonParts.Add(new LessonPart(lessonPartType: LessonPartType.MCAlphabetToTransliteration, index: index));
+            index = Managers.CourseManager.CurrentCourse.Alphabet.Letters.IndexOf(letters[1]);
+            lessonParts.Add(new LessonPart(lessonPartType: LessonPartType.Learning, index: index));
+            lessonParts.Add(new LessonPart(lessonPartType: LessonPartType.MCAlphabetToTransliteration, index: index));
+            index = Managers.CourseManager.CurrentCourse.Alphabet.Letters.IndexOf(letters[2]);
+            lessonParts.Add(new LessonPart(lessonPartType: LessonPartType.Learning, index: index));
+            lessonParts.Add(new LessonPart(lessonPartType: LessonPartType.MCAlphabetToTransliteration, index: index));
+            index = Managers.CourseManager.CurrentCourse.Words.IndexOf(words.ElementAt(0));
+            lessonParts.Add(new LessonPart(lessonPartType: LessonPartType.WordAlphabetToTransliteration, index: index));
+            index = Managers.CourseManager.CurrentCourse.Words.IndexOf(words.ElementAt(1));
+            lessonParts.Add(new LessonPart(lessonPartType: LessonPartType.WordAlphabetToTransliteration, index: index));
+            index = Managers.CourseManager.CurrentCourse.Alphabet.Letters.IndexOf(letters[0]);
+            lessonParts.Add(new LessonPart(lessonPartType: LessonPartType.MCTransliterationToAlphabet, index: index));
+            index = Managers.CourseManager.CurrentCourse.Alphabet.Letters.IndexOf(letters[1]);
+            lessonParts.Add(new LessonPart(lessonPartType: LessonPartType.MCTransliterationToAlphabet, index: index));
+            index = Managers.CourseManager.CurrentCourse.Alphabet.Letters.IndexOf(letters[2]);
+            lessonParts.Add(new LessonPart(lessonPartType: LessonPartType.MCTransliterationToAlphabet, index: index));
+            index = Managers.CourseManager.CurrentCourse.Words.IndexOf(words.ElementAt(2));
+            lessonParts.Add(new LessonPart(lessonPartType: LessonPartType.WordAlphabetToTransliteration, index: index));
+            index = Managers.CourseManager.CurrentCourse.Words.IndexOf(words.ElementAt(3));
+            lessonParts.Add(new LessonPart(lessonPartType: LessonPartType.WordAlphabetToTransliteration, index: index));
 
             //firstly create the lesson
-            practiceLesson = new Lesson(new int[] { 0, 8, 10, 11 }, lessonParts);
+            //use the cummulativeLetters of the highest lesson index reached by the player
+            practiceLesson = new Lesson(Managers.CourseManager.CurrentCourse.Lessons[Managers.PlayerDataManager.HighestLessonIndexCompleted].CumulativeLetters, lessonParts.ToArray());
 
             //then call base implementation
             base.Reset();
