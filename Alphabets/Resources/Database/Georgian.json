@@ -494,19 +494,19 @@
         },
         {
           "LessonPartType": 3,
+          "Index": "18"
+        },
+        {
+          "LessonPartType": 3,
+          "Index": "15"
+        },
+        {
+          "LessonPartType": 3,
           "Index": "16"
         },
         {
           "LessonPartType": 3,
-          "Index": "13"
-        },
-        {
-          "LessonPartType": 3,
-          "Index": "14"
-        },
-        {
-          "LessonPartType": 3,
-          "Index": "26"
+          "Index": "30"
         }
       ]
     },
@@ -551,11 +551,11 @@
         },
         {
           "LessonPartType": 3,
-          "Index": "36"
+          "Index": "41"
         },
         {
           "LessonPartType": 3,
-          "Index": "41"
+          "Index": "46"
         }
       ]
     },
@@ -597,6 +597,14 @@
         {
           "LessonPartType": 2,
           "Index": "14"
+        },
+        {
+          "LessonPartType": 3,
+          "Index": "57"
+        },
+        {
+          "LessonPartType": 3,
+          "Index": "77"
         }
       ]
     },
@@ -650,6 +658,14 @@
         {
           "LessonPartType": 2,
           "Index": "6"
+        },
+        {
+          "LessonPartType": 3,
+          "Index": "110"
+        },
+        {
+          "LessonPartType": 3,
+          "Index": "93"
         }
       ]
     },
@@ -865,7 +881,7 @@
     },
     {
       "Original": "ლამა",
-      "Transliteration": "Llama",
+      "Transliteration": "lama",
       "Tips": {
         "en": "An animal",
         "de": "An animal",
@@ -887,7 +903,7 @@
     },
     {
       "Original": "მილანი",
-      "Transliteration": "milan",
+      "Transliteration": "milani",
       "Tips": {
         "en": "A city in Europe",
         "de": "A city in Europe",
@@ -963,6 +979,28 @@
       "Lesson": 2
     },
     {
+      "Original": "სამოა",
+      "Transliteration": "samoa",
+      "Tips": {
+        "en": "A country in the Pacific",
+        "de": "A country in the Pacific",
+        "pl": "A country in the Pacific"
+      },
+      "Letters": [ 17, 0, 11, 13, 0 ],
+      "Lesson": 2
+    },
+    {
+      "Original": "მე",
+      "Transliteration": "me",
+      "Tips": {
+        "en": "The Georgian word for *I*",
+        "de": "The Georgian word for *I*",
+        "pl": "The Georgian word for *I*"
+      },
+      "Letters": [ 11, 4 ],
+      "Lesson": 2
+    },
+    {
       "Original": "რომი",
       "Transliteration": "romi",
       "Tips": {
@@ -988,9 +1026,9 @@
       "Original": "ერევანი",
       "Transliteration": "erevani",
       "Tips": {
-        "en": "The capital of Armenia.",
-        "de": "The capital of Armenia.",
-        "pl": "The capital of Armenia."
+        "en": "The capital of Armenia",
+        "de": "The capital of Armenia",
+        "pl": "The capital of Armenia"
       },
       "Letters": [ 4, 16, 4, 5, 0, 12, 8 ],
       "Lesson": 3
@@ -1106,6 +1144,28 @@
       "Lesson": 3
     },
     {
+      "Original": "სურინამი",
+      "Transliteration": "surinami",
+      "Tips": {
+        "en": "A country in South America",
+        "de": "A country in South America",
+        "pl": "A country in South America"
+      },
+      "Letters": [ 17, 19, 16, 8, 12, 0, 11, 8 ],
+      "Lesson": 3
+    },
+    {
+      "Original": "ვენესუელა",
+      "Transliteration": "venesuela",
+      "Tips": {
+        "en": "A country in South America",
+        "de": "A country in South America",
+        "pl": "A country in South America"
+      },
+      "Letters": [ 5, 4, 12, 4, 17, 19, 4, 10, 0 ],
+      "Lesson": 100
+    },
+    {
       "Original": "მენიუ",
       "Transliteration": "meniu",
       "Tips": {
@@ -1161,6 +1221,17 @@
       "Lesson": 3
     },
     {
+      "Original": "ორი",
+      "Transliteration": "ori",
+      "Tips": {
+        "en": "The Georgian word for *two*",
+        "de": "The Georgian word for *two*",
+        "pl": "The Georgian word for *two*"
+      },
+      "Letters": [ 13, 16, 8 ],
+      "Lesson": 3
+    },
+    {
       "Original": "რიონი",
       "Transliteration": "rioni",
       "Tips": {
@@ -1186,9 +1257,9 @@
       "Original": "ნული",
       "Transliteration": "nuli",
       "Tips": {
-        "en": "Zero",
-        "de": "Zero",
-        "pl": "Zero"
+        "en": "The Georgian word for *zero*",
+        "de": "The Georgian word for *zero*",
+        "pl": "The Georgian word for *zero*"
       },
       "Letters": [ 12, 19, 10, 8 ],
       "Lesson": 3
@@ -1268,7 +1339,7 @@
         "pl": "Georgia written in Georgian"
       },
       "Letters": [ 17, 0, 21, 0, 16, 7, 5, 4, 10, 13 ],
-      "Lesson": 4
+      "Lesson": 100
     },
     {
       "Original": "ქართული",
@@ -1323,6 +1394,50 @@
         "pl": "The georgian word for *city*"
       },
       "Letters": [ 21, 0, 10, 0, 21, 8 ],
+      "Lesson": 4
+    },
+    {
+      "Original": "ფული",
+      "Transliteration": "puli",
+      "Tips": {
+        "en": "The georgian word for *money*",
+        "de": "The georgian word for *money*",
+        "pl": "The georgian word for *money*"
+      },
+      "Letters": [ 20, 19, 10, 8 ],
+      "Lesson": 4
+    },
+    {
+      "Original": "თურქეთი",
+      "Transliteration": "turketi",
+      "Tips": {
+        "en": "A country in Europe",
+        "de": "A country in Europe",
+        "pl": "A country in Europe"
+      },
+      "Letters": [ 7, 19, 16, 21, 4, 7, 8 ],
+      "Lesson": 4
+    },
+    {
+      "Original": "ქუვეითი",
+      "Transliteration": "kuveiti",
+      "Tips": {
+        "en": "A country in the Middle East",
+        "de": "A country in the Middle East",
+        "pl": "A country in the Middle East"
+      },
+      "Letters": [ 21, 19, 5, 4, 8, 7, 8 ],
+      "Lesson": 4
+    },
+    {
+      "Original": "ქართული",
+      "Transliteration": "kartuli",
+      "Tips": {
+        "en": "The Georgian Langauge",
+        "de": "The Georgian Langauge",
+        "pl": "The Georgian Langauge"
+      },
+      "Letters": [ 21, 0, 16, 7, 19, 10, 8 ],
       "Lesson": 4
     },
     {
@@ -1532,7 +1647,7 @@
         "pl": "A country in Europe"
       },
       "Letters": [ 17, 10, 13, 5, 0, 9, 4, 7, 8 ],
-      "Lesson": 5
+      "Lesson": 100
     },
     {
       "Original": "პაკისტანი",
@@ -1543,7 +1658,7 @@
         "pl": "A county in Asia"
       },
       "Letters": [ 14, 0, 9, 8, 17, 18, 0, 12, 8 ],
-      "Lesson": 5
+      "Lesson": 100
     },
     {
       "Original": "ავსტრალია",
@@ -1554,15 +1669,15 @@
         "pl": "A country"
       },
       "Letters": [ 0, 5, 17, 18, 16, 0, 10, 8, 0 ],
-      "Lesson": 5
+      "Lesson": 100
     },
     {
       "Original": "მეტრო",
       "Transliteration": "met'ro",
       "Tips": {
-        "en": "...",
-        "de": "...",
-        "pl": "..."
+        "en": "A means of transport",
+        "de": "A means of transport",
+        "pl": "A means of transport"
       },
       "Letters": [ 11, 4, 18, 16, 13 ],
       "Lesson": 5
@@ -1598,7 +1713,1041 @@
         "pl": "..."
       },
       "Letters": [ 8, 12, 18, 4, 16, 12, 4, 18, 8 ],
-      "Lesson": 5
+      "Lesson": 100
+    },
+    {
+      "Original": "აზია",
+      "Transliteration": "azia",
+      "Tips": {
+        "en": "A region",
+        "de": "A region",
+        "pl": "A region"
+      },
+      "Letters": [ 0, 6, 8, 0 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "რიგა",
+      "Transliteration": "riga",
+      "Tips": {
+        "en": "A city in Europe",
+        "de": "A city in Europe",
+        "pl": "A city in Europe"
+      },
+      "Letters": [ 16, 8, 2, 0 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "ლიბია",
+      "Transliteration": "libia",
+      "Tips": {
+        "en": "A country in Africa",
+        "de": "A country in Africa",
+        "pl": "A country in Africa"
+      },
+      "Letters": [ 10, 8, 1, 8, 0 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "კანადა",
+      "Transliteration": "k'anada",
+      "Tips": {
+        "en": "A country in North America",
+        "de": "A country in North America",
+        "pl": "A country in North America"
+      },
+      "Letters": [ 9, 0, 12, 0, 3, 0 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "სუდანი",
+      "Transliteration": "sudani",
+      "Tips": {
+        "en": "A country in Africa",
+        "de": "A country in Africa",
+        "pl": "A country in Africa"
+      },
+      "Letters": [ 17, 19, 3, 0, 12, 8 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "ანდორა",
+      "Transliteration": "andora",
+      "Tips": {
+        "en": "A country in Europe",
+        "de": "A country in Europe",
+        "pl": "A country in Europe"
+      },
+      "Letters": [ 0, 12, 3, 13, 16, 0 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "ანგოლა",
+      "Transliteration": "angola",
+      "Tips": {
+        "en": "A country in Africa",
+        "de": "A country in Africa",
+        "pl": "A country in Africa"
+      },
+      "Letters": [ 0, 12, 2, 13, 10, 0 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "ბელგია",
+      "Transliteration": "belgia",
+      "Tips": {
+        "en": "A country in Europe",
+        "de": "A country in Europe",
+        "pl": "A country in Europe"
+      },
+      "Letters": [ 1, 4, 10, 2, 8, 0 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "ზამბია",
+      "Transliteration": "zambia",
+      "Tips": {
+        "en": "A country in Africa",
+        "de": "A country in Africa",
+        "pl": "A country in Africa"
+      },
+      "Letters": [ 6, 0, 11, 1, 8, 0 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "პარიზი",
+      "Transliteration": "p'arizi",
+      "Tips": {
+        "en": "A city in Europe",
+        "de": "A city in Europe",
+        "pl": "A city in Europe"
+      },
+      "Letters": [ 14, 0, 16, 8, 6, 8 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "ლიბანი",
+      "Transliteration": "libani",
+      "Tips": {
+        "en": "A country in the Middle East",
+        "de": "A country in the Middle East",
+        "pl": "A country in the Middle East"
+      },
+      "Letters": [ 10, 8, 1, 0, 12, 8 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "დუბლინი",
+      "Transliteration": "dublini",
+      "Tips": {
+        "en": "A city in Europe",
+        "de": "A city in Europe",
+        "pl": "A city in Europe"
+      },
+      "Letters": [ 3, 19, 1, 10, 8, 12, 8 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "ბერლინი",
+      "Transliteration": "berlini",
+      "Tips": {
+        "en": "A city in Europe",
+        "de": "A city in Europe",
+        "pl": "A city in Europe"
+      },
+      "Letters": [ 1, 4, 16, 10, 8, 12, 8 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "ლონდონი",
+      "Transliteration": "londoni",
+      "Tips": {
+        "en": "A city in Europe",
+        "de": "A city in Europe",
+        "pl": "A city in Europe"
+      },
+      "Letters": [ 10, 13, 12, 3, 13, 12, 8 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "ბოლივია",
+      "Transliteration": "bolivia",
+      "Tips": {
+        "en": "A country in South America",
+        "de": "A country in South America",
+        "pl": "A country in South America"
+      },
+      "Letters": [ 1, 13, 10, 8, 5, 8, 0 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "მადრიდი",
+      "Transliteration": "madridi",
+      "Tips": {
+        "en": "A city in Europe",
+        "de": "A city in Europe",
+        "pl": "A city in Europe"
+      },
+      "Letters": [ 11, 0, 3, 16, 8, 3, 8 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "ირლანდია",
+      "Transliteration": "irlandia",
+      "Tips": {
+        "en": "A country in Europe",
+        "de": "A country in Europe",
+        "pl": "A country in Europe"
+      },
+      "Letters": [ 8, 16, 10, 0, 12, 3, 8, 0 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "ბრაზილია",
+      "Transliteration": "brazilia",
+      "Tips": {
+        "en": "A country in South America",
+        "de": "A country in South America",
+        "pl": "A country in South America"
+      },
+      "Letters": [ 1, 16, 0, 6, 8, 10, 8, 0 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "ბელარუსი",
+      "Transliteration": "belarusi",
+      "Tips": {
+        "en": "A country in Europe",
+        "de": "A country in Europe",
+        "pl": "A country in Europe"
+      },
+      "Letters": [ 1, 4, 10, 0, 16, 19, 17, 8 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "გერმანია",
+      "Transliteration": "germania",
+      "Tips": {
+        "en": "A country in Europe",
+        "de": "A country in Europe",
+        "pl": "A country in Europe"
+      },
+      "Letters": [ 2, 4, 16, 11, 0, 12, 8, 0 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "უზბეკეთი",
+      "Transliteration": "uzbek'eti",
+      "Tips": {
+        "en": "A country in Central Asia",
+        "de": "A country in Central Asia",
+        "pl": "A country in Central Asia"
+      },
+      "Letters": [ 19, 6, 1, 4, 9, 4, 7, 8 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "მალაიზია",
+      "Transliteration": "malaizia",
+      "Tips": {
+        "en": "A country in Asia",
+        "de": "A country in Asia",
+        "pl": "A country in Asia"
+      },
+      "Letters": [ 11, 0, 10, 0, 8, 6, 8, 0 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "ინდონეზია",
+      "Transliteration": "indonezia",
+      "Tips": {
+        "en": "...",
+        "de": "...",
+        "pl": "..."
+      },
+      "Letters": [ 8, 12, 3, 13, 12, 4, 6, 8, 0 ],
+      "Lesson": 100
+    },
+    {
+      "Original": "ამსტერდამი",
+      "Transliteration": "amst'erdami",
+      "Tips": {
+        "en": "...",
+        "de": "...",
+        "pl": "..."
+      },
+      "Letters": [ 0, 11, 17, 18, 4, 16, 3, 0, 11, 8 ],
+      "Lesson": 100
+    },
+    {
+      "Original": "ბრატისლავა",
+      "Transliteration": "brat'islava",
+      "Tips": {
+        "en": "...",
+        "de": "...",
+        "pl": "..."
+      },
+      "Letters": [ 1, 16, 0, 18, 8, 17, 10, 0, 5, 0 ],
+      "Lesson": 100
+    },
+    {
+      "Original": "გორი",
+      "Transliteration": "gori",
+      "Tips": {
+        "en": "A city in Georgia",
+        "de": "A city in Georgia",
+        "pl": "A city in Georgia"
+      },
+      "Letters": [ 2, 13, 16, 8 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "გურია",
+      "Transliteration": "guria",
+      "Tips": {
+        "en": "A region in Georgia",
+        "de": "A region in Georgia",
+        "pl": "A region in Georgia"
+      },
+      "Letters": [ 2, 19, 16, 8, 0 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "ბათუმი",
+      "Transliteration": "batumi",
+      "Tips": {
+        "en": "A city in Georgia",
+        "de": "A city in Georgia",
+        "pl": "A city in Georgia"
+      },
+      "Letters": [ 1, 0, 7, 19, 11, 8 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "თბილისი",
+      "Transliteration": "tbilisi",
+      "Tips": {
+        "en": "A city in Georgia",
+        "de": "A city in Georgia",
+        "pl": "A city in Georgia"
+      },
+      "Letters": [ 7, 1, 8, 10, 8, 17, 8 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "ზუგდიდი",
+      "Transliteration": "zugdidi",
+      "Tips": {
+        "en": "A city in Georgia",
+        "de": "A city in Georgia",
+        "pl": "A city in Georgia"
+      },
+      "Letters": [ 6, 19, 2, 3, 8, 3, 8 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "სამტრედია",
+      "Transliteration": "samt'redia",
+      "Tips": {
+        "en": "A town in Georgia",
+        "de": "A town in Georgia",
+        "pl": "A town in Georgia"
+      },
+      "Letters": [ 17, 0, 11, 18, 16, 4, 3, 8, 0 ],
+      "Lesson": 100
+    },
+    {
+      "Original": "ზესტაფონი",
+      "Transliteration": "zest'aponi",
+      "Tips": {
+        "en": "A town in Georgia",
+        "de": "A town in Georgia",
+        "pl": "A town in Georgia"
+      },
+      "Letters": [ 6, 4, 17, 18, 0, 20, 13, 12, 8 ],
+      "Lesson": 100
+    },
+    {
+      "Original": "ქობულეთი",
+      "Transliteration": "kobuleti",
+      "Tips": {
+        "en": "A town in Georgia",
+        "de": "A town in Georgia",
+        "pl": "A town in Georgia"
+      },
+      "Letters": [ 21, 13, 1, 19, 10, 4, 7, 8 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "ოზურგეთი",
+      "Transliteration": "ozurgeti",
+      "Tips": {
+        "en": "A city in Georgia",
+        "de": "A city in Georgia",
+        "pl": "A city in Georgia"
+      },
+      "Letters": [ 13, 6, 19, 16, 2, 4, 7, 8 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "გარდაბანი",
+      "Transliteration": "gardabani",
+      "Tips": {
+        "en": "A town in Georgia",
+        "de": "A town in Georgia",
+        "pl": "A town in Georgia"
+      },
+      "Letters": [ 2, 0, 16, 3, 0, 1, 0, 12, 8 ],
+      "Lesson": 100
+    },
+    {
+      "Original": "ვიკიპედია",
+      "Transliteration": "vik'ip'edia",
+      "Tips": {
+        "en": "A free online encyclopedia",
+        "de": "A free online encyclopedia",
+        "pl": "A free online encyclopedia"
+      },
+      "Letters": [ 5, 8, 9, 8, 14, 4, 3, 8, 0 ],
+      "Lesson": 100
+    },
+    {
+      "Original": "ავტობუსი",
+      "Transliteration": "avt'obusi",
+      "Tips": {
+        "en": "A means of transport",
+        "de": "A means of transport",
+        "pl": "A means of transport"
+      },
+      "Letters": [ 0, 5, 18, 13, 1, 19, 17, 8 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "გუგლი",
+      "Transliteration": "gugli",
+      "Tips": {
+        "en": "An American technological company",
+        "de": "An American technological company",
+        "pl": "An American technological company"
+      },
+      "Letters": [ 2, 19, 2, 10, 8 ],
+      "Lesson": 6
+    },
+    {
+      "Original": "ჩილე",
+      "Transliteration": "chile",
+      "Tips": {
+        "en": "A country in South America",
+        "de": "A country in South America",
+        "pl": "A country in South America"
+      },
+      "Letters": [ 25, 8, 10, 4 ],
+      "Lesson": 7
+    },
+    {
+      "Original": "ჩადი",
+      "Transliteration": "chadi",
+      "Tips": {
+        "en": "...",
+        "de": "...",
+        "pl": "..."
+      },
+      "Letters": [ 25, 0, 3, 8 ],
+      "Lesson": 7
+    },
+    {
+      "Original": "ცენტრი",
+      "Transliteration": "tsent'ri",
+      "Tips": {
+        "en": "...",
+        "de": "...",
+        "pl": "..."
+      },
+      "Letters": [ 26, 4, 12, 18, 16, 8 ],
+      "Lesson": 7
+    },
+    {
+      "Original": "ჩიკაგო",
+      "Transliteration": "chik'ago",
+      "Tips": {
+        "en": "A city in the USA",
+        "de": "A city in the USA",
+        "pl": "A city in the USA"
+      },
+      "Letters": [ 25, 8, 9, 0, 2, 13 ],
+      "Lesson": 7
+    },
+    {
+      "Original": "ვარშავა",
+      "Transliteration": "varshava",
+      "Tips": {
+        "en": "...",
+        "de": "...",
+        "pl": "..."
+      },
+      "Letters": [ 5, 0, 16, 24, 0, 5, 0 ],
+      "Lesson": 7
+    },
+    {
+      "Original": "ჩემპიონი",
+      "Transliteration": "chemp'ioni",
+      "Tips": {
+        "en": "...",
+        "de": "...",
+        "pl": "..."
+      },
+      "Letters": [ 25, 4, 11, 14, 8, 13, 12, 8 ],
+      "Lesson": 7
+    },
+    {
+      "Original": "ბუდაპეშტი",
+      "Transliteration": "budap'esht'i",
+      "Tips": {
+        "en": "...",
+        "de": "...",
+        "pl": "..."
+      },
+      "Letters": [ 1, 19, 3, 0, 14, 4, 24, 18, 8 ],
+      "Lesson": 100
+    },
+    {
+      "Original": "შვეიცარია",
+      "Transliteration": "shveitsaria",
+      "Tips": {
+        "en": "...",
+        "de": "...",
+        "pl": "..."
+      },
+      "Letters": [ 24, 5, 4, 8, 26, 0, 16, 8, 0 ],
+      "Lesson": 100
+    },
+    {
+      "Original": "ვაშინგტონი",
+      "Transliteration": "vashingt'oni",
+      "Tips": {
+        "en": "A city in the USA",
+        "de": "A city in the USA",
+        "pl": "A city in the USA"
+      },
+      "Letters": [ 5, 0, 24, 8, 12, 2, 18, 13, 12, 8 ],
+      "Lesson": 100
+    },
+    {
+      "Original": "ბანგლადეში",
+      "Transliteration": "bangladeshi",
+      "Tips": {
+        "en": "...",
+        "de": "...",
+        "pl": "..."
+      },
+      "Letters": [ 1, 0, 12, 2, 10, 0, 3, 4, 24, 8 ],
+      "Lesson": 100
+    },
+    {
+      "Original": "ინფორმაცია",
+      "Transliteration": "inpormatsia",
+      "Tips": {
+        "en": "...",
+        "de": "...",
+        "pl": "..."
+      },
+      "Letters": [ 8, 12, 20, 13, 16, 11, 0, 26, 8, 0 ],
+      "Lesson": 100
+    },
+    {
+      "Original": "ჩაი",
+      "Transliteration": "chai",
+      "Tips": {
+        "en": "The georgian word for *tea*",
+        "de": "The georgian word for *tea*",
+        "pl": "The georgian word for *tea*"
+      },
+      "Letters": [ 25, 0, 8 ],
+      "Lesson": 7
+    },
+    {
+      "Original": "ქუჩა",
+      "Transliteration": "kucha",
+      "Tips": {
+        "en": "The georgian word for *street*",
+        "de": "The georgian word for *street*",
+        "pl": "The georgian word for *street*"
+      },
+      "Letters": [ 21, 19, 25, 0 ],
+      "Lesson": 7
+    },
+    {
+      "Original": "კაცი",
+      "Transliteration": "k'atsi",
+      "Tips": {
+        "en": "The georgian word for *man*",
+        "de": "The georgian word for *man*",
+        "pl": "The georgian word for *man*"
+      },
+      "Letters": [ 9, 0, 26, 8 ],
+      "Lesson": 7
+    },
+    {
+      "Original": "თუშეთი",
+      "Transliteration": "tusheti",
+      "Tips": {
+        "en": "A region in Georgia",
+        "de": "A region in Georgia",
+        "pl": "A region in Georgia"
+      },
+      "Letters": [ 7, 19, 24, 4, 7, 8 ],
+      "Lesson": 7
+    },
+    {
+      "Original": "ცოლი",
+      "Transliteration": "tsoli",
+      "Tips": {
+        "en": "The georgian word for *wife*",
+        "de": "The georgian word for *wife*",
+        "pl": "The georgian word for *wife*"
+      },
+      "Letters": [ 26, 13, 10, 8 ],
+      "Lesson": 7
+    },
+    {
+      "Original": "შენ",
+      "Transliteration": "shen",
+      "Tips": {
+        "en": "The georgian word for *you* (sg)",
+        "de": "The georgian word for *you* (sg)",
+        "pl": "The georgian word for *you* (sg)"
+      },
+      "Letters": [ 24, 4, 12 ],
+      "Lesson": 7
+    },
+    {
+      "Original": "ჯაზი",
+      "Transliteration": "jazi",
+      "Tips": {
+        "en": "A genre of music",
+        "de": "A genre of music",
+        "pl": "A genre of music"
+      },
+      "Letters": [ 31, 0, 6, 8 ],
+      "Lesson": 8
+    },
+    {
+      "Original": "ჯუნგლი",
+      "Transliteration": "jungli",
+      "Tips": {
+        "en": "A large, humid forest in a tropical region",
+        "de": "A large, humid forest in a tropical region",
+        "pl": "A large, humid forest in a tropical region"
+      },
+      "Letters": [ 31, 19, 12, 2, 10, 8 ],
+      "Lesson": 8
+    },
+    {
+      "Original": "ალჟირი",
+      "Transliteration": "alzhiri",
+      "Tips": {
+        "en": "A country in Africa",
+        "de": "A country in Africa",
+        "pl": "A country in Africa"
+      },
+      "Letters": [ 0, 10, 15, 8, 16, 8 ],
+      "Lesson": 8
+    },
+    {
+      "Original": "ჯიბუტი",
+      "Transliteration": "jibut'i",
+      "Tips": {
+        "en": "A country in Africa",
+        "de": "A country in Africa",
+        "pl": "A country in Africa"
+      },
+      "Letters": [ 31, 8, 1, 19, 18, 8 ],
+      "Lesson": 8
+    },
+    {
+      "Original": "ჟენევა",
+      "Transliteration": "zheneva",
+      "Tips": {
+        "en": "A city in Switzerland",
+        "de": "A city in Switzerland",
+        "pl": "A city in Switzerland"
+      },
+      "Letters": [ 15, 4, 12, 4, 5, 0 ],
+      "Lesson": 8
+    },
+    {
+      "Original": "კამბოჯა",
+      "Transliteration": "k'amboja",
+      "Tips": {
+        "en": "A country in Asia",
+        "de": "A country in Asia",
+        "pl": "A country in Asia"
+      },
+      "Letters": [ 9, 0, 11, 1, 13, 31, 0 ],
+      "Lesson": 8
+    },
+    {
+      "Original": "ჟელატინი",
+      "Transliteration": "zhelat'ini",
+      "Tips": {
+        "en": "A food ingredient",
+        "de": "A food ingredient",
+        "pl": "A food ingredient"
+      },
+      "Letters": [ 15, 4, 10, 0, 18, 8, 12, 8 ],
+      "Lesson": 8
+    },
+    {
+      "Original": "ინჟინერი",
+      "Transliteration": "inzhineri",
+      "Tips": {
+        "en": "A profession",
+        "de": "A profession",
+        "pl": "A profession"
+      },
+      "Letters": [ 8, 12, 15, 8, 12, 4, 16, 8 ],
+      "Lesson": 8
+    },
+    {
+      "Original": "ჟურნალისტი",
+      "Transliteration": "zhurnalist'i",
+      "Tips": {
+        "en": "A profession",
+        "de": "A profession",
+        "pl": "A profession"
+      },
+      "Letters": [ 15, 19, 16, 12, 0, 10, 8, 17, 18, 8 ],
+      "Lesson": 100
+    },
+    {
+      "Original": "აზერბაიჯანი",
+      "Transliteration": "azerbaijani",
+      "Tips": {
+        "en": "...",
+        "de": "...",
+        "pl": "..."
+      },
+      "Letters": [ 0, 6, 4, 16, 1, 0, 8, 31, 0, 12, 8 ],
+      "Lesson": 100
+    },
+    {
+      "Original": "მცხეთა",
+      "Transliteration": "mtskheta",
+      "Tips": {
+        "en": "A city in Georgia",
+        "de": "A city in Georgia",
+        "pl": "A city in Georgia"
+      },
+      "Letters": [ 11, 26, 30, 4, 7, 0 ],
+      "Lesson": 8
+    },
+    {
+      "Original": "სოხუმი",
+      "Transliteration": "sokhumi",
+      "Tips": {
+        "en": "A city on the Black Sea coast",
+        "de": "A city on the Black Sea coast",
+        "pl": "A city on the Black Sea coast"
+      },
+      "Letters": [ 17, 13, 30, 19, 11, 8 ],
+      "Lesson": 8
+    },
+    {
+      "Original": "ბორჯომი",
+      "Transliteration": "borjomi",
+      "Tips": {
+        "en": "A town in Georgia",
+        "de": "A town in Georgia",
+        "pl": "A town in Georgia"
+      },
+      "Letters": [ 1, 13, 16, 31, 13, 11, 8 ],
+      "Lesson": 8
+    },
+    {
+      "Original": "ხინკალი",
+      "Transliteration": "khink'ali",
+      "Tips": {
+        "en": "Part of Georgian cuisine",
+        "de": "Part of Georgian cuisine",
+        "pl": "Part of Georgian cuisine"
+      },
+      "Letters": [ 30, 8, 12, 9, 0, 10, 8 ],
+      "Lesson": 8
+    },
+    {
+      "Original": "გამარჯობა",
+      "Transliteration": "gamarjoba",
+      "Tips": {
+        "en": "The georgian word for *hello*",
+        "de": "The georgian word for *hello*",
+        "pl": "The georgian word for *hello*"
+      },
+      "Letters": [ 2, 0, 11, 0, 16, 31, 13, 1, 0 ],
+      "Lesson": 100
+    },
+    {
+      "Original": "ცხინვალი",
+      "Transliteration": "tskhinvali",
+      "Tips": {
+        "en": "A city",
+        "de": "A city",
+        "pl": "A city"
+      },
+      "Letters": [ 26, 30, 8, 12, 5, 0, 10, 8 ],
+      "Lesson": 8
+    },
+    {
+      "Original": "ჩურჩხელა",
+      "Transliteration": "churchkhela",
+      "Tips": {
+        "en": "Part of Georgian cuisine",
+        "de": "Part of Georgian cuisine",
+        "pl": "Part of Georgian cuisine"
+      },
+      "Letters": [ 25, 19, 16, 25, 30, 4, 10, 0 ],
+      "Lesson": 8
+    },
+    {
+      "Original": "ახალციხე",
+      "Transliteration": "akhaltsikhe",
+      "Tips": {
+        "en": "A city in Georgia",
+        "de": "A city in Georgia",
+        "pl": "A city in Georgia"
+      },
+      "Letters": [ 0, 30, 0, 10, 26, 8, 30, 4 ],
+      "Lesson": 8
+    },
+    {
+      "Original": "მხედრული",
+      "Transliteration": "mkhedruli",
+      "Tips": {
+        "en": "Name of the georgian script",
+        "de": "Name of the georgian script",
+        "pl": "Name of the georgian script"
+      },
+      "Letters": [ 11, 30, 4, 3, 16, 19, 10, 8 ],
+      "Lesson": 8
+    },
+    {
+      "Original": "ჰაიტი",
+      "Transliteration": "hait'i",
+      "Tips": {
+        "en": "A country in the Caribbean",
+        "de": "A country in the Caribbean",
+        "pl": "A country in the Caribbean"
+      },
+      "Letters": [ 32, 0, 8, 18, 8 ],
+      "Lesson": 9
+    },
+    {
+      "Original": "ჰაიკუ",
+      "Transliteration": "haik'u",
+      "Tips": {
+        "en": "A form of Japanese poetry",
+        "de": "A form of Japanese poetry",
+        "pl": "A form of Japanese poetry"
+      },
+      "Letters": [ 32, 0, 8, 9, 19 ],
+      "Lesson": 9
+    },
+    {
+      "Original": "პრაღა",
+      "Transliteration": "p'ragha",
+      "Tips": {
+        "en": "A city in Europe",
+        "de": "A city in Europe",
+        "pl": "A city in Europe"
+      },
+      "Letters": [ 14, 16, 0, 22, 0 ],
+      "Lesson": 9
+    },
+    {
+      "Original": "საჰარა",
+      "Transliteration": "sahara",
+      "Tips": {
+        "en": "A desert in Africa",
+        "de": "A desert in Africa",
+        "pl": "A desert in Africa"
+      },
+      "Letters": [ 17, 0, 32, 0, 16, 0 ],
+      "Lesson": 9
+    },
+    {
+      "Original": "ბაღდადი",
+      "Transliteration": "baghdadi",
+      "Tips": {
+        "en": "A city in the Middle East",
+        "de": "A city in the Middle East",
+        "pl": "A city in the Middle East"
+      },
+      "Letters": [ 1, 0, 22, 3, 0, 3, 8 ],
+      "Lesson": 9
+    },
+    {
+      "Original": "ჰელსინკი",
+      "Transliteration": "helsink'i",
+      "Tips": {
+        "en": "A city in Europe",
+        "de": "A city in Europe",
+        "pl": "A city in Europe"
+      },
+      "Letters": [ 32, 4, 10, 17, 8, 12, 9, 8 ],
+      "Lesson": 9
+    },
+    {
+      "Original": "ჰოლივუდი",
+      "Transliteration": "holivudi",
+      "Tips": {
+        "en": "A neighborhood in Los Angeles",
+        "de": "A neighborhood in Los Angeles",
+        "pl": "A neighborhood in Los Angeles"
+      },
+      "Letters": [ 32, 13, 10, 8, 5, 19, 3, 8 ],
+      "Lesson": 9
+    },
+    {
+      "Original": "სტოკჰოლმი",
+      "Transliteration": "st'ok'holmi",
+      "Tips": {
+        "en": "A city in Europe",
+        "de": "A city in Europe",
+        "pl": "A city in Europe"
+      },
+      "Letters": [ 17, 18, 13, 9, 32, 13, 10, 11, 8 ],
+      "Lesson": 100
+    },
+    {
+      "Original": "ჰონდურასი",
+      "Transliteration": "hondurasi",
+      "Tips": {
+        "en": "A country in Central America",
+        "de": "A country in Central America",
+        "pl": "A country in Central America"
+      },
+      "Letters": [ 32, 13, 12, 3, 19, 16, 0, 17, 8 ],
+      "Lesson": 100
+    },
+    {
+      "Original": "დღე",
+      "Transliteration": "dghe",
+      "Tips": {
+        "en": "The georgian word for *day*",
+        "de": "The georgian word for *day*",
+        "pl": "The georgian word for *day*"
+      },
+      "Letters": [ 3, 22, 4 ],
+      "Lesson": 9
+    },
+    {
+      "Original": "დღეს",
+      "Transliteration": "dghes",
+      "Tips": {
+        "en": "The georgian word for *today*",
+        "de": "The georgian word for *today*",
+        "pl": "The georgian word for *today*"
+      },
+      "Letters": [ 3, 22, 4, 17 ],
+      "Lesson": 9
+    },
+    {
+      "Original": "სიღნაღი",
+      "Transliteration": "sighnaghi",
+      "Tips": {
+        "en": "A town in Georgia",
+        "de": "A town in Georgia",
+        "pl": "A town in Georgia"
+      },
+      "Letters": [ 17, 8, 22, 12, 0, 22, 8 ],
+      "Lesson": 9
+    },
+    {
+      "Original": "ჭაჭა",
+      "Transliteration": "ch'ach'a",
+      "Tips": {
+        "en": "A georgian Brandy",
+        "de": "A georgian Brandy",
+        "pl": "A georgian Brandy"
+      },
+      "Letters": [ 29, 0, 29, 0 ],
+      "Lesson": 10
+    },
+    {
+      "Original": "ყავა",
+      "Transliteration": "q'ava",
+      "Tips": {
+        "en": "The georgian word for *coffee*",
+        "de": "The georgian word for *coffee*",
+        "pl": "The georgian word for *coffee*"
+      },
+      "Letters": [ 23, 0, 5, 0 ],
+      "Lesson": 10
+    },
+    {
+      "Original": "ერაყი",
+      "Transliteration": "eraq'i",
+      "Tips": {
+        "en": "A country in the Middle East",
+        "de": "A country in the Middle East",
+        "pl": "A country in the Middle East"
+      },
+      "Letters": [ 4, 16, 0, 23, 8 ],
+      "Lesson": 10
+    },
+    {
+      "Original": "ყაზბეგი",
+      "Transliteration": "q'azbegi",
+      "Tips": {
+        "en": "A town and mountain peak in Georgia",
+        "de": "A town and mountain peak in Georgia",
+        "pl": "A town and mountain peak in Georgia"
+      },
+      "Letters": [ 23, 0, 6, 1, 4, 2, 8 ],
+      "Lesson": 10
+    },
+    {
+      "Original": "ყაზახეთი",
+      "Transliteration": "q'azakheti",
+      "Tips": {
+        "en": "A country in Central Asia",
+        "de": "A country in Central Asia",
+        "pl": "A country in Central Asia"
+      },
+      "Letters": [ 23, 0, 6, 0, 30, 4, 7, 8 ],
+      "Lesson": 10
+    },
+    {
+      "Original": "ხაჭაპური",
+      "Transliteration": "khach'ap'uri",
+      "Tips": {
+        "en": "Part of Georgian cuisine",
+        "de": "Part of Georgian cuisine",
+        "pl": "Part of Georgian cuisine"
+      },
+      "Letters": [ 30, 0, 29, 0, 14, 19, 16, 8 ],
+      "Lesson": 10
+    },
+    {
+      "Original": "ნარიყალა",
+      "Transliteration": "nariq'ala",
+      "Tips": {
+        "en": "An ancient fortress",
+        "de": "An ancient fortress",
+        "pl": "An ancient fortress"
+      },
+      "Letters": [ 12, 0, 16, 8, 23, 0, 10, 0 ],
+      "Lesson": 10
+    },
+    {
+      "Original": "წყალტუბო",
+      "Transliteration": "ts'q'alt'ubo",
+      "Tips": {
+        "en": "A city in Georgia",
+        "de": "A city in Georgia",
+        "pl": "A city in Georgia"
+      },
+      "Letters": [ 28, 23, 0, 10, 18, 19, 1, 13 ],
+      "Lesson": 10
     }
   ]
 }
