@@ -39,6 +39,7 @@
     <Folder Include="Resources\Audio\Alphabets\Georgian\" />
     <Folder Include="DeFuncArt\Audio\" />
     <Folder Include="Views\Common\" />
+    <Folder Include="DeFuncArt\PlatformSpecific\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Audio\SFX\answerCorrect.wav" />
